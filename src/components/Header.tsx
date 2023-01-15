@@ -33,7 +33,7 @@ export const Header = ({ dictionary }: { dictionary: HeaderDictionary }) => {
       <Link href={""}>
         <Image width={130} height={90} className="w-24 h-16" alt="Beyonders Logo" src="/beyonders-logo-white.png" />
       </Link>
-      <div className="flex items-center space-x-6 text-xs lg:text-sm">
+      <div className="flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
         <HeaderLink href={"#showcase"}>{dictionary.showcase}</HeaderLink>
         <HeaderLink href={"#services"}>{dictionary.services}</HeaderLink>
         <HeaderLink href={"#team"}>{dictionary.team}</HeaderLink>
@@ -54,7 +54,7 @@ const HeaderLink = ({ children, href }: { children: ReactNode; href: string }) =
 
 const LocaleSwitcher = () => {
   const router = useRouter();
-  const { pathname, asPath, query, locale, defaultLocale } = router;
+  const { pathname, asPath, query } = router;
   const options = {
     en: {
       imgUrl: "/flags/eua.webp",
