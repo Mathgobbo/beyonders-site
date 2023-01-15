@@ -1,8 +1,8 @@
+import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useCallback, useEffect, useState, Fragment } from "react";
-import { Menu, Transition } from "@headlessui/react";
-import { FaChevronDown } from "react-icons/fa";
+import { useRouter } from "next/router";
+import { Fragment, ReactNode, useCallback, useEffect, useState } from "react";
 
 type HeaderDictionary = {
   showcase: string;
@@ -53,11 +53,27 @@ const HeaderLink = ({ children, href }: { children: ReactNode; href: string }) =
 };
 
 const LocaleSwitcher = () => {
+  const router = useRouter();
+  const { pathname, asPath, query, locale, defaultLocale } = router;
+  const options = {
+    en: {
+      imgUrl: "/flags/eua.webp",
+      alt: "EN",
+      locale: "en",
+    },
+    pt: {
+      imgUrl: "/flags/brazil.png",
+      alt: "PT",
+      locale: "pt",
+    },
+  };
+
+  const selectedOption = options[router.locale as "en" | "pt"] || options[router.defaultLocale as "en" | "pt"];
+
   return (
     <Menu as="div" className="relative inline-block text-left">
-      <Menu.Button className="flex p-2 border bg-main-black border-main-green/20">
-        <Image src={"/flags/eua.webp"} alt="EN" className="w-4 h-3" width={64} height={40} />
-        {/* <FaChevronDown className="w-4 h-4 text-main-white" /> */}
+      <Menu.Button className="flex p-2 border border-main-green/20">
+        <Image src={selectedOption.imgUrl} alt={selectedOption.alt} className="w-4 h-3" width={64} height={40} />
       </Menu.Button>
       <Transition
         as={Fragment}
@@ -69,12 +85,19 @@ const LocaleSwitcher = () => {
         leaveTo="transform opacity-0 scale-95"
       >
         <Menu.Items className="absolute right-0 mt-2 divide-y shadow-lg w-ful focus:outline-none">
-          <Menu.Item>
-            <button className="p-2 border bg-main-black border-main-green/20">
-              {" "}
-              <Image src={"/flags/brazil.png"} alt="PT" className="w-4 h-3" width={64} height={40} />
-            </button>
-          </Menu.Item>
+          {Object.values(options)
+            .filter((option) => option.locale !== selectedOption.locale)
+            .map((option) => (
+              <Menu.Item key={option.locale}>
+                <button
+                  onClick={() => router.push({ pathname, query }, asPath, { locale: option.locale })}
+                  className="p-2 border bg-main-black border-main-green/20"
+                >
+                  {" "}
+                  <Image src={option.imgUrl} alt={option.alt} className="w-4 h-3" width={64} height={40} />
+                </button>
+              </Menu.Item>
+            ))}
         </Menu.Items>
       </Transition>
     </Menu>
