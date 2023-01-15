@@ -15,7 +15,7 @@ export const Hero = ({
 }) => {
   return (
     <section className="relative flex items-center justify-center bg-[url('/home/hero-bg.jpg')] bg-cover bg-no-repeat w-full h-screen">
-      <div className="absolute inset-0 bg-black/80" />
+      <div className="absolute inset-0 bg-black/90" />
 
       <div className="z-[1] space-y-3 text-center uppercase text-main-white">
         <h3 className="text-lg font-bold text-transparent main-gradient bg-clip-text">{dictionary.subtitle}</h3>

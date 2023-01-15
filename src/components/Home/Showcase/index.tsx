@@ -3,8 +3,8 @@ import { showcaseData } from "./showcaseData";
 
 export const Showcase = () => {
   return (
-    <section id="showcase" className="px-24 py-12 space-y-6">
-      <h2 className="text-xl font-bold text-center uppercase text-main-white">Showcase</h2>
+    <section id="showcase" className="px-24 py-16 space-y-6">
+      <h2 className="text-2xl tracking-wider text-center uppercase text-main-white">Showcase</h2>
       <div className="grid grid-cols-3 gap-8">
         {showcaseData.map((showcase) => {
           return (

@@ -1,5 +1,6 @@
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Home/Hero";
+import { Services } from "@/components/Home/Services";
 import { Showcase } from "@/components/Home/Showcase";
 import { useI18n } from "@/hooks/useI18n";
 import Head from "next/head";
@@ -18,6 +19,7 @@ export default function Home() {
         <Header dictionary={dictionary.header} />
         <Hero dictionary={dictionary.home} />
         <Showcase />
+        <Services />
       </main>
     </>
   );
