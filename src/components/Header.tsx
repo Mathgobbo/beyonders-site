@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ReactNode, useCallback, useEffect, useState } from "react";
+import { ReactNode, useCallback, useEffect, useState, Fragment } from "react";
+import { Menu, Transition } from "@headlessui/react";
+import { FaChevronDown } from "react-icons/fa";
 
 type HeaderDictionary = {
   showcase: string;
@@ -31,11 +33,12 @@ export const Header = ({ dictionary }: { dictionary: HeaderDictionary }) => {
       <Link href={""}>
         <Image width={130} height={90} className="w-24 h-16" alt="Beyonders Logo" src="/beyonders-logo-white.png" />
       </Link>
-      <div className="flex space-x-6 text-xs lg:text-sm">
+      <div className="flex items-center space-x-6 text-xs lg:text-sm">
         <HeaderLink href={"#showcase"}>{dictionary.showcase}</HeaderLink>
         <HeaderLink href={"#services"}>{dictionary.services}</HeaderLink>
         <HeaderLink href={"#team"}>{dictionary.team}</HeaderLink>
         <HeaderLink href={"#contact"}>{dictionary.contact}</HeaderLink>
+        <LocaleSwitcher />
       </div>
     </header>
   );
@@ -46,5 +49,34 @@ const HeaderLink = ({ children, href }: { children: ReactNode; href: string }) =
     <a className="uppercase transition hover:text-main-green/80 text-main-white" href={href}>
       {children}
     </a>
+  );
+};
+
+const LocaleSwitcher = () => {
+  return (
+    <Menu as="div" className="relative inline-block text-left">
+      <Menu.Button className="flex p-2 border bg-main-black border-main-green/20">
+        <Image src={"/flags/eua.webp"} alt="EN" className="w-4 h-3" width={64} height={40} />
+        {/* <FaChevronDown className="w-4 h-4 text-main-white" /> */}
+      </Menu.Button>
+      <Transition
+        as={Fragment}
+        enter="transition ease-out duration-100"
+        enterFrom="transform opacity-0 scale-95"
+        enterTo="transform opacity-100 scale-100"
+        leave="transition ease-in duration-75"
+        leaveFrom="transform opacity-100 scale-100"
+        leaveTo="transform opacity-0 scale-95"
+      >
+        <Menu.Items className="absolute right-0 mt-2 divide-y shadow-lg w-ful focus:outline-none">
+          <Menu.Item>
+            <button className="p-2 border bg-main-black border-main-green/20">
+              {" "}
+              <Image src={"/flags/brazil.png"} alt="PT" className="w-4 h-3" width={64} height={40} />
+            </button>
+          </Menu.Item>
+        </Menu.Items>
+      </Transition>
+    </Menu>
   );
 };
