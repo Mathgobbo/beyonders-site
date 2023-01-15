@@ -50,7 +50,7 @@ interface IServiceSectionProps {
   invert?: boolean;
 }
 const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSectionProps) => {
-  // const isLg = useMediaQuery({ minWidth: 1024 });
+  const isLg = useMediaQuery({ minWidth: 1024 });
 
   const MainImage = () => <Image src={imgUrl} className="my-2 rounded-xl" alt="websites" width={600} height={380} />;
   const TextSection = () => (
@@ -61,7 +61,7 @@ const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSecti
   );
 
   const FirstItem = !invert ? MainImage : TextSection;
-  const LastItem = invert ? MainImage : TextSection;
+  const LastItem = invert && isLg ? MainImage : TextSection;
 
   return (
     <div className="flex">
