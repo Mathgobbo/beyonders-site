@@ -1,5 +1,5 @@
 import { Waves } from "./Waves";
-
+import { motion } from "framer-motion";
 export const Hero = ({
   dictionary,
 }: {
@@ -14,26 +14,54 @@ export const Hero = ({
   };
 }) => {
   return (
-    <section className="relative flex items-center justify-center bg-[url('/home/hero-bg.jpg')] bg-cover bg-no-repeat w-full h-screen">
+    <section className="relative flex items-center justify-center object-center bg-center bg-[url('/home/hero-bg.jpg')] bg-cover bg-no-repeat w-full h-screen">
       <div className="absolute inset-0 bg-black/90" />
 
-      <div className="z-[1] space-y-3 text-center uppercase text-main-white">
-        <h3 className="text-lg font-bold text-transparent main-gradient bg-clip-text">{dictionary.subtitle}</h3>
-        <h2 className="text-4xl font-bold">
+      <div className="z-[1] px-4 space-y-3 text-center uppercase text-main-white">
+        <motion.h3
+          initial={{ opacity: 0, y: -25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="font-bold text-transparent lg:text-lg main-gradient bg-clip-text"
+        >
+          {dictionary.subtitle}
+        </motion.h3>
+        <motion.h2
+          initial={{ opacity: 0, y: -25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-3xl font-bold lg:text-4xl"
+        >
           {dictionary.titleLine1}{" "}
           <span className="text-transparent main-gradient bg-clip-text">{dictionary.titleGradientLine1}</span> <br />{" "}
           {dictionary.titleLine2}{" "}
           <span className="text-transparent main-gradient bg-clip-text">{dictionary.titleGradientLine2}</span>{" "}
-        </h2>
-        <p className="text-lg text-gray-300">{dictionary.text}</p>
-        <div className="pt-2">
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: -25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="text-sm text-gray-300 lg:text-lg"
+        >
+          {dictionary.text}
+        </motion.p>
+        <motion.div
+          initial={{ opacity: 0, y: -25 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true }}
+          className="pt-2"
+        >
           <a
             href="#contact"
-            className="px-3 py-2 uppercase transition border-2 rounded-lg bg-secondary-green hover:bg-main-green border-main-white"
+            className="px-3 py-2 text-sm uppercase transition border-2 rounded-lg bg-secondary-green hover:bg-main-green lg:text-base border-main-white"
           >
             {dictionary.buttonLabel}
           </a>
-        </div>
+        </motion.div>
       </div>
       <Waves />
     </section>

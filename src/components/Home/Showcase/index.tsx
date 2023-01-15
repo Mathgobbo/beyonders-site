@@ -1,28 +1,31 @@
+import { motion } from "framer-motion";
 import Image from "next/image";
 import { showcaseData } from "./showcaseData";
-
 export const Showcase = () => {
   return (
-    <section id="showcase" className="px-24 py-16 space-y-6">
-      <h2 className="text-2xl tracking-wider text-center uppercase text-main-white">Showcase</h2>
-      <div className="grid grid-cols-3 gap-8">
-        {showcaseData.map((showcase) => {
+    <section id="showcase" className="px-4 py-16 space-y-6 lg:px-36">
+      <h2 className="text-2xl font-bold tracking-wider text-center uppercase text-main-white">Showcase</h2>
+      <div className="grid gap-8 lg:grid-cols-3">
+        {showcaseData.map((showcase, index) => {
           return (
-            <a
-              className="overflow-hidden transition duration-500"
-              target={"_blank"}
-              href={showcase.url}
+            <motion.div
+              initial={{ opacity: 0, y: -25 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: index * 0.5, duration: 1 }}
+              viewport={{ once: true }}
+              className="overflow-hidden"
               key={showcase.name}
-              rel="noreferrer"
             >
-              <Image
-                className="transition hover:scale-110"
-                src={showcase.bgImgUrl}
-                alt={showcase.name}
-                width={500}
-                height={280}
-              />
-            </a>
+              <a className="transition duration-500" target={"_blank"} href={showcase.url} rel="noreferrer">
+                <Image
+                  className="transition duration-700 hover:scale-110"
+                  src={showcase.bgImgUrl}
+                  alt={showcase.name}
+                  width={500}
+                  height={280}
+                />
+              </a>
+            </motion.div>
           );
         })}
       </div>

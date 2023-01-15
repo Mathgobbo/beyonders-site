@@ -14,4 +14,9 @@ export const showcaseData = [
     url: "https://geografiairada.com",
     name: "Geografia Irada",
   },
+  {
+    bgImgUrl: "/home/showcase/professor-marcelo.png",
+    url: "https://professormarcelo.com",
+    name: "Professor Marcelo",
+  },
 ];
