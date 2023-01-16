@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export const Waves = () => {
   return (
-    <div className="absolute bottom-0 inset-x-0 -ml-2">
-      <div className="overflow-hidden relative ">
+    <div className="absolute inset-x-0 bottom-0 -ml-2">
+      <div className="relative overflow-hidden ">
         <MainGreenWave />
         <SecondaryGreenWave />
         <BlackWave />

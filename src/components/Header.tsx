@@ -31,7 +31,7 @@ export const Header = ({ dictionary }: { dictionary: HeaderDictionary }) => {
       }`}
     >
       <Link href={""}>
-        <Image width={130} height={90} className="w-24 h-16" alt="Beyonders Logo" src="/beyonders-logo-white.png" />
+        <Image width={96} height={60} className="w-24 h-[60px]" alt="Beyonders Logo" src="/beyonders-logo-white.webp" />
       </Link>
       <div className="flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
         <HeaderLink href={"#showcase"}>{dictionary.showcase}</HeaderLink>
@@ -62,7 +62,7 @@ const LocaleSwitcher = () => {
       locale: "en",
     },
     pt: {
-      imgUrl: "/flags/brazil.png",
+      imgUrl: "/flags/brazil.webp",
       alt: "PT",
       locale: "pt",
     },

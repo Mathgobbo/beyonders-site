@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import Image from "next/image";
 import { showcaseData } from "./showcaseData";
 export const Showcase = () => {
@@ -8,7 +8,7 @@ export const Showcase = () => {
       <div className="grid gap-8 lg:grid-cols-3">
         {showcaseData.map((showcase, index) => {
           return (
-            <motion.div
+            <m.div
               initial={{ opacity: 0, y: -25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.5, duration: 1 }}
@@ -25,7 +25,7 @@ export const Showcase = () => {
                   height={280}
                 />
               </a>
-            </motion.div>
+            </m.div>
           );
         })}
       </div>

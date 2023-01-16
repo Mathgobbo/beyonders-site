@@ -1,6 +1,6 @@
 import { useI18n } from "@/hooks/useI18n";
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
 import { useMediaQuery } from "react-responsive";
 
 export const Services = () => {
@@ -19,20 +19,20 @@ export const Services = () => {
           className="absolute top-0 right-0 w-12 h-12 lg:w-28 lg:h-28"
         />
         <ServiceSection
-          imgUrl="/home/services/websites.png"
+          imgUrl="/home/services/websites.webp"
           iconUrl="/home/services/websites-icon.svg"
           title={services.websiteTitle}
           label={services.websiteText}
         />
         <ServiceSection
           invert
-          imgUrl="/home/services/mobile-apps.png"
+          imgUrl="/home/services/mobile-apps.webp"
           iconUrl="/home/services/mobile-apps-icon.svg"
           title={services.mobileAppsTitle}
           label={services.mobileAppsText}
         />
         <ServiceSection
-          imgUrl="/home/services/blockchain.png"
+          imgUrl="/home/services/blockchain.webp"
           iconUrl="/home/services/blockchain-icon.svg"
           title={services.blockchainTitle}
           label={services.blockchainText}
@@ -52,7 +52,9 @@ interface IServiceSectionProps {
 const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSectionProps) => {
   const isLg = useMediaQuery({ minWidth: 1024 });
 
-  const MainImage = () => <Image src={imgUrl} className="my-2 rounded-xl" alt="websites" width={600} height={380} />;
+  const MainImage = () => (
+    <Image quality={50} src={imgUrl} className="my-2 rounded-xl" alt="websites" width={600} height={380} />
+  );
   const TextSection = () => (
     <div className="flex flex-col justify-center h-full py-10 space-y-2 lg:p-0">
       <h3 className="font-bold uppercase lg:text-2xl text-main-white">{title}</h3>
@@ -65,7 +67,7 @@ const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSecti
 
   return (
     <div className="flex">
-      <motion.div
+      <m.div
         className="hidden w-5/12 lg:block"
         transition={{ duration: 1.2 }}
         initial={{ opacity: 0, x: -80 }}
@@ -73,10 +75,10 @@ const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSecti
         viewport={{ once: true }}
       >
         <FirstItem />
-      </motion.div>
+      </m.div>
       <div className="relative flex justify-center w-4/12 lg:2/12">
         <div className="w-1 h-full bg-main-green" />
-        <motion.div
+        <m.div
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.8 }}
@@ -86,9 +88,9 @@ const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSecti
           <div className="grid w-full h-full rounded-full place-items-center bg-main-green">
             <Image src={iconUrl} className="w-10 h-10" alt={title + " icon"} width={87} height={87} />
           </div>
-        </motion.div>
+        </m.div>
       </div>
-      <motion.div
+      <m.div
         transition={{ duration: 1.2 }}
         className="w-8/12 lg:w-5/12"
         initial={{ opacity: 0, x: 80 }}
@@ -96,7 +98,7 @@ const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSecti
         viewport={{ once: true }}
       >
         <LastItem />
-      </motion.div>
+      </m.div>
     </div>
   );
 };

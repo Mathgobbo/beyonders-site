@@ -1,5 +1,6 @@
 import { Waves } from "./Waves";
-import { motion } from "framer-motion";
+import { m } from "framer-motion";
+import Image from "next/image";
 export const Hero = ({
   dictionary,
 }: {
@@ -14,11 +15,19 @@ export const Hero = ({
   };
 }) => {
   return (
-    <section className="relative flex items-center justify-center object-center bg-center bg-[url('/home/hero-bg.jpg')] bg-cover bg-no-repeat w-full h-screen">
+    <section className="relative flex items-center justify-center w-full h-screen">
+      <Image
+        src={"/home/hero-bg.webp"}
+        alt="Hero background"
+        width={1920}
+        height={851}
+        quality={25}
+        className="absolute inset-0 object-cover w-full h-full"
+      />
       <div className="absolute inset-0 bg-black/90" />
 
       <div className="z-[1] px-4 space-y-3 text-center uppercase text-main-white">
-        <motion.h3
+        <m.h3
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -26,8 +35,8 @@ export const Hero = ({
           className="font-bold text-transparent lg:text-lg main-gradient bg-clip-text"
         >
           {dictionary.subtitle}
-        </motion.h3>
-        <motion.h2
+        </m.h3>
+        <m.h2
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -38,8 +47,8 @@ export const Hero = ({
           <span className="text-transparent main-gradient bg-clip-text">{dictionary.titleGradientLine1}</span> <br />{" "}
           {dictionary.titleLine2}{" "}
           <span className="text-transparent main-gradient bg-clip-text">{dictionary.titleGradientLine2}</span>{" "}
-        </motion.h2>
-        <motion.p
+        </m.h2>
+        <m.p
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -47,8 +56,8 @@ export const Hero = ({
           className="text-sm text-gray-300 lg:text-lg"
         >
           {dictionary.text}
-        </motion.p>
-        <motion.div
+        </m.p>
+        <m.div
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
@@ -61,7 +70,7 @@ export const Hero = ({
           >
             {dictionary.buttonLabel}
           </a>
-        </motion.div>
+        </m.div>
       </div>
       <Waves />
     </section>
