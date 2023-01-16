@@ -1,0 +1,18 @@
+User-agent: *
+Allow:
+User-agent: Googlebot
+Allow:
+User-agent: Googlebot-Image
+Allow:
+User-agent: Mediapartners-Google
+Allow:
+User-agent: Adsbot-Google
+Allow:
+
+Disallow: 
+Disallow: /cgi-bin/
+
+Sitemap: https://beyonders.com.br/sitemap.xml
+
+# Host
+Host: https://beyonders.com.br
