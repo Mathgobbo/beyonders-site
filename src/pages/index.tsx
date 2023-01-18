@@ -13,7 +13,7 @@ export default function Home() {
     <>
       <MainHead />
       <main className="bg-main-black">
-        <Header dictionary={dictionary.header} />
+        <Header />
         <Hero dictionary={dictionary.home.hero} />
         <Showcase />
         <Services />

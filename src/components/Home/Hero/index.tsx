@@ -24,6 +24,7 @@ export const Hero = ({
         quality={25}
         className="absolute inset-0 object-cover w-full h-full"
       />
+      {/* <div className="bg-[url('/home/hero-bg.webp')] absolute inset-0 object-cover w-full h-full bg-center bg-fixed bg-no-repeat bg-cover" /> */}
       <div className="absolute inset-0 bg-black/90" />
 
       <div className="z-[1] px-4 space-y-3 text-center uppercase text-main-white">

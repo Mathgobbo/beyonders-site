@@ -41,5 +41,30 @@ export interface IDictionary {
       submitButtonLabel: string;
       mailSubject: string;
     };
+    showcase: {
+      testimonials: {
+        imgUrl: string;
+        title: string;
+        testimonial: string;
+        author: string;
+        occupation: string;
+      }[];
+    };
+  };
+  team: {
+    title: string;
+    titleGradient: string;
+    subtitle: string;
+    head: {
+      title: string;
+      description: string;
+    };
+    members: {
+      imgUrl: string;
+      name: string;
+      role: string;
+      bio: string;
+      skillset: string[];
+    }[];
   };
 }

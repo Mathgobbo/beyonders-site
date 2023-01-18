@@ -45,5 +45,49 @@ export const en: IDictionary = {
       blockchainTitle: "BLOCKCHAIN",
       blockchainText: "Ready to build the next dapp and introduce your business into web3",
     },
+    showcase: {
+      testimonials: [
+        {
+          author: "Marcelo da Silva",
+          occupation: "Teacher, writer and Speaker",
+          title: "“They did an impressive job”",
+          imgUrl: "/home/showcase/testimonials/teacher-marcelo.webp",
+          testimonial:
+            "“I was lost and didn't know how to create “Geografia Irada”, my goal was to create something different from what I saw on the market. I thought of an intuitive platform, where students could study with quality and discipline. And Beyonders, from the first contact, gave me all the support and contributed to the success of my project.”",
+        },
+      ],
+    },
+  },
+  team: {
+    title: "Meet our ",
+    titleGradient: "team",
+    subtitle: "Skilled developers. Years of experience. And one mission. Take you beyond.",
+    head: {
+      title: "Beyonders - Team",
+      description: "Meet our team | Skilled developers. Years of experience. And one mission. Take you beyond.",
+    },
+    members: [
+      {
+        name: "Matheus Gobbo Bernardi",
+        role: "Co-founder and Developer",
+        bio: "Matheus is a high-skilled Full Stack developer. Already worked as freelancer for many companies, already founded a startup, and now he’s looking to help build the dreams of other businesses. ",
+        imgUrl: "/team/matheus.webp",
+        skillset: [
+          "Front-end",
+          "React",
+          "HTML",
+          "Javascript",
+          "CSS",
+          "Flutter",
+          "Solidity",
+          "Ethereum",
+          "EthersJs",
+          "Hardhat",
+          "Communication",
+          "Management",
+          "Leadership",
+        ],
+      },
+    ],
   },
 };

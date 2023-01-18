@@ -21,7 +21,7 @@ export const Contact = () => {
       <h2 className="text-2xl font-bold tracking-wider uppercase text-main-white">{contact.title}</h2>
       <p className="text-gray-200">{contact.subtitle1}</p>
       <div className="flex my-2 space-x-4">
-        <IconLink url="https://www.linkedin.com/in/matheus-gobbo-bernardi/?locale=en_US" Logo={FaLinkedinIn} />
+        <IconLink url="https://www.linkedin.com/company/beyonders-digital-solutions/" Logo={FaLinkedinIn} />
         <IconLink url="https://www.instagram.com/beyonders.oficial/" Logo={FaInstagram} />
         <IconLink url="https://wa.me/5547999381468" Logo={FaWhatsapp} />
       </div>

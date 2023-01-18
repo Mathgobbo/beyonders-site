@@ -46,5 +46,50 @@ export const pt: IDictionary = {
       messagePlaceholder: "CONTE UM POUCO MAIS SOBRE SEU PROJETO/IDEIA/NECESSIDADE...",
       mailSubject: "[APLICAÇÃO PARA NOVO PROJETO]",
     },
+    showcase: {
+      testimonials: [
+        {
+          author: "Marcelo da Silva",
+          occupation: "Professor, escritor e palestrante",
+          title: "“Eles fizeram um trabalho impressionante”",
+          imgUrl: "/home/showcase/testimonials/teacher-marcelo.webp",
+          testimonial:
+            "“Estava perdido e não sabia como criar o “Geografia Irada”, meu objetivo era criar algo diferente do que via no mercado. Pensava numa plataforma intuitiva, onde os alunos pudessem estudar com qualidade e disciplina. E a Beyonders, desde o primeiro contato me deu todo o suporte e contribuiu para o sucesso de meu projeto.”",
+        },
+      ],
+    },
+  },
+  team: {
+    title: "Conheça nossa ",
+    titleGradient: "Equipe",
+    subtitle: "Desenvolvedores habilidosos. Anos de experiência. E uma missão. Te levar além.",
+    head: {
+      title: "Beyonders - Equipe",
+      description:
+        "Conheça nossa Equipe | Desenvolvedores habilidosos. Anos de experiência. E uma missão. Te levar além.",
+    },
+    members: [
+      {
+        name: "Matheus Gobbo Bernardi",
+        role: "Co-fundador e Desenvolvedor",
+        bio: "Matheus é um desenvolvedor Full Stack extremamente habilidoso. Já trabalhou como Freelancer para várias empresas, fundou uma startup, e agora pretende ajudar outros negócios a realizar seus sonhos.",
+        imgUrl: "/team/matheus.webp",
+        skillset: [
+          "Front-end",
+          "React",
+          "HTML",
+          "Javascript",
+          "CSS",
+          "Flutter",
+          "Solidity",
+          "Ethereum",
+          "EthersJs",
+          "Hardhat",
+          "Comunicação",
+          "Gerenciamento",
+          "Liderança",
+        ],
+      },
+    ],
   },
 };

@@ -1,17 +1,12 @@
+import { useI18n } from "@/hooks/useI18n";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment, ReactNode, useCallback, useEffect, useState } from "react";
 
-type HeaderDictionary = {
-  showcase: string;
-  team: string;
-  services: string;
-  contact: string;
-};
-
-export const Header = ({ dictionary }: { dictionary: HeaderDictionary }) => {
+export const Header = ({ alwaysShowBorder }: { alwaysShowBorder?: boolean }) => {
+  const { header: dictionary } = useI18n();
   const [isOnTop, setIsOnTop] = useState(true);
 
   const scrollListener = useCallback(() => {
@@ -27,16 +22,16 @@ export const Header = ({ dictionary }: { dictionary: HeaderDictionary }) => {
   return (
     <header
       className={`fixed z-50 space-y-2 lg:space-y-0 flex flex-col lg:flex-row transition duration-700 items-center lg:justify-between w-screen lg:w-full px-6 py-4 xl:px-36 ${
-        isOnTop ? "bg-transparent" : "bg-main-black border-b border-secondary-green"
+        alwaysShowBorder || !isOnTop ? "bg-main-black border-b border-secondary-green" : "bg-transparent"
       }`}
     >
       <Link href={""}>
         <Image width={96} height={60} className="w-24 h-[60px]" alt="Beyonders Logo" src="/beyonders-logo-white.webp" />
       </Link>
       <div className="flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
-        <HeaderLink href={"#showcase"}>{dictionary.showcase}</HeaderLink>
-        <HeaderLink href={"#services"}>{dictionary.services}</HeaderLink>
-        <HeaderLink href={"#team"}>{dictionary.team}</HeaderLink>
+        <HeaderLink href={"/#showcase"}>{dictionary.showcase}</HeaderLink>
+        <HeaderLink href={"/#services"}>{dictionary.services}</HeaderLink>
+        <HeaderLink href={"/team"}>{dictionary.team}</HeaderLink>
         <HeaderLink href={"#contact"}>{dictionary.contact}</HeaderLink>
         <LocaleSwitcher />
       </div>
