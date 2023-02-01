@@ -25,25 +25,31 @@ export const Header = ({ alwaysShowBorder }: { alwaysShowBorder?: boolean }) => 
         alwaysShowBorder || !isOnTop ? "bg-main-black border-b border-secondary-green" : "bg-transparent"
       }`}
     >
-      <Link href={""}>
+      <Link href={"/"}>
         <Image width={96} height={60} className="w-24 h-[60px]" alt="Beyonders Logo" src="/beyonders-logo-white.webp" />
       </Link>
       <div className="flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
-        <HeaderLink href={"/#showcase"}>{dictionary.showcase}</HeaderLink>
-        <HeaderLink href={"/#services"}>{dictionary.services}</HeaderLink>
+        <HeaderLink href={"/#showcase"} scroll={false}>
+          {dictionary.showcase}
+        </HeaderLink>
+        <HeaderLink scroll={false} href={"/#services"}>
+          {dictionary.services}
+        </HeaderLink>
         <HeaderLink href={"/team"}>{dictionary.team}</HeaderLink>
-        <HeaderLink href={"#contact"}>{dictionary.contact}</HeaderLink>
+        <HeaderLink scroll={false} href={"/#contact"}>
+          {dictionary.contact}
+        </HeaderLink>
         <LocaleSwitcher />
       </div>
     </header>
   );
 };
 
-const HeaderLink = ({ children, href }: { children: ReactNode; href: string }) => {
+const HeaderLink = ({ children, href, scroll = true }: { children: ReactNode; href: string; scroll?: boolean }) => {
   return (
-    <a className="uppercase transition hover:text-main-green/80 text-main-white" href={href}>
+    <Link scroll={scroll} className="uppercase transition hover:text-main-green/80 text-main-white" href={href}>
       {children}
-    </a>
+    </Link>
   );
 };
 
