@@ -11,15 +11,10 @@ export default function Home() {
   const dictionary = useI18n();
   return (
     <>
-      <MainHead />
-      <main className="bg-main-black">
-        <Header />
-        <Hero dictionary={dictionary.home.hero} />
-        <Showcase />
-        <Services />
-        <Contact />
-        <Footer />
-      </main>
+      <Hero dictionary={dictionary.home.hero} />
+      <Showcase />
+      <Services />
+      <Contact />
     </>
   );
 }

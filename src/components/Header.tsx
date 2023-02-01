@@ -5,9 +5,14 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import { Fragment, ReactNode, useCallback, useEffect, useState } from "react";
 
-export const Header = ({ alwaysShowBorder }: { alwaysShowBorder?: boolean }) => {
+const routesToAlwaysShowBorder = ["/team", "/blog"];
+
+export const Header = () => {
+  const router = useRouter();
   const { header: dictionary } = useI18n();
   const [isOnTop, setIsOnTop] = useState(true);
+
+  const showBorder = routesToAlwaysShowBorder.some((route) => router.pathname.indexOf(route) > -1);
 
   const scrollListener = useCallback(() => {
     if (window.scrollY === 0 && isOnTop === false) setIsOnTop(true);
@@ -22,7 +27,7 @@ export const Header = ({ alwaysShowBorder }: { alwaysShowBorder?: boolean }) => 
   return (
     <header
       className={`fixed z-50 space-y-2 lg:space-y-0 flex flex-col lg:flex-row transition duration-700 items-center lg:justify-between w-screen lg:w-full px-6 py-4 xl:px-36 ${
-        alwaysShowBorder || !isOnTop ? "bg-main-black border-b border-secondary-green" : "bg-transparent"
+        showBorder || !isOnTop ? "bg-main-black border-b border-secondary-green" : "bg-transparent"
       }`}
     >
       <Link href={"/"}>
