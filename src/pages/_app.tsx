@@ -16,7 +16,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <GoogleAnalytics />
       <main>
         <LazyMotion features={domAnimation}>
-          <main className={`${poppins.className} bg-main-black`}>
+          <main className={`${poppins.variable} bg-main-black`}>
             <Header />
             <Component {...pageProps} />
             <Footer />
