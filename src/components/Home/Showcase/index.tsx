@@ -14,7 +14,7 @@ export const Showcase = () => {
         {showcaseData.map((showcase, index) => {
           return (
             <m.div
-              initial={{ opacity: 0, y: -25 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ delay: index * 0.5, duration: 1 }}
               viewport={{ once: true }}
@@ -45,7 +45,7 @@ export const Showcase = () => {
               alt={testimonial.author}
             />
             <m.div
-              initial={{ opacity: 0, y: -25 }}
+              initial={{ opacity: 0, y: 25 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1.2 }}
               viewport={{ once: true }}

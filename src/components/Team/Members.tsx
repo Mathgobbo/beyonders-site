@@ -8,7 +8,7 @@ export const Members = () => {
   return (
     <section className="p-4 mt-4 mb-8 md:mt-8 lg:px-36 md:min-h-screen">
       {members.map((member) => (
-        <div key={member.name} className="px-4 text-main-white md:flex">
+        <div key={member.name} className="px-4 md:space-x-4 text-main-white md:flex">
           <Image
             src={member.imgUrl}
             width={640}
