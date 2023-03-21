@@ -33,7 +33,7 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="font-bold text-transparent lg:text-lg main-gradient bg-clip-text"
+          className="font-bold text-transparent lg:text-2xl main-gradient bg-clip-text"
         >
           {dictionary.subtitle}
         </m.h3>
@@ -42,7 +42,7 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold lg:text-4xl"
+          className="text-3xl font-bold lg:text-5xl"
         >
           {dictionary.titleLine1}{" "}
           <span className="text-transparent main-gradient bg-clip-text">{dictionary.titleGradientLine1}</span> <br />{" "}
@@ -54,7 +54,7 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-sm text-gray-300 lg:text-lg"
+          className="text-sm text-gray-300 lg:text-xl"
         >
           {dictionary.text}
         </m.p>
@@ -67,13 +67,13 @@ export const Hero = ({
         >
           <a
             href="#contact"
-            className="px-3 py-2 text-sm uppercase transition border-2 rounded-lg bg-secondary-green hover:bg-main-green lg:text-base border-main-white"
+            className="px-8 py-3 text-sm uppercase transition rounded-full bg-secondary-green hover:bg-main-green/80 lg:text-2xl hover:cursor-pointer"
           >
             {dictionary.buttonLabel}
           </a>
         </m.div>
       </div>
-      <Waves />
+      {/* <Waves /> */}
     </section>
   );
 };
