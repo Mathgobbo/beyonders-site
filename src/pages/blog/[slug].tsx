@@ -26,6 +26,7 @@ export const getStaticProps: GetServerSideProps = async (ctx) => {
   const fullPath = path.join("src/articles", `${slug}.md`);
   const fileContents = fs.readFileSync(fullPath, "utf8");
   const matterResult = matter(fileContents);
+
   return {
     props: {
       metadata: matterResult.data,

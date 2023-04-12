@@ -7,7 +7,11 @@ import { Poppins } from "@next/font/google";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
 
-const poppins = Poppins({ subsets: ["latin"], weight: ["300", "400", "600"], variable: "--font-poppins" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "600"],
+  variable: "--font-poppins",
+});
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
@@ -16,7 +20,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <GoogleAnalytics />
       <main>
         <LazyMotion features={domAnimation}>
-          <main className={`${poppins.variable} bg-main-black`}>
+          <main className={`${poppins.variable} font-poppins bg-main-black`}>
             <Header />
             <Component {...pageProps} />
             <Footer />

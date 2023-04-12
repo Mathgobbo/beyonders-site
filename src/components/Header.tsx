@@ -12,7 +12,9 @@ export const Header = () => {
   const { header: dictionary } = useI18n();
   const [isOnTop, setIsOnTop] = useState(true);
 
-  const showBorder = routesToAlwaysShowBorder.some((route) => router.pathname.indexOf(route) > -1);
+  const showBorder = routesToAlwaysShowBorder.some(
+    (route) => router.pathname.indexOf(route) > -1
+  );
 
   const scrollListener = useCallback(() => {
     if (window.scrollY === 0 && isOnTop === false) setIsOnTop(true);
@@ -26,12 +28,20 @@ export const Header = () => {
 
   return (
     <header
-      className={`fixed z-50 space-y-2 lg:space-y-0 flex flex-col lg:flex-row transition duration-700 items-center lg:justify-between w-screen lg:w-full px-6 py-4 xl:px-36 ${
-        showBorder || !isOnTop ? "bg-main-black border-b border-secondary-green" : "bg-transparent"
+      className={`fixed z-50 space-y-2 lg:space-y-0 flex flex-col lg:flex-row transition duration-700 items-center lg:justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 ${
+        showBorder || !isOnTop
+          ? "bg-main-black border-b border-secondary-green"
+          : "bg-transparent"
       }`}
     >
       <Link href={"/"}>
-        <Image width={96} height={60} className="w-24 h-[60px]" alt="Beyonders Logo" src="/beyonders-logo-white.webp" />
+        <Image
+          width={516}
+          height={90.5}
+          className="w-40 lg:w-56"
+          alt="Beyonders Logo"
+          src="/beyonders-logo-new.webp"
+        />
       </Link>
       <div className="flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
         <HeaderLink href={"/#showcase"} scroll={false}>
@@ -50,9 +60,21 @@ export const Header = () => {
   );
 };
 
-const HeaderLink = ({ children, href, scroll = true }: { children: ReactNode; href: string; scroll?: boolean }) => {
+const HeaderLink = ({
+  children,
+  href,
+  scroll = true,
+}: {
+  children: ReactNode;
+  href: string;
+  scroll?: boolean;
+}) => {
   return (
-    <Link scroll={scroll} className="uppercase transition hover:text-main-green/80 text-main-white" href={href}>
+    <Link
+      scroll={scroll}
+      className="uppercase transition hover:text-main-green/80 text-main-white"
+      href={href}
+    >
       {children}
     </Link>
   );
@@ -74,12 +96,20 @@ const LocaleSwitcher = () => {
     },
   };
 
-  const selectedOption = options[router.locale as "en" | "pt"] || options[router.defaultLocale as "en" | "pt"];
+  const selectedOption =
+    options[router.locale as "en" | "pt"] ||
+    options[router.defaultLocale as "en" | "pt"];
 
   return (
     <Menu as="div" className="relative inline-block text-left">
       <Menu.Button className="flex p-2 border border-main-green/20">
-        <Image src={selectedOption.imgUrl} alt={selectedOption.alt} className="w-4 h-3" width={64} height={40} />
+        <Image
+          src={selectedOption.imgUrl}
+          alt={selectedOption.alt}
+          className="w-4 h-3"
+          width={64}
+          height={40}
+        />
       </Menu.Button>
       <Transition
         as={Fragment}
@@ -96,11 +126,21 @@ const LocaleSwitcher = () => {
             .map((option) => (
               <Menu.Item key={option.locale}>
                 <button
-                  onClick={() => router.push({ pathname, query }, asPath, { locale: option.locale })}
+                  onClick={() =>
+                    router.push({ pathname, query }, asPath, {
+                      locale: option.locale,
+                    })
+                  }
                   className="p-2 border bg-main-black border-main-green/20"
                 >
                   {" "}
-                  <Image src={option.imgUrl} alt={option.alt} className="w-4 h-3" width={64} height={40} />
+                  <Image
+                    src={option.imgUrl}
+                    alt={option.alt}
+                    className="w-4 h-3"
+                    width={64}
+                    height={40}
+                  />
                 </button>
               </Menu.Item>
             ))}

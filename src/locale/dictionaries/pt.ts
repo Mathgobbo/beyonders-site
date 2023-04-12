@@ -19,7 +19,7 @@ export const pt: IDictionary = {
   home: {
     hero: {
       subtitle: "Vá Além",
-      titleLine1: "construindo SOftwares",
+      titleLine1: "Construimos Softwares",
       titleGradientLine1: "Únicos",
       titleLine2: "Para negócios",
       titleGradientLine2: "inovadores",
@@ -29,12 +29,14 @@ export const pt: IDictionary = {
     services: {
       title: "NOSSOS SERVIÇOS",
       websiteTitle: "WEBSITES",
-      websiteText: "Construímos sites bonitos, responsivos e otimizados para performance e SEO.",
+      websiteText:
+        "Construímos sites bonitos, responsivos e otimizados para performance e SEO.",
       mobileAppsTitle: "APLICATIVOS MOBILE",
       mobileAppsText:
         "Aplicativos para Android e IOS, desenvolvidos com as melhores ferramentas para garantir a melhor experiência de usuário.",
       blockchainTitle: "BLOCKCHAIN",
-      blockchainText: "Estamos preparados para construir seu próximo DAPP e introduzir seu negócio à WEB3.",
+      blockchainText:
+        "Estamos preparados para construir seu próximo DAPP e introduzir seu negócio à WEB3.",
     },
     contact: {
       title: "FALE COM A GENTE",
@@ -43,7 +45,8 @@ export const pt: IDictionary = {
       subtitle2: "Ou envie um email que responderemos o mais rápido possível.",
       submitButtonLabel: "ENVIAR EMAIL",
       namePlaceholder: "SEU NOME",
-      messagePlaceholder: "CONTE UM POUCO MAIS SOBRE SEU PROJETO/IDEIA/NECESSIDADE...",
+      messagePlaceholder:
+        "CONTE UM POUCO MAIS SOBRE SEU PROJETO/IDEIA/NECESSIDADE...",
       mailSubject: "[APLICAÇÃO PARA NOVO PROJETO]",
     },
     showcase: {
@@ -62,7 +65,8 @@ export const pt: IDictionary = {
   team: {
     title: "Conheça nossa ",
     titleGradient: "Equipe",
-    subtitle: "Desenvolvedores habilidosos. Anos de experiência. E uma missão. Te levar além.",
+    subtitle:
+      "Desenvolvedores habilidosos. Anos de experiência. E uma missão. Te levar além.",
     head: {
       title: "Beyonders - Equipe",
       description:

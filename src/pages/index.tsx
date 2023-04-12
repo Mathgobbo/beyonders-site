@@ -1,10 +1,7 @@
-import { Footer } from "@/components/Footer";
-import { Header } from "@/components/Header";
 import { Contact } from "@/components/Home/Contact";
 import { Hero } from "@/components/Home/Hero";
 import { Services } from "@/components/Home/Services";
 import { Showcase } from "@/components/Home/Showcase";
-import { MainHead } from "@/components/MainHead";
 import { useI18n } from "@/hooks/useI18n";
 
 export default function Home() {
