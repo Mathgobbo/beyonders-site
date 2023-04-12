@@ -36,7 +36,7 @@ export const Contact = () => {
         />
         <IconLink url="https://wa.me/5547999381468" Logo={FaWhatsapp} />
       </div>
-      <section className="space-y-3 text-gray-200 lg:text-lg">
+      <section className="space-y-3 text-gray-200 lg:text-lg max-w-full">
         <p>{contact.subtitle2}</p>
         <form onSubmit={onSubmit} className="flex flex-col space-y-3 ">
           {" "}
