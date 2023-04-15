@@ -10,6 +10,7 @@ export const MainHead = () => {
       <meta key={"title"} name="title" content={head.title} />
       <meta key={"description"} name="description" content={head.description} />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="icon" href="/favicon/favicon.ico" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
@@ -44,7 +45,7 @@ export const MainHead = () => {
         property="og:description"
         content={head.description}
       />
-      <meta property="og:image" content="/beyonders-logo.png" />
+      <meta property="og:image" content="/beyonders-logo-new.png" />
 
       <meta property="twitter:card" content="summary_large_image" />
       <meta property="twitter:url" content="https://beyonders.com.br" />
@@ -58,7 +59,23 @@ export const MainHead = () => {
         property="twitter:description"
         content={head.description}
       />
-      <meta property="twitter:image" content="/beyonders-logo.png" />
+      <meta property="twitter:image" content="/beyonders-logo-new.png" />
+
+      {/* Google Logotipo */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: `
+      
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "url": "https://www.beyonders.com.br",
+      "logo": "https://www.beyonders.com.br/logo-full.webp"
+    }
+      `,
+        }}
+      ></script>
     </Head>
   );
 };
