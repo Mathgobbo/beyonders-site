@@ -28,8 +28,10 @@ export const en: IDictionary = {
     },
     contact: {
       title: "Contact us",
-      subtitle1: "Feel free to reach us out! We will be glad to know your ideas and to build your next project.",
-      subtitle2: "Or send us an email that we will return to you right away.",
+      subtitle1:
+        "Feel free to reach us out! We will be glad to know your ideas and to build your next project.",
+      subtitle2:
+        "Or fill the form below, that we will return to you right away.",
       namePlaceholder: "YOUR NAME",
       messagePlaceholder: "TELL US ABOUT YOUR NEEDS?",
       submitButtonLabel: "SEND EMAIL",
@@ -38,12 +40,14 @@ export const en: IDictionary = {
     services: {
       title: "OUR SERVICES",
       websiteTitle: "WEBSITES",
-      websiteText: "We build responsive, beautiful, and seo optimized websites.",
+      websiteText:
+        "We build responsive, beautiful, and seo optimized websites.",
       mobileAppsTitle: "MOBILE APPS",
       mobileAppsText:
         "Android and ios apps, developing with the best tools and frameworks to ensure the best user experience.",
       blockchainTitle: "BLOCKCHAIN",
-      blockchainText: "Ready to build the next dapp and introduce your business into web3",
+      blockchainText:
+        "Ready to build the next dapp and introduce your business into web3",
     },
     showcase: {
       testimonials: [
@@ -61,10 +65,12 @@ export const en: IDictionary = {
   team: {
     title: "Meet our ",
     titleGradient: "team",
-    subtitle: "Skilled developers. Years of experience. And one mission. Take you beyond.",
+    subtitle:
+      "Skilled developers. Years of experience. And one mission. Take you beyond.",
     head: {
       title: "Beyonders - Team",
-      description: "Meet our team | Skilled developers. Years of experience. And one mission. Take you beyond.",
+      description:
+        "Meet our team | Skilled developers. Years of experience. And one mission. Take you beyond.",
     },
     members: [
       {
@@ -89,5 +95,11 @@ export const en: IDictionary = {
         ],
       },
     ],
+  },
+  success: {
+    title: "Message Received!",
+    description:
+      "You have just taken your first step in turning your ideas into reality. Stay tuned as we will contact you as soon as possible with news!",
+    imgAlt: "Success!",
   },
 };

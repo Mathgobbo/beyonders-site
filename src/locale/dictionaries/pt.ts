@@ -42,7 +42,8 @@ export const pt: IDictionary = {
       title: "FALE COM A GENTE",
       subtitle1:
         "Nos contate através de nossos canais! Ficaremos gratos em receber suas ideias e dar início a seu próximo projeto.",
-      subtitle2: "Ou envie um email que responderemos o mais rápido possível.",
+      subtitle2:
+        "Ou preencha o formulário abaixo que responderemos o mais rápido possível.",
       submitButtonLabel: "ENVIAR EMAIL",
       namePlaceholder: "SEU NOME",
       messagePlaceholder:
@@ -95,5 +96,11 @@ export const pt: IDictionary = {
         ],
       },
     ],
+  },
+  success: {
+    title: "Mensagem Recebida!",
+    description:
+      "Você acaba de dar seu primeiro passo na transformação de suas ideias em realidade. Fique atento pois entraremos em contato o mais breve possível com novidades!",
+    imgAlt: "Sucesso!",
   },
 };

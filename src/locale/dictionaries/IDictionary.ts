@@ -67,4 +67,10 @@ export interface IDictionary {
       skillset: string[];
     }[];
   };
+
+  success: {
+    title: string;
+    description: string;
+    imgAlt: string;
+  };
 }

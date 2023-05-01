@@ -13,3 +13,33 @@ html {
 .main-gradient {
   @apply bg-gradient-to-r from-main-green to-secondary-green;
 }
+
+
+
+.crmWebToEntityForm {
+  @apply bg-transparent w-full flex flex-col 
+}
+
+.crmWebToEntityForm form .zcwf_row:nth-last-child(2){
+  @apply mt-7
+}
+
+.crmWebToEntityForm .zcwf_row {
+  @apply mb-2
+}
+
+.crmWebToEntityForm label {
+  @apply text-lg
+}
+
+.crmWebToEntityForm input  {
+  @apply rounded-md text-lg w-full p-2 py-3 text-black focus:outline-none
+}
+
+ .zcwf_button {
+  @apply cursor-pointer text-white !important
+ }
+
+.crmWebToEntityForm .formsubmit  {
+  @apply rounded-md text-lg w-full p-2 bg-gradient-to-r text-white from-secondary-green to-main-green/90 transform hover:translate-y-1 transition cursor-pointer 
+}
