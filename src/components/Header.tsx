@@ -11,109 +11,106 @@ export const Header = () => {
   const { header: dictionary } = useI18n();
   const [isMenuOpened, setMenuOpened] = useState(false);
   return (
-    <>
-      {" "}
-      <AnimatePresence>
-        <header
-          className={`bg-main-black border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 `}
-        >
-          <Link href={"/"}>
-            <Image
-              width={516}
-              height={90.5}
-              className="w-40 lg:w-56"
-              alt="Beyonders Logo"
-              src="/beyonders-logo-new.webp"
-            />
-          </Link>
+    <AnimatePresence>
+      <header
+        className={`bg-main-black border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 `}
+      >
+        <Link href={"/"}>
+          <Image
+            width={516}
+            height={90.5}
+            className="w-40 lg:w-56"
+            alt="Beyonders Logo"
+            src="/beyonders-logo-new.webp"
+          />
+        </Link>
 
-          <div className="hidden md:flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
-            <HeaderLink href={"/#showcase"} scroll={false}>
-              {dictionary.showcase}
-            </HeaderLink>
-            <HeaderLink href={"/#benefits"} scroll={false}>
-              {dictionary.benefits}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#services"}>
-              {dictionary.services}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#pricing"}>
-              {dictionary.pricing}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#faq"}>
-              {dictionary.faq}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#contact"}>
-              {dictionary.contact}
-            </HeaderLink>
-            <LocaleSwitcher />
-          </div>
+        <div className="hidden md:flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
+          <HeaderLink href={"/#showcase"} scroll={false}>
+            {dictionary.showcase}
+          </HeaderLink>
+          <HeaderLink href={"/#benefits"} scroll={false}>
+            {dictionary.benefits}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#services"}>
+            {dictionary.services}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#pricing"}>
+            {dictionary.pricing}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#faq"}>
+            {dictionary.faq}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#contact"}>
+            {dictionary.contact}
+          </HeaderLink>
+          {/* <LocaleSwitcher /> */}
+        </div>
 
-          <div className="flex justify-center items-center md:hidden">
-            <button
-              onClick={() => setMenuOpened((prev) => !prev)}
-              className="border rounded-md border-gray-500 p-1"
-            >
-              {!isMenuOpened && (
-                <m.div
-                  key={"animated-open-menu-button"}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <HiBars3 className="text-gray-300 h-5 w-5" />
-                </m.div>
-              )}
-              {isMenuOpened && (
-                <m.div
-                  key={"animated-close-menu-button"}
-                  initial={{ opacity: 0 }}
-                  animate={{ opacity: 1 }}
-                  exit={{ opacity: 0 }}
-                  transition={{ duration: 0.4 }}
-                >
-                  <HiXMark className="text-gray-300 h-5 w-5" />
-                </m.div>
-              )}
-            </button>
-          </div>
-        </header>
-
-        {isMenuOpened && (
-          <m.section
-            key={"animated-mobile-menu"}
-            initial={{ y: -300 }}
-            animate={{ y: 0 }}
-            exit={{ y: -300 }}
-            transition={{ duration: 0.4 }}
-            onClickCapture={() => setMenuOpened((prev) => !prev)}
-            className="z-40 p-4 pt-6 fixed top-14 w-full bg-main-black border-b border-gray-800 flex text-left flex-col"
+        <div className="flex justify-center items-center md:hidden">
+          <button
+            onClick={() => setMenuOpened((prev) => !prev)}
+            className="border rounded-md border-gray-500 p-1"
           >
-            {" "}
-            <HeaderLink href={"/#showcase"} scroll={false}>
-              {dictionary.showcase}
-            </HeaderLink>
-            <HeaderLink href={"/#benefits"} scroll={false}>
-              {dictionary.benefits}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#services"}>
-              {dictionary.services}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#pricing"}>
-              {dictionary.pricing}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#faq"}>
-              {dictionary.faq}
-            </HeaderLink>
-            <HeaderLink scroll={false} href={"/#contact"}>
-              {dictionary.contact}
-            </HeaderLink>
-            <LocaleSwitcher />
-          </m.section>
-        )}
-      </AnimatePresence>
-    </>
+            {!isMenuOpened && (
+              <m.div
+                key={"animated-open-menu-button"}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                <HiBars3 className="text-gray-300 h-5 w-5" />
+              </m.div>
+            )}
+            {isMenuOpened && (
+              <m.div
+                key={"animated-close-menu-button"}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+              >
+                <HiXMark className="text-gray-300 h-5 w-5" />
+              </m.div>
+            )}
+          </button>
+        </div>
+      </header>
+
+      {isMenuOpened && (
+        <m.section
+          key={"animated-mobile-menu"}
+          initial={{ y: -300 }}
+          animate={{ y: 0 }}
+          exit={{ y: -300 }}
+          transition={{ duration: 0.4 }}
+          onClickCapture={() => setMenuOpened((prev) => !prev)}
+          className="z-40 p-4 pt-6 fixed top-14 w-full bg-main-black border-b border-gray-800 flex text-left flex-col"
+        >
+          {" "}
+          <HeaderLink href={"/#showcase"} scroll={false}>
+            {dictionary.showcase}
+          </HeaderLink>
+          <HeaderLink href={"/#benefits"} scroll={false}>
+            {dictionary.benefits}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#services"}>
+            {dictionary.services}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#pricing"}>
+            {dictionary.pricing}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#faq"}>
+            {dictionary.faq}
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#contact"}>
+            {dictionary.contact}
+          </HeaderLink>
+          <LocaleSwitcher />
+        </m.section>
+      )}
+    </AnimatePresence>
   );
 };
 
@@ -129,7 +126,7 @@ const HeaderLink = ({
   return (
     <Link
       scroll={scroll}
-      className="font-poppins p-2 hover:bg-white/90 rounded-md md:hover:bg-transparent hover:text-main-black md:p-0 capitalize md:uppercase transition md:hover:text-white text-main-white/70"
+      className="font-poppins p-2  rounded-md lg:text-base md:hover:bg-transparent hover:border border-gray-600  md:p-0 tracking-wide capitalize md:uppercase transition md:hover:text-white text-main-white/80"
       href={href}
     >
       {children}
