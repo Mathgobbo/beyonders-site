@@ -8,6 +8,10 @@ export interface IDictionary {
     team: string;
     services: string;
     contact: string;
+    customers: string;
+    pricing: string;
+    faq: string;
+    benefits: string;
   };
   footer: {
     companyName: string;

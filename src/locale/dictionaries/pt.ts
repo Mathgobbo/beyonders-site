@@ -11,6 +11,10 @@ export const pt: IDictionary = {
     services: "Serviços",
     showcase: "Showcase",
     team: "Equipe",
+    benefits: "Benefícios",
+    customers: "Clientes",
+    faq: "FAQ",
+    pricing: "Preços",
   },
   footer: {
     companyName: "BEYONDERS - SOLUÇÕES DIGITAIS",
@@ -19,8 +23,8 @@ export const pt: IDictionary = {
   home: {
     hero: {
       subtitle: "Vá Além",
-      titleLine1: "Construimos Softwares",
-      titleGradientLine1: "Únicos",
+      titleLine1: "Construindo softwares",
+      titleGradientLine1: "únicos",
       titleLine2: "Para negócios",
       titleGradientLine2: "inovadores",
       text: "Somos a melhor escolha para seu próximo projeto",
