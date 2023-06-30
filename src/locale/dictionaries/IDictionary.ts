@@ -46,6 +46,7 @@ export interface IDictionary {
       mailSubject: string;
     };
     showcase: {
+      description: string;
       testimonials: {
         imgUrl: string;
         title: string;

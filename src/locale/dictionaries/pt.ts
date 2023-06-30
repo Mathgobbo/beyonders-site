@@ -55,6 +55,7 @@ export const pt: IDictionary = {
       mailSubject: "[APLICAÇÃO PARA NOVO PROJETO]",
     },
     showcase: {
+      description: "Temos a expertise para tirar sua ideia do papel",
       testimonials: [
         {
           author: "Marcelo da Silva",

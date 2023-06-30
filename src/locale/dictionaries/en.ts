@@ -54,6 +54,7 @@ export const en: IDictionary = {
         "Ready to build the next dapp and introduce your business into web3",
     },
     showcase: {
+      description: "We have the expertise to make your idea real",
       testimonials: [
         {
           author: "Marcelo da Silva",

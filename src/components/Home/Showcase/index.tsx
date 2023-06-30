@@ -1,9 +1,7 @@
 import { useI18n } from "@/hooks/useI18n";
-import { m } from "framer-motion";
 import Image from "next/image";
-import { GoStar } from "react-icons/go";
-import { showcaseData } from "./showcaseData";
 import Marquee from "react-fast-marquee";
+import { showcaseData } from "./showcaseData";
 
 export const Showcase = () => {
   const {
@@ -16,7 +14,7 @@ export const Showcase = () => {
           Showcase
         </h2>
         <p className="text-gray-secondary/80 text-sm font-light">
-          We have the expertise to make your idea real
+          {showcase.description}
         </p>
       </div>
       <Marquee>
