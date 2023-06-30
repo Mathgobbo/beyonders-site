@@ -13,6 +13,8 @@ module.exports = {
         "main-green": "#27FB6B",
         "secondary-green": "#329F5B",
         "main-white": "#fff",
+        "gray-primary": "#E1E1E1",
+        "gray-secondary": "#ECECEC",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],

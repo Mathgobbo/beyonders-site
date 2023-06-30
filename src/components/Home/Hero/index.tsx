@@ -13,14 +13,14 @@ export const Hero = ({
   };
 }) => {
   return (
-    <section className="relative flex items-center md:items-end justify-center w-full h-[80vh] md:h-[75vh]">
+    <section className="relative flex items-end justify-center w-full h-[70vh] sm:items-center lg:items-end md:h-[75vh]">
       <div className="z-[1] px-4 text-center text-main-white">
         <m.h3
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="font-bold text-transparent font-poppins mb-3 md:text-xl lg:text-3xl main-gradient bg-clip-text uppercase"
+          className="font-bold text-transparent font-poppins mb-3 text-lg md:text-xl lg:text-3xl main-gradient bg-clip-text uppercase"
         >
           {dictionary.subtitle}
         </m.h3>
@@ -29,7 +29,7 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-normal font-poppins tracking-wider leading-10 md:text-4xl lg:text-5xl lg:leading-snug "
+          className="text-4xl font-normal font-poppins tracking-wider leading-10 md:text-4xl lg:text-5xl lg:leading-snug "
         >
           {dictionary.titleLine1}{" "}
           <span className="text-transparent main-gradient bg-clip-text">
@@ -65,7 +65,7 @@ export const Hero = ({
         </m.div>
 
         <div className="flex justify-center">
-          <div className="w-1 rounded-full  h-16 mt-12 bg-gradient-to-b from-secondary-green to-main-green"></div>
+          <div className="w-[2px] rounded-full h-10 md:h-16 mt-12 bg-gradient-to-b from-secondary-green to-main-green"></div>
         </div>
       </div>
       {/* <Waves /> */}
