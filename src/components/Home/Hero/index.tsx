@@ -1,3 +1,4 @@
+import { Button } from "@/components/common/Button";
 import { m } from "framer-motion";
 export const Hero = ({
   dictionary,
@@ -58,9 +59,7 @@ export const Hero = ({
           className="pt-2 mt-8"
         >
           <a href="#contact">
-            <button className="px-6 py-3 shadow-md text-sm sm:text-base  font-semibold rounded-md bg-gradient-to-r from-secondary-green to-main-green/80 hover:bg-main-green/80  hover:cursor-pointer">
-              {dictionary.buttonLabel}
-            </button>
+            <Button>{dictionary.buttonLabel}</Button>
           </a>
         </m.div>
 

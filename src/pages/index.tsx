@@ -1,4 +1,5 @@
 import { Contact } from "@/components/Home/Contact";
+import { Differentials } from "@/components/Home/Differentials";
 import { Hero } from "@/components/Home/Hero";
 import { Services } from "@/components/Home/Services";
 import { Showcase } from "@/components/Home/Showcase";
@@ -10,6 +11,7 @@ export default function Home() {
     <>
       <Hero dictionary={dictionary.home.hero} />
       <Showcase />
+      <Differentials />
       <Services />
       <Contact />
     </>
