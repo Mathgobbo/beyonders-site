@@ -1,4 +1,5 @@
 import { Contact } from "@/components/Home/Contact";
+import { DevelopmentProcess } from "@/components/Home/DevelopmentProcess";
 import { Differentials } from "@/components/Home/Differentials";
 import { Hero } from "@/components/Home/Hero";
 import { Services } from "@/components/Home/Services";
@@ -13,6 +14,7 @@ export default function Home() {
       <Showcase />
       <Differentials />
       <Services />
+      <DevelopmentProcess />
       <Contact />
     </>
   );

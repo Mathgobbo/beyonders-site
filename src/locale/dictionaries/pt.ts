@@ -69,6 +69,25 @@ export const pt: IDictionary = {
         },
       ],
     },
+    developmentProcess: {
+      title: "Processo de desenvolvimento",
+      description:
+        "Descubra como nós iremos contruir seu próximo projeto do zero.",
+      steps: [
+        {
+          iconUrl: "/home/processes/discovery.svg",
+          title: "Discovery",
+          subtitle: "The initial recognition",
+          text: "The first step is where we are going to meet each other. We will identify your projects needs, your problems, ideas, visions and what you really want to build! We are going to create a study based on your answers and on our thoughts. And with all these docs, we can go ahead for the next step! ",
+        },
+        {
+          iconUrl: "/home/processes/kickoff.svg",
+          title: "Kickoff",
+          subtitle: "The initial recognition",
+          text: "The first step is where we are going to meet each other. We will identify your projects needs, your problems, ideas, visions and what you really want to build! We are going to create a study based on your answers and on our thoughts. And with all these docs, we can go ahead for the next step! ",
+        },
+      ],
+    },
   },
   team: {
     title: "Conheça nossa ",

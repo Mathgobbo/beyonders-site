@@ -56,6 +56,16 @@ export interface IDictionary {
         occupation: string;
       }[];
     };
+    developmentProcess: {
+      title: string;
+      description: string;
+      steps: {
+        iconUrl: string;
+        title: string;
+        subtitle: string;
+        text: string;
+      }[];
+    };
   };
   team: {
     title: string;

@@ -1,12 +1,17 @@
 import { HTMLAttributes } from "react";
 
-export const SectionTitle = (props: HTMLAttributes<HTMLHeadingElement>) => {
+interface Props extends HTMLAttributes<HTMLHeadingElement> {
+  additionalClassName?: string;
+}
+
+export const SectionTitle = (props: Props) => {
+  const { additionalClassName, ...rest } = props;
   return (
     <h2
-      {...props}
-      className="text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary"
+      {...rest}
+      className={`text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary ${additionalClassName}`}
     >
-      {props.children}
+      {rest.children}
     </h2>
   );
 };
