@@ -10,7 +10,7 @@ export const Showcase = () => {
   return (
     <section
       id="showcase"
-      className="relative font-inter  py-12 lg:py-28 space-y-6"
+      className="relative font-inter  py-12 lg:pt-28 space-y-6"
     >
       <div className="px-4 md:mb-8 lg:px-36">
         <h2 className="text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary">

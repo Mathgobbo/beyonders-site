@@ -42,16 +42,18 @@ export const en: IDictionary = {
       mailSubject: "[NEW PROJECT APPLICATION]",
     },
     services: {
-      title: "OUR SERVICES",
-      websiteTitle: "WEBSITES",
+      title: "Services",
+      description:
+        "Take a look at our services and discover what we can help you with.",
+      websiteTitle: "Websites",
       websiteText:
-        "We build responsive, beautiful, and seo optimized websites.",
-      mobileAppsTitle: "MOBILE APPS",
+        "We create powerful web applications tailored to your business needs, with intuitive interfaces, seamless user experiences, and robust functionality.",
+      mobileAppsTitle: "Mobile Apps",
       mobileAppsText:
-        "Android and ios apps, developing with the best tools and frameworks to ensure the best user experience.",
-      blockchainTitle: "BLOCKCHAIN",
+        "Our team builds captivating mobile apps for iOS and Android, delivering feature-rich experiences that engage your target audience and stand out in the app market.",
+      blockchainTitle: "Blockchain",
       blockchainText:
-        "Ready to build the next dapp and introduce your business into web3",
+        "Explore the potential of blockchain with our expertise in developing secure, transparent, and efficient applications that redefine trust and optimize processes. Embrace decentralized networks and transform your industry.",
     },
     showcase: {
       description: "We have the expertise to make your idea real",

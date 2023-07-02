@@ -31,14 +31,16 @@ export const pt: IDictionary = {
       buttonLabel: "Fale com a gente",
     },
     services: {
-      title: "NOSSOS SERVIÇOS",
-      websiteTitle: "WEBSITES",
+      title: "Nossos serviços",
+      description:
+        "De uma olhada em nossos serviços e descubra em como podemos te ajudar.",
+      websiteTitle: "Websites",
       websiteText:
         "Construímos sites bonitos, responsivos e otimizados para performance e SEO.",
-      mobileAppsTitle: "APLICATIVOS MOBILE",
+      mobileAppsTitle: "Aplicativos",
       mobileAppsText:
         "Aplicativos para Android e IOS, desenvolvidos com as melhores ferramentas para garantir a melhor experiência de usuário.",
-      blockchainTitle: "BLOCKCHAIN",
+      blockchainTitle: "Blockchain",
       blockchainText:
         "Estamos preparados para construir seu próximo DAPP e introduzir seu negócio à WEB3.",
     },

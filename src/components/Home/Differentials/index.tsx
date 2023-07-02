@@ -6,7 +6,7 @@ export const Differentials = () => {
   return (
     <section
       id="benefits"
-      className="px-4 lg:px-36 relative font-inter py-12 lg:py-28"
+      className="px-4 lg:px-36 relative font-inter pt-20 lg:pt-52"
     >
       <div>
         <h2 className="text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary">
@@ -50,7 +50,7 @@ export const Differentials = () => {
         />
       </div>
       <div className="flex items-center justify-center mt-12 md:mt-16">
-        <Link href="/#pricing">
+        <Link href="/#pricing" className="w-full md:w-auto">
           {" "}
           <Button additionalClassName="w-full md:w-auto text-sm md:text-sm md:px-32 lg:px-40">
             See plans

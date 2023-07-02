@@ -29,6 +29,7 @@ export interface IDictionary {
     };
     services: {
       title: string;
+      description: string;
       websiteTitle: string;
       websiteText: string;
       mobileAppsTitle: string;
