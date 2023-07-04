@@ -153,6 +153,56 @@ export const en: IDictionary = {
         },
       ],
     },
+    faq: {
+      title: "FAQ",
+      description:
+        "Still not sure about how can we help you achieve your goals?",
+      questions: [
+        {
+          title: "Why Subscriptions?",
+          answer: [
+            "Software is something that you are always improving. There will always be more things to do as you release and start getting noticed. You may add a new core or side feature, change something in design, or simply try something new to see how your users react.",
+            "That’s why we decided to make different. We want to offer you the possibility to make unlimited requests and create as many projects as you want. And to make our subscriptions even better, giving you the desired freedom, you can cancel it at anytime.",
+          ],
+        },
+        {
+          title:
+            "Why wouldn't I just hire a full-time Developer or other software agency?",
+          answer: [
+            "Good question! For starters, the annual cost of a full-time senior-level designer now exceeds $80.000, plus benefits (and good luck finding one available). Aside from that, you may not always have enough work to keep them busy at all times, so you're stuck paying for time you aren't able to utilize.",
+            "With us, you can stop the subscription any time, make unlimited request, and build as many projects as you want.",
+          ],
+        },
+        {
+          title:
+            "Why I don’t just use a Website Builder like Webflow, Wix or Shopify?",
+          answer: [
+            "Well, because hiring a service like ours offers much more advantages than these DIY website builders. We provide fully customized websites that reflect your unique brand identity, allowing you to stand out in the market. Our expertise ensures scalability, optimized performance, and tailored functionalities that align with your specific business needs. With dedicated technical support and ongoing maintenance, you will also have a long-term partnership focused on your success. And to get all these benefits using a tool like these, you certainly would have to hire an expensive professional or spend hours studying and understanding these tools.",
+          ],
+        },
+        {
+          title: "How does the project estimates and deliverables work?",
+          answer: [
+            "As part of our development process, we will analyze each request and let you know as soon as possible about the estimates, release dates and new updates. And of course, we are always  going to communicate with you to make sure our visions and estimates are aligned.",
+          ],
+        },
+        {
+          title: "What tools do you use?",
+          answer: [
+            "To build your projects, we are always up to date with the best tools in the market.",
+            "Currently our team is working with React, NextJS, Flutter, Solidity, Firebase, Supabase, AWS, and many other libraries to make your projects stand out.",
+          ],
+        },
+        {
+          title: "Why Beyonders?",
+          answer: [
+            "Who wouldn’t like to go beyond?",
+            "Our mission is to deliver the best products, websites, apps, and services that you can find in the market. We always had the vision that each new customer is an opportunity to build something amazing and to improve our processes and results.",
+            "In short, our mission is to make you GO BEYOND!",
+          ],
+        },
+      ],
+    },
   },
   team: {
     title: "Meet our ",

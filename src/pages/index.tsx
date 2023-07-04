@@ -1,6 +1,7 @@
 import { Contact } from "@/components/Home/Contact";
 import { DevelopmentProcess } from "@/components/Home/DevelopmentProcess";
 import { Differentials } from "@/components/Home/Differentials";
+import { Faq } from "@/components/Home/Faq";
 import { Hero } from "@/components/Home/Hero";
 import { Pricing } from "@/components/Home/Pricing";
 import { Services } from "@/components/Home/Services";
@@ -17,6 +18,7 @@ export default function Home() {
       <Services />
       <DevelopmentProcess />
       <Pricing />
+      <Faq />
       <Contact />
     </>
   );

@@ -78,6 +78,11 @@ export interface IDictionary {
         labels: string[];
       }[];
     };
+    faq: {
+      title: string;
+      description: string;
+      questions: { title: string; answer: string[] }[];
+    };
   };
   team: {
     title: string;
