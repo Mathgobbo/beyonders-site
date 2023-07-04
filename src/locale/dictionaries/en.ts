@@ -81,8 +81,26 @@ export const en: IDictionary = {
         {
           iconUrl: "/home/processes/kickoff.svg",
           title: "Kickoff",
-          subtitle: "The initial recognition",
-          text: "The first step is where we are going to meet each other. We will identify your projects needs, your problems, ideas, visions and what you really want to build! We are going to create a study based on your answers and on our thoughts. And with all these docs, we can go ahead for the next step! ",
+          subtitle: "Initiating development efforts",
+          text: "The kickoff phase marks the formal start of the software development process. It involves bringing together the development team, stakeholders, and other relevant parties to discuss the project's objectives, deliverables, timelines, and resources! Here we will ensure everyone is aligned and ready to begin development!",
+        },
+        {
+          iconUrl: "/home/processes/development.svg",
+          title: "Development",
+          subtitle: "Creating the solution",
+          text: "Here is where the actual coding and implementation of the software take place. The development team follows the requirements gathered during the discovery phase to design, build, and test the software. This phase may involve various iterations and feedback loops to refine the solution and ensure it meets the desired functionality and quality standards.",
+        },
+        {
+          iconUrl: "/home/processes/rocket.svg",
+          title: "Release",
+          subtitle: "Lançando o sistema",
+          text: "A fase de lançamento se concentra na preparação do software para seu lançamento. Isso envolve testes, correção de bugs e a implantação do código. O processo de lançamento também pode envolver a criação de documentação, configuração de ambientes de implantação e coordenação entre a equipe para garantir uma implantação tranquila e bem-sucedida.",
+        },
+        {
+          iconUrl: "/home/processes/gear.svg",
+          title: "Maintenance",
+          subtitle: "Garantindo uma melhora contínua",
+          text: "Aqui temos um processo que envolve o suporte a e melhoria da solução após seu lançamento. Incluindo atividades como monitoramento de desempenho, resolução de bugs, aplicação de atualizações e implementação de novos recursos. Nosso objetivo é garantir a estabilidade, confiabilidade e usabilidade de longo prazo do software em todo o seu ciclo de vida!",
         },
       ],
     },
