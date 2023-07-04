@@ -104,6 +104,55 @@ export const en: IDictionary = {
         },
       ],
     },
+    pricing: {
+      title: "Pricing",
+      description:
+        "We have a custom pricing system that leverages your time and scaling",
+      cards: [
+        {
+          title: "Monthly",
+          description: "We will build whatever you want",
+          price: "$4,999/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+        {
+          title: "Semiyearly",
+          description: "We will build whatever you want",
+          price: "$4,499/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+        {
+          title: "Yearly",
+          description: "We will build whatever you want",
+          price: "$3,999/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+      ],
+    },
   },
   team: {
     title: "Meet our ",

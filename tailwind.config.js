@@ -16,6 +16,7 @@ module.exports = {
         "gray-primary": "#E1E1E1",
         "gray-secondary": "#ECECEC",
         "black-secondary": "#181818",
+        "black-tertiary": "#2B2B2B",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],

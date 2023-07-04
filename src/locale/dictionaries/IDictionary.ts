@@ -66,6 +66,18 @@ export interface IDictionary {
         text: string;
       }[];
     };
+    pricing: {
+      title: string;
+      description: string;
+      cards: {
+        title: string;
+        description: string;
+        price: string;
+        buttonLabel: string;
+        includes: string;
+        labels: string[];
+      }[];
+    };
   };
   team: {
     title: string;

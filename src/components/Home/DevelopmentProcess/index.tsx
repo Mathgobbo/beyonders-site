@@ -32,10 +32,10 @@ export const DevelopmentProcess = () => {
             <button
               key={`${dp.title}-button`}
               onClick={() => setCurrentStep(index)}
-              className={`transition p-4 lg:p-5 rounded-md flex items-center gap-8  ${
+              className={`transition p-4 lg:p-5 rounded-md flex items-center gap-8 hover  ${
                 currentStep === index
                   ? "bg-secondary-green/20"
-                  : "bg-transparent"
+                  : "bg-transparent hover:bg-black/10"
               }`}
             >
               <Image
