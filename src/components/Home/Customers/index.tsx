@@ -106,9 +106,12 @@ export const Customers = () => {
         <div className="flex items-center gap-6 mt-12">
           {customers.map((customer, index) =>
             currentStep === index ? (
-              <ActiveStepMark />
+              <ActiveStepMark key={customer.name} />
             ) : (
-              <StepMark handleStepClick={() => handleStepClick(index)} />
+              <StepMark
+                key={customer.name}
+                handleStepClick={() => handleStepClick(index)}
+              />
             )
           )}
         </div>
