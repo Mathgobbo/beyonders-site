@@ -1,4 +1,6 @@
 import { Button } from "@/components/common/Button";
+import { SectionDescription } from "@/components/common/SectionDescription";
+import { SectionTitle } from "@/components/common/SectionTitle";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -9,15 +11,16 @@ export const Differentials = () => {
       className="px-4 lg:px-36 relative font-inter pt-20 lg:pt-52"
     >
       <div>
-        <h2 className="text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary">
+        <SectionTitle additionalClassName="capitalize">
           A Different Software Agency
-        </h2>
-        <p className="text-gray-secondary/80 text-sm font-light">
+        </SectionTitle>
+        <SectionDescription>
+          {" "}
           Unlike the common software houses, we work differently.
-        </p>
+        </SectionDescription>
       </div>
 
-      <div className="grid grid-cols-1 mt-8 md:mt-12 md:grid-cols-2 gap-8 md:gap-10 lg:grid-cols-3">
+      <div className="grid grid-cols-1 mt-8 md:mt-12 md:grid-cols-2 gap-8 md:gap-28 lg:grid-cols-3">
         <Item
           imrUrl="/home/differentials/badge.svg"
           title="Membership system"
@@ -77,8 +80,8 @@ const Item = ({ description, imrUrl, title }: ItemProps) => {
         height={84}
         className="w-20 h-20 md:w-20 md:h-20"
       />
-      <h3 className="font-poppins text-lg text-gray-primary/60">{title}</h3>
-      <p className="text-xs lg:text-sm text-gray-secondary/80 w-3/4">
+      <h3 className="font-poppins text-lg text-gray-primary/80">{title}</h3>
+      <p className="text-xs font-light lg:text-sm text-gray-secondary/60 w-3/4">
         {description}
       </p>
     </div>

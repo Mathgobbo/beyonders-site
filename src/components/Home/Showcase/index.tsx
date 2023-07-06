@@ -2,6 +2,8 @@ import { useI18n } from "@/hooks/useI18n";
 import Image from "next/image";
 import Marquee from "react-fast-marquee";
 import { showcaseData } from "./showcaseData";
+import { SectionTitle } from "@/components/common/SectionTitle";
+import { SectionDescription } from "@/components/common/SectionDescription";
 
 export const Showcase = () => {
   const {
@@ -13,12 +15,8 @@ export const Showcase = () => {
       className="relative font-inter  py-12 lg:pt-28 space-y-6"
     >
       <div className="px-4 md:mb-8 lg:px-36">
-        <h2 className="text-xl md:text-2xl font-normal font-inter tracking-wider text-gray-primary">
-          Showcase
-        </h2>
-        <p className="text-gray-secondary/80 text-sm font-light">
-          {showcase.description}
-        </p>
+        <SectionTitle additionalClassName="capitalize">Showcase</SectionTitle>
+        <SectionDescription>{showcase.description}</SectionDescription>
       </div>
       <Marquee>
         {showcaseData.map((showcase, index) => {
