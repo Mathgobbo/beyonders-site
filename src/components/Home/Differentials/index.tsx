@@ -53,7 +53,7 @@ export const Differentials = () => {
         />
       </div>
       <div className="flex items-center justify-center mt-12 md:mt-16">
-        <Link href="/#pricing" className="w-full md:w-auto">
+        <Link href="/#pricing" scroll={false} className="w-full md:w-auto">
           {" "}
           <Button additionalClassName="w-full md:w-auto text-sm md:text-sm md:px-32 lg:px-40">
             See plans

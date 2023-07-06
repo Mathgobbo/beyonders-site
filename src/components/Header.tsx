@@ -19,7 +19,7 @@ export const Header = () => {
           <Image
             width={516}
             height={90.5}
-            className="w-40 lg:w-56"
+            className="w-40 lg:w-56 py-2"
             alt="Beyonders Logo"
             src="/beyonders-logo-new.webp"
           />
@@ -86,7 +86,7 @@ export const Header = () => {
           exit={{ y: -300 }}
           transition={{ duration: 0.4 }}
           onClickCapture={() => setMenuOpened((prev) => !prev)}
-          className="z-40 p-4 pt-6 fixed top-14 w-full bg-main-black border-b border-gray-800 flex text-left flex-col"
+          className="z-40 p-4 pt-6 fixed top-16 w-full bg-main-black/90 border-b border-gray-800 flex text-left flex-col"
         >
           {" "}
           <HeaderLink href={"/#showcase"} scroll={false}>
