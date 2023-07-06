@@ -34,8 +34,7 @@ export const en: IDictionary = {
       title: "Contact us",
       subtitle1:
         "Feel free to reach us out! We will be glad to know your ideas and to build your next project.",
-      subtitle2:
-        "Or fill the form below, that we will return to you right away.",
+      subtitle2: "Turn your ideas into reality now",
       namePlaceholder: "YOUR NAME",
       messagePlaceholder: "TELL US ABOUT YOUR NEEDS?",
       submitButtonLabel: "SEND EMAIL",

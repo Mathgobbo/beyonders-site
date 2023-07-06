@@ -1,13 +1,16 @@
-import { ReactNode } from "react";
+import { HTMLAttributes, ReactNode } from "react";
 
-interface Props {
-  children: ReactNode;
+interface Props extends HTMLAttributes<HTMLDivElement> {
+  additionalClassName?: string;
 }
 
-export const Section = ({ children }: Props) => {
+export const Section = (props: Props) => {
   return (
-    <section className="px-4 py-10 lg:px-36 font-inter mt-24 lg:mt-52">
-      {children}
+    <section
+      className="px-4 py-10 lg:px-36 font-inter mt-24 lg:mt-52"
+      {...props}
+    >
+      {props.children}
     </section>
   );
 };
