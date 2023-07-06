@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <AnimatePresence>
       <header
-        className={`bg-main-black border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 `}
+        className={`bg-main-black/80 border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 `}
       >
         <Link href={"/"}>
           <Image
