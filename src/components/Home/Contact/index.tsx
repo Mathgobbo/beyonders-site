@@ -3,6 +3,7 @@ import { Section } from "@/components/common/Section";
 import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { useI18n } from "@/hooks/useI18n";
+import Image from "next/image";
 import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
 import { MdOutlineMail } from "react-icons/md";
 export const Contact = () => {
@@ -12,6 +13,14 @@ export const Contact = () => {
 
   return (
     <Section id="contact">
+      {" "}
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={360}
+        height={360}
+        className="absolute top-0 z-[1] -right-40"
+      />
       <SectionTitle>{contact.title}</SectionTitle>
       <SectionDescription>{contact.subtitle1}</SectionDescription>
       <div className="flex my-2 space-x-4 mt-8">
@@ -29,8 +38,8 @@ export const Contact = () => {
           Logo={MdOutlineMail}
         />
       </div>
-      <section className="mt-20">
-        <p className="text-xl font-bold mb-4 font-inter text-gray-primary tracking-widest">
+      <section className="mt-20 ">
+        <p className="text-xl z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
           {contact.subtitle2}
         </p>
         <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold">
@@ -51,7 +60,7 @@ const IconLink = ({ Logo, url }: IIConLinkProps) => {
       href={url}
       target="_blank"
       rel="noreferrer"
-      className="p-4 transition main-gradient rounded-full text-main-white hover:bg-main-green"
+      className="p-4 transition main-gradient rounded-full text-main-white hover:bg-main-green z-10"
     >
       <Logo className="w-8 h-8 fill-current" />
     </a>

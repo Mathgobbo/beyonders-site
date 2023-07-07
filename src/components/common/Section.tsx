@@ -7,7 +7,7 @@ interface Props extends HTMLAttributes<HTMLDivElement> {
 export const Section = (props: Props) => {
   return (
     <section
-      className="px-4 py-10 lg:px-36 font-inter mt-24 lg:mt-52"
+      className="px-4 py-10 lg:px-36 font-inter mt-24 lg:mt-52 relative overflow-x-hidden"
       {...props}
     >
       {props.children}

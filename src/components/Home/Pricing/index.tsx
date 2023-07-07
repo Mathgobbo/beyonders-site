@@ -2,6 +2,7 @@ import { Button } from "@/components/common/Button";
 import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { useI18n } from "@/hooks/useI18n";
+import Image from "next/image";
 
 export const Pricing = () => {
   const {
@@ -11,8 +12,16 @@ export const Pricing = () => {
   return (
     <section
       id="pricing"
-      className="px-4 py-10 lg:px-36 font-inter pt-24 lg:pt-52"
+      className="px-4 py-10 relative overflow-x-hidden lg:px-36 font-inter pt-24 lg:pt-52"
     >
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={500}
+        height={500}
+        className="absolute top-10 -right-40"
+      />
+
       <SectionTitle>{pricing.title}</SectionTitle>
       <SectionDescription>{pricing.description}</SectionDescription>
 
@@ -35,7 +44,7 @@ type PricingCardProps = {
 };
 const PricingCard = (props: PricingCardProps) => {
   return (
-    <div className="text-white font-poppins main-gradient tracking-widest rounded-md p-[2px]">
+    <div className="text-white font-poppins main-gradient tracking-widest rounded-md p-[2px] z-10">
       <div className="bg-black-secondary rounded-md p-6 lg:p-8">
         <h2 className="text-2xl tracking-[0.16em] font-semibold text-gray-primary">
           {props.title}

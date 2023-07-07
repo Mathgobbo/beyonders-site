@@ -11,8 +11,16 @@ export const Services = () => {
   return (
     <section
       id="services"
-      className="px-4 py-10 lg:px-36 font-inter pt-24 lg:pt-52"
+      className="px-4 py-10 overflow-x-hidden lg:px-36 relative font-inter pt-24 lg:pt-52"
     >
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={500}
+        height={500}
+        className="absolute top-1/3 -right-40"
+      />
+
       <div>
         <SectionTitle>{services.title}</SectionTitle>
         <SectionDescription>{services.description}</SectionDescription>

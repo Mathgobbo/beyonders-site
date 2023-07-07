@@ -1,16 +1,27 @@
 import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { useI18n } from "@/hooks/useI18n";
+import { AnimatePresence, m } from "framer-motion";
+import Image from "next/image";
 import { useState } from "react";
-import { m, AnimatePresence } from "framer-motion";
-import { FaArrowDown, FaChevronDown } from "react-icons/fa";
+import { FaChevronDown } from "react-icons/fa";
 
 export const Faq = () => {
   const {
     home: { faq },
   } = useI18n();
   return (
-    <section id="faq" className="px-4 py-10 lg:px-36 font-inter pt-24 lg:pt-52">
+    <section
+      id="faq"
+      className="px-4 py-10 lg:px-36 relative overflow-x-hidden font-inter pt-24 lg:pt-52"
+    >
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={500}
+        height={500}
+        className="absolute -top-0 -left-40"
+      />
       <SectionTitle>{faq.title}</SectionTitle>
       <SectionDescription>{faq.description}</SectionDescription>
 
@@ -33,10 +44,10 @@ const FaqQuestion = ({
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <div className="pt-6">
+      <div className="pt-6 relative">
         <div
           key={`question-${title}`}
-          className="flex justify-between items-center text-gray-secondary cursor-pointer  text-base"
+          className="flex justify-between z-10 items-center text-gray-secondary cursor-pointer  text-base"
           onClick={() => setIsOpen(!isOpen)}
         >
           <p className="font-semibold w-11/12">{title}</p>

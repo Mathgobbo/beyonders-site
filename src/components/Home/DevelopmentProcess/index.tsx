@@ -15,8 +15,16 @@ export const DevelopmentProcess = () => {
   return (
     <section
       id="services"
-      className="px-4 py-10 lg:px-36 font-inter pt-24 lg:pt-52"
+      className="px-4 py-10 lg:px-36 font-inter pt-24 relative lg:pt-52"
     >
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={500}
+        height={500}
+        className="absolute top-10 -left-40"
+      />
+
       <div>
         <SectionTitle additionalClassName="capitalize">
           {developmentProcess.title}
@@ -27,7 +35,7 @@ export const DevelopmentProcess = () => {
       </div>
 
       <div className="mt-12 flex flex-col lg:flex-row-reverse gap-6">
-        <div className="bg-black-secondary p-4 border rounded-md border-gray-secondary/20 flex justify-between lg:flex-col lg:w-1/3">
+        <div className="bg-black-secondary z-10 p-4 border rounded-md border-gray-secondary/20 flex justify-between lg:flex-col lg:w-1/3">
           {developmentProcess.steps.map((dp, index) => (
             <button
               key={`${dp.title}-button`}
@@ -62,7 +70,7 @@ export const DevelopmentProcess = () => {
           ))}
         </div>
 
-        <section className="p-6 lg:p-10 xl:p-12 lg:min-h-[420px] xl:h-auto overflow-hidden bg-black-secondary flex flex-col justify-between border rounded-md border-gray-secondary/20 lg:w-2/3">
+        <section className="p-6 lg:p-10 xl:p-12 lg:min-h-[420px] xl:h-auto overflow-hidden z-10 bg-black-secondary flex flex-col justify-between border rounded-md border-gray-secondary/20 lg:w-2/3">
           <AnimatePresence mode="wait">
             {developmentProcess.steps.map(
               (dp, index) =>
