@@ -1,5 +1,3 @@
-import { GrayMatterFile } from "gray-matter";
-
 export interface IPostMetadata {
   title: string;
   author: string;
