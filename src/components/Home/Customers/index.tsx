@@ -3,30 +3,30 @@ import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
 import { MouseEventHandler, useEffect, useState } from "react";
 import { AnimatePresence, m } from "framer-motion";
+import Image from "next/image";
 
 const customers = [
   {
-    quote: `Meu objetivo era criar algo diferente do que via no mercado. E a
-        Beyonders, desde o primeiro contato me deu todo o suporte e
-        contribuiu para o sucesso de meu projeto.`,
+    quote: `My goal was to create something different from what I saw on the market. And the
+    Beyonders, from the first contact, gave me all the support and
+    contributed to the success of my project.`,
     name: "Marcelo da Silva",
-    role: "Professor e palestrante",
-    picture:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cGVyc29ufGVufDB8fDB8fHww&w=1000&q=80",
+    role: "Teacher and Speaker",
+    picture: "/home/showcase/testimonials/teacher-marcelo.webp",
   },
-  {
-    quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
-    name: "Jackson Jones",
-    role: "Influencer",
-    picture:
-      "https://www.incimages.com/uploaded_files/image/1024x576/getty_481292845_77896.jpg",
-  },
-  {
-    quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
-    name: "Jackson Jones",
-    role: "Influencer",
-    picture: "https://engineering.unl.edu/images/staff/Kayla-Person.jpg",
-  },
+  // {
+  //   quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
+  //   name: "Jackson Jones",
+  //   role: "Influencer",
+  //   picture:
+  //     "https://www.incimages.com/uploaded_files/image/1024x576/getty_481292845_77896.jpg",
+  // },
+  // {
+  //   quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
+  //   name: "Jackson Jones",
+  //   role: "Influencer",
+  //   picture: "https://engineering.unl.edu/images/staff/Kayla-Person.jpg",
+  // },
 ];
 
 export const Customers = () => {
@@ -52,9 +52,9 @@ export const Customers = () => {
   return (
     <Section>
       <div>
-        <SectionTitle additionalClassName="capitalize">Clientes</SectionTitle>
+        <SectionTitle additionalClassName="capitalize">Customers</SectionTitle>
         <SectionDescription>
-          Veja o que nossos clientes estão falando
+          See what our customers are saying
         </SectionDescription>
       </div>
 
@@ -73,27 +73,31 @@ export const Customers = () => {
                   className="flex flex-col md:flex-row items-center justify-center gap-10 md:gap-16"
                 >
                   <div className="w-52 h-52 md:w-60 md:h-60 bg-gradient-to-r from-secondary-green to-main-green/80 rounded-full p-1">
-                    <img
+                    <Image
                       alt="customer-picture"
                       src={customer.picture}
+                      width={500}
+                      height={600}
                       className="w-full h-full rounded-full object-cover"
                     />
                   </div>
 
                   <div>
-                    <img
+                    <Image
                       alt="quotation-marks"
-                      src="quotation-mark.png"
+                      src="/quotation-mark.svg"
+                      width={40}
+                      height={40}
                       className="w-10 md:w-14 mb-7"
                     />
                     <p className="max-w-xl text-gray-secondary/80 font-light italic text-base md:text-lg">
                       {customer.quote}
                     </p>
                     <div>
-                      <h2 className="main-gradient bg-clip-text text-transparent font-bold text-lg md:text-xl mt-5">
+                      <h2 className="main-gradient bg-clip-text tracking-wider text-transparent font-extrabold text-lg md:text-xl mt-5">
                         {customer.name}
                       </h2>
-                      <span className="text-gray-secondary/80 font-light text-sm">
+                      <span className="text-gray-secondary/80 tracking-widest font-medium text-sm">
                         {customer.role}
                       </span>
                     </div>

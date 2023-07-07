@@ -2,6 +2,7 @@ import { Button } from "@/components/common/Button";
 import { Section } from "@/components/common/Section";
 import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { PIPEFY_FORM_URL } from "@/config/constants";
 import { useI18n } from "@/hooks/useI18n";
 import Image from "next/image";
 import { FaInstagram, FaLinkedinIn, FaWhatsapp } from "react-icons/fa";
@@ -42,9 +43,11 @@ export const Contact = () => {
         <p className="text-xl z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
           {contact.subtitle2}
         </p>
-        <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold">
-          Get Started
-        </Button>
+        <a href={PIPEFY_FORM_URL} target="_blank" rel="noreferrer">
+          <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold">
+            Get Started
+          </Button>
+        </a>
       </section>
     </Section>
   );

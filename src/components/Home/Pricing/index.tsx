@@ -1,6 +1,7 @@
 import { Button } from "@/components/common/Button";
 import { SectionDescription } from "@/components/common/SectionDescription";
 import { SectionTitle } from "@/components/common/SectionTitle";
+import { PIPEFY_FORM_URL } from "@/config/constants";
 import { useI18n } from "@/hooks/useI18n";
 import Image from "next/image";
 
@@ -57,9 +58,11 @@ const PricingCard = (props: PricingCardProps) => {
         <h3 className="text-white font-semibold text-3xl my-6">
           {props.price}
         </h3>
-        <Button additionalClassName="font-semibold w-full font-poppins">
-          {props.buttonLabel}
-        </Button>
+        <a href={PIPEFY_FORM_URL} target="_blank" rel="noreferrer">
+          <Button additionalClassName="font-semibold w-full font-poppins">
+            {props.buttonLabel}
+          </Button>
+        </a>
 
         <div className="my-6 bg-black-tertiary w-full h-[2px] rounded-full" />
         <p className="text-gray-primary text-base">{props.includes}</p>
