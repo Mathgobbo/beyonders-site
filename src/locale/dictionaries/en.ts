@@ -92,14 +92,14 @@ export const en: IDictionary = {
         {
           iconUrl: "/home/processes/rocket.svg",
           title: "Release",
-          subtitle: "Lançando o sistema",
-          text: "A fase de lançamento se concentra na preparação do software para seu lançamento. Isso envolve testes, correção de bugs e a implantação do código. O processo de lançamento também pode envolver a criação de documentação, configuração de ambientes de implantação e coordenação entre a equipe para garantir uma implantação tranquila e bem-sucedida.",
+          subtitle: "Releasing the software",
+          text: "The release phase focuses on preparing the software for release. This involves testing, fixing bugs, and deploying the code. This process can also involve creating documentation, setting up deployment environments, and coordinating across the team to ensure a smooth and successful deployment.",
         },
         {
           iconUrl: "/home/processes/gear.svg",
           title: "Maintenance",
-          subtitle: "Garantindo uma melhora contínua",
-          text: "Aqui temos um processo que envolve o suporte a e melhoria da solução após seu lançamento. Incluindo atividades como monitoramento de desempenho, resolução de bugs, aplicação de atualizações e implementação de novos recursos. Nosso objetivo é garantir a estabilidade, confiabilidade e usabilidade de longo prazo do software em todo o seu ciclo de vida!",
+          subtitle: "Ensuring continuous improvement",
+          text: "Here we have a process that involves supporting and improving the solution after its release. Including activities such as monitoring performance, fixing bugs, applying updates and implementing new features. Our goal is to ensure the long-term stability, reliability and usability of the software throughout its entire lifecycle!",
         },
       ],
     },
