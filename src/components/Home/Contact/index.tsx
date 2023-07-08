@@ -20,7 +20,7 @@ export const Contact = () => {
         alt="circle"
         width={360}
         height={360}
-        className="absolute top-0 z-[1] -right-40"
+        className="absolute top-20 z-[1] -right-40"
       />
       <SectionTitle>{contact.title}</SectionTitle>
       <SectionDescription>{contact.subtitle1}</SectionDescription>
@@ -40,11 +40,11 @@ export const Contact = () => {
         />
       </div>
       <section className="mt-20 ">
-        <p className="text-xl z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
+        <p className="text-xl  relative z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
           {contact.subtitle2}
         </p>
         <a href={PIPEFY_FORM_URL} target="_blank" rel="noreferrer">
-          <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold">
+          <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold  relative z-10">
             Get Started
           </Button>
         </a>
