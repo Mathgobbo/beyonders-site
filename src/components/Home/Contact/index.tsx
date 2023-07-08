@@ -20,7 +20,7 @@ export const Contact = () => {
         alt="circle"
         width={360}
         height={360}
-        className="absolute top-20 z-[1] -right-40"
+        className="absolute top-0 z-[1] -right-40"
       />
       <SectionTitle>{contact.title}</SectionTitle>
       <SectionDescription>{contact.subtitle1}</SectionDescription>
