@@ -8,6 +8,10 @@ export interface IDictionary {
     team: string;
     services: string;
     contact: string;
+    customers: string;
+    pricing: string;
+    faq: string;
+    benefits: string;
   };
   footer: {
     companyName: string;
@@ -25,6 +29,7 @@ export interface IDictionary {
     };
     services: {
       title: string;
+      description: string;
       websiteTitle: string;
       websiteText: string;
       mobileAppsTitle: string;
@@ -42,6 +47,7 @@ export interface IDictionary {
       mailSubject: string;
     };
     showcase: {
+      description: string;
       testimonials: {
         imgUrl: string;
         title: string;
@@ -49,6 +55,33 @@ export interface IDictionary {
         author: string;
         occupation: string;
       }[];
+    };
+    developmentProcess: {
+      title: string;
+      description: string;
+      steps: {
+        iconUrl: string;
+        title: string;
+        subtitle: string;
+        text: string;
+      }[];
+    };
+    pricing: {
+      title: string;
+      description: string;
+      cards: {
+        title: string;
+        description: string;
+        price: string;
+        buttonLabel: string;
+        includes: string;
+        labels: string[];
+      }[];
+    };
+    faq: {
+      title: string;
+      description: string;
+      questions: { title: string; answer: string[] }[];
     };
   };
   team: {

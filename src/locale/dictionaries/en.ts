@@ -11,6 +11,10 @@ export const en: IDictionary = {
     services: "services",
     showcase: "showcase",
     team: "team",
+    benefits: "benefits",
+    customers: "customers",
+    faq: "FAQ",
+    pricing: "pricing",
   },
   footer: {
     companyName: "BEYONDERS - DIGITAL SOLUTIONS",
@@ -19,10 +23,10 @@ export const en: IDictionary = {
   home: {
     hero: {
       subtitle: "GO BEYOND",
-      titleLine1: "BUILDING UNIQUE",
-      titleGradientLine1: "SOFTWARES",
+      titleLine1: "Building unique",
+      titleGradientLine1: "softwares",
       titleLine2: "For unique",
-      titleGradientLine2: "Businesses",
+      titleGradientLine2: "businesses",
       text: "We are the right choice for your next project",
       buttonLabel: "Talk with us",
     },
@@ -30,26 +34,28 @@ export const en: IDictionary = {
       title: "Contact us",
       subtitle1:
         "Feel free to reach us out! We will be glad to know your ideas and to build your next project.",
-      subtitle2:
-        "Or fill the form below, that we will return to you right away.",
+      subtitle2: "Turn your ideas into reality now",
       namePlaceholder: "YOUR NAME",
       messagePlaceholder: "TELL US ABOUT YOUR NEEDS?",
       submitButtonLabel: "SEND EMAIL",
       mailSubject: "[NEW PROJECT APPLICATION]",
     },
     services: {
-      title: "OUR SERVICES",
-      websiteTitle: "WEBSITES",
+      title: "Services",
+      description:
+        "Take a look at our services and discover what we can help you with.",
+      websiteTitle: "Websites",
       websiteText:
-        "We build responsive, beautiful, and seo optimized websites.",
-      mobileAppsTitle: "MOBILE APPS",
+        "We create powerful web applications tailored to your business needs, with intuitive interfaces, seamless user experiences, and robust functionality.",
+      mobileAppsTitle: "Mobile Apps",
       mobileAppsText:
-        "Android and ios apps, developing with the best tools and frameworks to ensure the best user experience.",
-      blockchainTitle: "BLOCKCHAIN",
+        "Our team builds captivating mobile apps for iOS and Android, delivering feature-rich experiences that engage your target audience and stand out in the app market.",
+      blockchainTitle: "Blockchain",
       blockchainText:
-        "Ready to build the next dapp and introduce your business into web3",
+        "Explore the potential of blockchain with our expertise in developing secure, transparent, and efficient applications that redefine trust and optimize processes. Embrace decentralized networks and transform your industry.",
     },
     showcase: {
+      description: "We have the expertise to make your idea real",
       testimonials: [
         {
           author: "Marcelo da Silva",
@@ -58,6 +64,141 @@ export const en: IDictionary = {
           imgUrl: "/home/showcase/testimonials/teacher-marcelo.webp",
           testimonial:
             "“I was lost and didn't know how to create “Geografia Irada”, my goal was to create something different from what I saw on the market. I thought of an intuitive platform, where students could study with quality and discipline. And Beyonders, from the first contact, gave me all the support and contributed to the success of my project.”",
+        },
+      ],
+    },
+    developmentProcess: {
+      title: "Our development process",
+      description: "Discover how we are going to build your next project",
+      steps: [
+        {
+          iconUrl: "/home/processes/discovery.svg",
+          title: "Discovery",
+          subtitle: "The initial recognition",
+          text: "The first step is where we are going to meet each other. We will identify your projects needs, your problems, ideas, visions and what you really want to build! We are going to create a study based on your answers and on our thoughts. And with all these docs, we can go ahead for the next step! ",
+        },
+        {
+          iconUrl: "/home/processes/kickoff.svg",
+          title: "Kickoff",
+          subtitle: "Initiating development efforts",
+          text: "The kickoff phase marks the formal start of the software development process. It involves bringing together the development team, stakeholders, and other relevant parties to discuss the project's objectives, deliverables, timelines, and resources! Here we will ensure everyone is aligned and ready to begin development!",
+        },
+        {
+          iconUrl: "/home/processes/development.svg",
+          title: "Development",
+          subtitle: "Creating the solution",
+          text: "Here is where the actual coding and implementation of the software take place. The development team follows the requirements gathered during the discovery phase to design, build, and test the software. This phase may involve various iterations and feedback loops to refine the solution and ensure it meets the desired functionality and quality standards.",
+        },
+        {
+          iconUrl: "/home/processes/rocket.svg",
+          title: "Release",
+          subtitle: "Lançando o sistema",
+          text: "A fase de lançamento se concentra na preparação do software para seu lançamento. Isso envolve testes, correção de bugs e a implantação do código. O processo de lançamento também pode envolver a criação de documentação, configuração de ambientes de implantação e coordenação entre a equipe para garantir uma implantação tranquila e bem-sucedida.",
+        },
+        {
+          iconUrl: "/home/processes/gear.svg",
+          title: "Maintenance",
+          subtitle: "Garantindo uma melhora contínua",
+          text: "Aqui temos um processo que envolve o suporte a e melhoria da solução após seu lançamento. Incluindo atividades como monitoramento de desempenho, resolução de bugs, aplicação de atualizações e implementação de novos recursos. Nosso objetivo é garantir a estabilidade, confiabilidade e usabilidade de longo prazo do software em todo o seu ciclo de vida!",
+        },
+      ],
+    },
+    pricing: {
+      title: "Pricing",
+      description:
+        "We have a custom pricing system that leverages your time and scaling",
+      cards: [
+        {
+          title: "Monthly",
+          description: "We will build whatever you want",
+          price: "$4,999/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+        {
+          title: "Semiyearly",
+          description: "We will build whatever you want",
+          price: "$4,499/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+        {
+          title: "Yearly",
+          description: "We will build whatever you want",
+          price: "$3,999/m",
+          buttonLabel: "Get started",
+          includes: "Includes:",
+          labels: [
+            "One request  at a time",
+            "Unlimited projects",
+            "Easy payment flow",
+            "Pause or cancel anytime",
+            "Ongoing maintenance",
+          ],
+        },
+      ],
+    },
+    faq: {
+      title: "FAQ",
+      description:
+        "Still not sure about how can we help you achieve your goals?",
+      questions: [
+        {
+          title: "Why Subscriptions?",
+          answer: [
+            "Software is something that you are always improving. There will always be more things to do as you release and start getting noticed. You may add a new core or side feature, change something in design, or simply try something new to see how your users react.",
+            "That’s why we decided to make different. We want to offer you the possibility to make unlimited requests and create as many projects as you want. And to make our subscriptions even better, giving you the desired freedom, you can cancel it at anytime.",
+          ],
+        },
+        {
+          title:
+            "Why wouldn't I just hire a full-time Developer or other software agency?",
+          answer: [
+            "Good question! For starters, the annual cost of a full-time senior-level designer now exceeds $80.000, plus benefits (and good luck finding one available). Aside from that, you may not always have enough work to keep them busy at all times, so you're stuck paying for time you aren't able to utilize.",
+            "With us, you can stop the subscription any time, make unlimited request, and build as many projects as you want.",
+          ],
+        },
+        {
+          title:
+            "Why I don’t just use a Website Builder like Webflow, Wix or Shopify?",
+          answer: [
+            "Well, because hiring a service like ours offers much more advantages than these DIY website builders. We provide fully customized websites that reflect your unique brand identity, allowing you to stand out in the market. Our expertise ensures scalability, optimized performance, and tailored functionalities that align with your specific business needs. With dedicated technical support and ongoing maintenance, you will also have a long-term partnership focused on your success. And to get all these benefits using a tool like these, you certainly would have to hire an expensive professional or spend hours studying and understanding these tools.",
+          ],
+        },
+        {
+          title: "How does the project estimates and deliverables work?",
+          answer: [
+            "As part of our development process, we will analyze each request and let you know as soon as possible about the estimates, release dates and new updates. And of course, we are always  going to communicate with you to make sure our visions and estimates are aligned.",
+          ],
+        },
+        {
+          title: "What tools do you use?",
+          answer: [
+            "To build your projects, we are always up to date with the best tools in the market.",
+            "Currently our team is working with React, NextJS, Flutter, Solidity, Firebase, Supabase, AWS, and many other libraries to make your projects stand out.",
+          ],
+        },
+        {
+          title: "Why Beyonders?",
+          answer: [
+            "Who wouldn’t like to go beyond?",
+            "Our mission is to deliver the best products, websites, apps, and services that you can find in the market. We always had the vision that each new customer is an opportunity to build something amazing and to improve our processes and results.",
+            "In short, our mission is to make you GO BEYOND!",
+          ],
         },
       ],
     },

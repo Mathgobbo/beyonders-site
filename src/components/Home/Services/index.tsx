@@ -1,106 +1,81 @@
+import { SectionDescription } from "@/components/common/SectionDescription";
+import { SectionTitle } from "@/components/common/SectionTitle";
 import { useI18n } from "@/hooks/useI18n";
-import Image from "next/image";
 import { m } from "framer-motion";
-import { useMediaQuery } from "react-responsive";
-import { useIsClient } from "@/hooks/useIsClient";
+import Image from "next/image";
 
 export const Services = () => {
   const {
     home: { services },
   } = useI18n();
   return (
-    <section id="services" className="px-4 py-10 lg:px-36">
-      <h2 className="mb-6 text-2xl font-bold tracking-wider uppercase text-main-white">{services.title}</h2>
-      <div className="relative">
-        <Image
-          src="/home/services/dots.svg"
-          alt="Dots"
-          width={210}
-          height={205}
-          className="absolute top-0 right-0 w-12 h-12 lg:w-28 lg:h-28"
-        />
-        <ServiceSection
-          imgUrl="/home/services/websites.webp"
-          iconUrl="/home/services/websites-icon.svg"
-          title={services.websiteTitle}
-          label={services.websiteText}
-        />
-        <ServiceSection
-          invert
-          imgUrl="/home/services/mobile-apps.webp"
-          iconUrl="/home/services/mobile-apps-icon.svg"
+    <section
+      id="services"
+      className="px-4 py-10 overflow-x-hidden lg:px-36 relative font-inter pt-24 lg:pt-52"
+    >
+      <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={500}
+        height={500}
+        className="absolute top-1/3 -right-40"
+      />
+
+      <div>
+        <SectionTitle>{services.title}</SectionTitle>
+        <SectionDescription>{services.description}</SectionDescription>
+      </div>
+
+      <div className="gap-16 grid grid-cols-1 mt-12 lg:mt-24">
+        <ServiceItem
+          imgUrl="/home/services/mobile-apps.svg"
           title={services.mobileAppsTitle}
-          label={services.mobileAppsText}
+          description={services.mobileAppsText}
         />
-        <ServiceSection
-          imgUrl="/home/services/blockchain.webp"
-          iconUrl="/home/services/blockchain-icon.svg"
+        <ServiceItem
+          imgUrl="/home/services/websites.svg"
+          title={services.websiteTitle}
+          description={services.websiteText}
+        />
+        <ServiceItem
+          imgUrl="/home/services/blockchain.svg"
           title={services.blockchainTitle}
-          label={services.blockchainText}
+          description={services.blockchainText}
         />
       </div>
     </section>
   );
 };
 
-interface IServiceSectionProps {
+interface ServiceItemProps {
   imgUrl: string;
-  iconUrl: string;
   title: string;
-  label: string;
-  invert?: boolean;
+  description: string;
 }
-const ServiceSection = ({ iconUrl, imgUrl, label, title, invert }: IServiceSectionProps) => {
-  const isLg = useMediaQuery({ minWidth: 1024 });
-  const isClient = useIsClient();
-
-  const MainImage = () => (
-    <Image quality={50} src={imgUrl} className="my-2 rounded-xl" alt="websites" width={600} height={380} />
-  );
-  const TextSection = () => (
-    <div className="flex flex-col justify-center h-full py-10 space-y-2 lg:p-0">
-      <h3 className="font-bold uppercase lg:text-2xl text-main-white">{title}</h3>
-      <p className="text-xs leading-4 lg:leading-5 lg:text-base text-main-white/90">{label}</p>
-    </div>
-  );
-
-  const FirstItem = !invert ? MainImage : TextSection;
-  const LastItem = invert && isLg && isClient ? MainImage : TextSection;
-
+const ServiceItem = ({ description, title, imgUrl }: ServiceItemProps) => {
   return (
-    <div className="flex">
-      <m.div
-        className="hidden w-5/12 lg:block"
-        transition={{ duration: 1.2 }}
-        initial={{ opacity: 0, x: -80 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-      >
-        <FirstItem />
-      </m.div>
-      <div className="relative flex justify-center w-4/12 lg:2/12">
-        <div className="w-1 h-full bg-main-green" />
-        <m.div
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-          className="absolute w-20 h-20 p-2 transform -translate-x-1/2 -translate-y-1/2 rounded-full lg:w-24 lg:h-24 top-1/2 left-1/2 bg-main-black"
-        >
-          <div className="grid w-full h-full rounded-full place-items-center bg-main-green">
-            <Image src={iconUrl} className="w-10 h-10" alt={title + " icon"} width={87} height={87} />
-          </div>
-        </m.div>
+    <m.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      className="flex flex-col gap-6 md:flex-row md:gap-16 lg:gap-36 md:items-center"
+    >
+      <Image
+        src={imgUrl}
+        width={400}
+        height={260}
+        alt={title}
+        className="rounded-md w-full md:w-1/3"
+      />
+      <div className="space-y-4 md:w-2/3">
+        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl">
+          {title}
+        </h2>
+        <p className="font-poppins pb-2 text-gray-secondary/80 text-sm md:max-w-[80%]">
+          {description}
+        </p>
+        <div className="w-24 h-[2px] rounded-full main-gradient"></div>
       </div>
-      <m.div
-        transition={{ duration: 1.2 }}
-        className="w-8/12 lg:w-5/12"
-        initial={{ opacity: 0, x: 80 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true }}
-      >
-        <LastItem />
-      </m.div>
-    </div>
+    </m.div>
   );
 };

@@ -1,5 +1,5 @@
+import { Button } from "@/components/common/Button";
 import { m } from "framer-motion";
-import Image from "next/image";
 export const Hero = ({
   dictionary,
 }: {
@@ -14,25 +14,14 @@ export const Hero = ({
   };
 }) => {
   return (
-    <section className="relative flex items-center justify-center w-full h-screen">
-      <Image
-        src={"/home/hero-bg.webp"}
-        alt="Hero background"
-        width={1920}
-        height={851}
-        quality={25}
-        className="absolute inset-0 object-cover w-full h-full"
-      />
-      {/* <div className="bg-[url('/home/hero-bg.webp')] absolute inset-0 object-cover w-full h-full bg-center bg-fixed bg-no-repeat bg-cover" /> */}
-      <div className="absolute inset-0 bg-black/80" />
-
-      <div className="z-[1] px-4  text-center text-main-white">
+    <section className="relative flex items-end justify-center w-full h-[70vh] sm:items-center lg:items-end md:h-[75vh] lg:h-[80vh]">
+      <div className="z-[1] px-4 text-center text-main-white">
         <m.h3
           initial={{ opacity: 0, y: -25 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="font-bold uppercase text-transparent lg:text-2xl main-gradient bg-clip-text"
+          className="font-bold text-transparent font-poppins mb-3 text-lg md:text-xl lg:text-3xl main-gradient bg-clip-text uppercase"
         >
           {dictionary.subtitle}
         </m.h3>
@@ -41,13 +30,14 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-3xl font-bold lg:text-5xl uppercase"
+          className="text-4xl font-normal font-poppins tracking-wider leading-10 md:text-4xl lg:text-5xl lg:leading-snug "
         >
           {dictionary.titleLine1}{" "}
           <span className="text-transparent main-gradient bg-clip-text">
             {dictionary.titleGradientLine1}
           </span>{" "}
-          <br /> {dictionary.titleLine2}{" "}
+          <br />
+          {dictionary.titleLine2}{" "}
           <span className="text-transparent main-gradient bg-clip-text">
             {dictionary.titleGradientLine2}
           </span>{" "}
@@ -57,7 +47,7 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="text-sm mt-3 mb-6 text-gray-100 font-poppins lg:text-2xl"
+          className="text-sm mt-5 mb-6 text-gray-100 font-inter md:text-lg lg:text-base lg:mt-7"
         >
           {dictionary.text}
         </m.p>
@@ -66,14 +56,16 @@ export const Hero = ({
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 1 }}
           viewport={{ once: true }}
-          className="pt-2"
+          className="pt-2 mt-8"
         >
           <a href="#contact">
-            <button className="hover:translate-y-1 px-8 py-3  shadow-md text-sm  border-b-4 border-green-700 hover:border-none transform transition-all  uppercase font-semibold rounded-full  bg-gradient-to-r from-secondary-green to-main-green/80 hover:bg-main-green/80 lg:text-2xl hover:cursor-pointer">
-              {dictionary.buttonLabel}
-            </button>
+            <Button>{dictionary.buttonLabel}</Button>
           </a>
         </m.div>
+
+        <div className="flex justify-center">
+          <div className="w-[2px] rounded-full h-10 md:h-16 mt-12 bg-gradient-to-b from-secondary-green to-main-green"></div>
+        </div>
       </div>
       {/* <Waves /> */}
     </section>
