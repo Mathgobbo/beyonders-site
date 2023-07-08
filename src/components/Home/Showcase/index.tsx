@@ -27,6 +27,7 @@ export const Showcase = () => {
                   className="w-60 h-48 md:w-72 rounded-md md:h-56 lg:w-96 lg:h-80 duration-700"
                   src={showcase.bgImgUrl}
                   alt={showcase.name}
+                  quality={70}
                   width={480}
                   height={480}
                 />
