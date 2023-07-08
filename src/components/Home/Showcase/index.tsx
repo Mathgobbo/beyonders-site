@@ -24,7 +24,7 @@ export const Showcase = () => {
             <div className="mx-4 lg:mx-8 rounded-md" key={showcase.name}>
               <a target={"_blank"} href={showcase.url} rel="noreferrer">
                 <Image
-                  className="w-60 h-48 md:w-72 md:h-56 lg:w-96 lg:h-80 duration-700"
+                  className="w-60 h-48 md:w-72 rounded-md md:h-56 lg:w-96 lg:h-80 duration-700"
                   src={showcase.bgImgUrl}
                   alt={showcase.name}
                   width={480}

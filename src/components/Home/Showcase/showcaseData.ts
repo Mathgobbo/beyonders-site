@@ -1,26 +1,26 @@
 export const showcaseData = [
   {
-    bgImgUrl: "/home/showcase/1.png",
-    url: "https://itson.com.br",
-    name: "It's On",
-  },
-  {
-    bgImgUrl: "/home/showcase/2.png",
+    bgImgUrl: "/home/showcase/PLAYSK8.svg",
     url: "https://playsk8.com",
     name: "PLAYSK8",
   },
   {
-    bgImgUrl: "/home/showcase/3.png",
-    url: "https://geografiairada.com",
-    name: "Geografia Irada",
+    bgImgUrl: "/home/showcase/ITS ON.svg",
+    url: "https://itson.com.br",
+    name: "It's On",
   },
   {
-    bgImgUrl: "/home/showcase/4.png",
-    url: "https://professormarcelo.com",
-    name: "Professor Marcelo",
+    bgImgUrl: "/home/showcase/DA2X.svg",
+    url: "https://www.da2x.com.br/",
+    name: "DA2x",
   },
   {
-    bgImgUrl: "/home/showcase/5.png",
+    bgImgUrl: "/home/showcase/CONTRACTAPP.svg",
+    url: "https://contractapp.ca",
+    name: "ContractApp",
+  },
+  {
+    bgImgUrl: "/home/showcase/PROFESSORMARCELO.svg",
     url: "https://professormarcelo.com",
     name: "Professor Marcelo",
   },
