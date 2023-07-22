@@ -14,7 +14,7 @@ export const Hero = ({
   };
 }) => {
   return (
-    <section className="relative flex items-end justify-center w-full h-[70vh] sm:items-center lg:items-end md:h-[75vh] lg:h-[80vh]">
+    <section className="relative flex items-end justify-center w-full h-[70vh] sm:items-center lg:items-end md:h-[75vh] lg:h-[100vh] 2xl:h-[80vh]">
       <div className="z-[1] px-4 text-center text-main-white">
         <m.h3
           initial={{ opacity: 0, y: -25 }}
