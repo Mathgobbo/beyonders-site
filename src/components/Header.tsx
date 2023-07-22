@@ -13,13 +13,13 @@ export const Header = () => {
   return (
     <AnimatePresence>
       <header
-        className={`bg-main-black/80 border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-8 xl:px-36 `}
+        className={`bg-main-black/80 border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-6 xl:px-36 `}
       >
         <Link href={"/"}>
           <Image
             width={516}
             height={90.5}
-            className="w-40 lg:w-56 py-2"
+            className="w-40 lg:w-40 py-2"
             alt="Beyonders Logo"
             src="/beyonders-logo-new.webp"
           />
