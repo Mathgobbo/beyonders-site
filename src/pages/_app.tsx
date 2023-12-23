@@ -6,6 +6,7 @@ import "@/styles/globals.css";
 import { Poppins, Inter } from "@next/font/google";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
+import { Analytics } from "@vercel/analytics/react";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -31,6 +32,7 @@ export default function App({ Component, pageProps }: AppProps) {
           >
             <Header />
             <Component {...pageProps} />
+            <Analytics />
             <Footer />
           </main>
         </LazyMotion>
