@@ -7,15 +7,39 @@ import Image from "next/image";
 
 export const Pricing = () => {
   const {
-    home: { pricing },
+    home: { pricing, callToAction },
   } = useI18n();
 
   return (
     <section
       id="pricing"
-      className="px-4 py-10 relative overflow-x-hidden lg:px-36 font-inter pt-24 lg:pt-52"
+      className="px-4 py-10 relative overflow-hidden lg:px-36 font-inter pt-24 lg:pt-52 flex flex-col justify-center items-center"
     >
       <Image
+        src={"/circle.svg"}
+        alt="circle"
+        width={380}
+        height={380}
+        className="absolute top-4 -right-40 hidden xl:block"
+      />
+      <SectionTitle>{callToAction.firstSentence}</SectionTitle>
+      <h3
+        className={`mt-2 text-xl md:text-3xl font-bold font-inter tracking-wider text-gray-primary`}
+      >
+        {callToAction.secondSentence}
+      </h3>
+      <a
+        className="mt-4  w-full grid place-items-center"
+        href={PIPEFY_FORM_URL}
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Button additionalClassName="mt-4 w-full lg:w-1/2">
+          {callToAction.buttonLabel}
+        </Button>
+      </a>
+
+      {/* <Image
         src={"/circle.svg"}
         alt="circle"
         width={500}
@@ -30,7 +54,7 @@ export const Pricing = () => {
         {pricing.cards.map((card) => (
           <PricingCard key={card.title} {...card} />
         ))}
-      </div>
+      </div> */}
     </section>
   );
 };

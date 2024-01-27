@@ -106,6 +106,11 @@ export const pt: IDictionary = {
         },
       ],
     },
+    callToAction: {
+      firstSentence: "You've got this far.",
+      secondSentence: "Ready to get started?",
+      buttonLabel: "Get in touch",
+    },
     pricing: {
       title: "Preços",
       description:
