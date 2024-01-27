@@ -66,6 +66,11 @@ export interface IDictionary {
         text: string;
       }[];
     };
+    callToAction: {
+      firstSentence: string;
+      secondSentence: string;
+      buttonLabel: string;
+    };
     pricing: {
       title: string;
       description: string;

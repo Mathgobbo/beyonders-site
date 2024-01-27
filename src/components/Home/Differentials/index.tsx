@@ -26,34 +26,35 @@ export const Differentials = () => {
       />
       <div>
         <SectionTitle additionalClassName="capitalize">
-          A Different Software Agency
+          Our Values{" "}
         </SectionTitle>
         <SectionDescription>
           {" "}
-          Unlike the common software houses, we work differently.
+          Unlike the common software houses, these are the values that guide our
+          work.{" "}
         </SectionDescription>
       </div>
 
       <div className="grid grid-cols-1 mt-8 md:mt-12 md:grid-cols-2 gap-8 md:gap-28 lg:grid-cols-3">
         <Item
           imrUrl="/home/differentials/badge.svg"
-          title="Membership system"
-          description="We work with a Subscription Pricing system. You won’t get an specific price for your project."
+          title="Quality is priority"
+          description="Performance and User Experience are the most important metrics for us."
         />
         <Item
           imrUrl="/home/differentials/infinite.svg"
-          title="Unlimites Projects"
-          description="Make as many requests you want. Same project or even different/new ones"
+          title="Sustainable development"
+          description="Tests and the best code practices are included during all the project development."
         />
         <Item
           imrUrl="/home/differentials/coin.svg"
-          title="Fixed Monthly Rate"
-          description="No surprises. Pay the same fixed price each month."
+          title="Accessible Solutions"
+          description="We always take into account the client's budget and profile."
         />
         <Item
           imrUrl="/home/differentials/flexible.svg"
-          title="Flexible Subscription"
-          description="Freedom to cancel your subscription any time."
+          title="Integrations and analytics"
+          description="We care with your results, installing the best softwares to track and measure your product performance."
         />
         <Item
           imrUrl="/home/differentials/tools.svg"
@@ -70,7 +71,7 @@ export const Differentials = () => {
         <Link href="/#pricing" scroll={false} className="w-full md:w-auto z-10">
           {" "}
           <Button additionalClassName="w-full md:w-auto text-sm md:text-sm md:px-32 lg:px-40">
-            See plans
+            Move forward
           </Button>
         </Link>
       </div>

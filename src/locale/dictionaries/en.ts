@@ -11,10 +11,10 @@ export const en: IDictionary = {
     services: "services",
     showcase: "showcase",
     team: "team",
-    benefits: "benefits",
+    benefits: "values",
     customers: "customers",
     faq: "FAQ",
-    pricing: "pricing",
+    pricing: "start now",
   },
   footer: {
     companyName: "BEYONDERS - DIGITAL SOLUTIONS",
@@ -103,6 +103,11 @@ export const en: IDictionary = {
         },
       ],
     },
+    callToAction: {
+      firstSentence: "You've got this far.",
+      secondSentence: "Ready to get started?",
+      buttonLabel: "Get in touch",
+    },
     pricing: {
       title: "Pricing",
       description:
@@ -157,13 +162,13 @@ export const en: IDictionary = {
       description:
         "Still not sure about how can we help you achieve your goals?",
       questions: [
-        {
-          title: "Why Subscriptions?",
-          answer: [
-            "Software is something that you are always improving. There will always be more things to do as you release and start getting noticed. You may add a new core or side feature, change something in design, or simply try something new to see how your users react.",
-            "That’s why we decided to make different. We want to offer you the possibility to make unlimited requests and create as many projects as you want. And to make our subscriptions even better, giving you the desired freedom, you can cancel it at anytime.",
-          ],
-        },
+        // {
+        //   title: "Why Subscriptions?",
+        //   answer: [
+        //     "Software is something that you are always improving. There will always be more things to do as you release and start getting noticed. You may add a new core or side feature, change something in design, or simply try something new to see how your users react.",
+        //     "That’s why we decided to make different. We want to offer you the possibility to make unlimited requests and create as many projects as you want. And to make our subscriptions even better, giving you the desired freedom, you can cancel it at anytime.",
+        //   ],
+        // },
         {
           title:
             "Why wouldn't I just hire a full-time Developer or other software agency?",
