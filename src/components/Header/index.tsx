@@ -1,3 +1,4 @@
+"use client";
 import { useI18n } from "@/hooks/useI18n";
 import { Menu, Transition } from "@headlessui/react";
 import Image from "next/image";
@@ -6,6 +7,7 @@ import { useRouter } from "next/router";
 import { Fragment, ReactNode, useState } from "react";
 import { HiBars3, HiXMark } from "react-icons/hi2";
 import { AnimatePresence, m } from "framer-motion";
+import { HeaderLink } from "./HeaderLink";
 
 export const Header = () => {
   const { header: dictionary } = useI18n();
@@ -111,26 +113,6 @@ export const Header = () => {
         </m.section>
       )}
     </AnimatePresence>
-  );
-};
-
-const HeaderLink = ({
-  children,
-  href,
-  scroll = true,
-}: {
-  children: ReactNode;
-  href: string;
-  scroll?: boolean;
-}) => {
-  return (
-    <Link
-      scroll={scroll}
-      className="font-poppins p-2  rounded-md lg:text-base md:hover:bg-transparent hover:border md:hover:border-none border-gray-600  md:p-0 tracking-wide capitalize md:uppercase transition md:hover:text-white text-main-white/80"
-      href={href}
-    >
-      {children}
-    </Link>
   );
 };
 
