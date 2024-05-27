@@ -1,5 +1,8 @@
 import { Inter, Poppins } from "@next/font/google";
 import "../styles/globals.css";
+import { HeaderLink } from "@/components/Header/HeaderLink";
+import { BlogMobileHeader } from "@/components/Header/BlogMobileHeader";
+import Image from "next/image";
 export const metadata = {
   title: "Beyonders Blog",
   description:
@@ -26,6 +29,27 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${inter.variable}  bg-main-black`}>
+        <header
+          className={`bg-main-black/80 border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-6 xl:px-36 `}
+        >
+          <Image
+            width={516}
+            height={90.5}
+            className="w-40 lg:w-40 py-2"
+            alt="Beyonders Logo"
+            src="/beyonders-logo-new.webp"
+          />
+          <div className="hidden md:flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
+            <HeaderLink scroll={false} href={"/"}>
+              Home
+            </HeaderLink>
+            <div className="text-white">•</div>
+            <HeaderLink href={"/blog"} scroll={false}>
+              Blog
+            </HeaderLink>
+          </div>
+          <BlogMobileHeader />
+        </header>
         {children}
       </body>
     </html>

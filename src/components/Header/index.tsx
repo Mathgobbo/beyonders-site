@@ -46,6 +46,10 @@ export const Header = () => {
           <HeaderLink scroll={false} href={"/#contact"}>
             {dictionary.contact}
           </HeaderLink>
+          <div className="text-white">•</div>
+          <HeaderLink scroll={false} href={"/blog"}>
+            {dictionary.blog}
+          </HeaderLink>
           {/* <LocaleSwitcher /> */}
         </div>
 
@@ -108,6 +112,10 @@ export const Header = () => {
           </HeaderLink>
           <HeaderLink scroll={false} href={"/#contact"}>
             {dictionary.contact}
+          </HeaderLink>
+          <div className="text-white">•</div>
+          <HeaderLink scroll={false} href={"/blog"}>
+            {dictionary.blog}
           </HeaderLink>
           {/* <LocaleSwitcher /> */}
         </m.section>
