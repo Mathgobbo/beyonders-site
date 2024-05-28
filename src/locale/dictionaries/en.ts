@@ -17,6 +17,10 @@ export const en: IDictionary = {
     pricing: "start now",
     blog: "Blog",
   },
+  blog: {
+    blog: "Blog",
+    moreInfo: "More info",
+  },
   footer: {
     companyName: "BEYONDERS - DIGITAL SOLUTIONS",
     cnpj: "",

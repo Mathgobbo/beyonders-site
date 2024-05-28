@@ -1,6 +1,8 @@
 import { Author } from "./IAuthor";
 
 export type Post = {
+  bannerImage: string;
+  description: string;
   slug: string;
   title: string;
   date: string;

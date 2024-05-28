@@ -2,15 +2,15 @@ import { Button } from "@/components/common/Button";
 import Image from "next/image";
 import Link from "next/link";
 
-
 interface ServiceItemProps {
 	date: string;
 	imgUrl: string;
 	title: string;
 	description: string;
+  url: string;
 }
 
-export const MainPost = ({ date, description, title, imgUrl }: ServiceItemProps) => {
+export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemProps) => {
   return (
     <div
       id="mainPost"
@@ -42,7 +42,7 @@ export const MainPost = ({ date, description, title, imgUrl }: ServiceItemProps)
 						<p className="font-poppins text-gray-secondary/80 text-sm pb-8">
 							{description}
 						</p>
-						<Link href="/blog/post/" >
+						<Link href={`/blog/post/${url}`} >
 							<Button>More info</Button>
 						</Link>
 					</div>

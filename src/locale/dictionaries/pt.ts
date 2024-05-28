@@ -17,6 +17,10 @@ export const pt: IDictionary = {
     pricing: "Preços",
     blog: "Blog",
   },
+  blog: {
+    blog: "Blog",
+    moreInfo: "Veja mais",
+  },
   footer: {
     companyName: "BEYONDERS - SOLUÇÕES DIGITAIS",
     cnpj: "CNPJ: 44606247000121",

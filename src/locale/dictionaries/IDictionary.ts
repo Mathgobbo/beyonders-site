@@ -14,6 +14,10 @@ export interface IDictionary {
     benefits: string;
     blog: string;
   };
+  blog: {
+    blog: string;
+    moreInfo: string;
+  }
   footer: {
     companyName: string;
     cnpj: string;
