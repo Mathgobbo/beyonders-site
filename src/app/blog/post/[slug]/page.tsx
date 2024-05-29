@@ -20,7 +20,7 @@ export default function Post({ params }: Params) {
 
   return (
     <main className="min-h-screen bg-main-black">
-      <div className="w-[80%] mx-auto pt-32">
+      <div className="w-[85%] sm:w-[600px] mx-auto pt-32">
         <Image
           src={post.bannerImage}
           width={600}
@@ -28,11 +28,19 @@ export default function Post({ params }: Params) {
           alt={post.title}
           className="rounded-md mx-auto"
 					/> 
-        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-md md:text-xl lg:text-2xl mx-auto text-center py-8">
+        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl md:text-2xl mx-auto text-center pt-8">
           {post.title}
         </h2>
-        <div className="w-[60%] h-[2px] rounded-full main-gradient mx-auto"></div>
-        <div className="w-[100%] lg:w-[70%] mx-auto text-justify font-poppins text-gray-secondary/80 text-md py-8">
+        <div className="flex sm:flow-root mt-4 mb-2">
+          <p className="mx-auto main-gradient bg-clip-text text-transparent font-poppins font-semibold mr-2 float-left">
+            {post.author}
+          </p>
+          <p className="mx-auto main-gradient bg-clip-text text-transparent font-poppins font-semibold sm:float-right">
+            {post.date}
+          </p>
+        </div>
+        <div className="h-[2px] rounded-full main-gradient mx-auto"></div>
+        <div className="mx-auto text-justify font-poppins text-gray-secondary/80 text-md py-8">
           <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeRaw]} children={post.content} />
         </div>
       </div>

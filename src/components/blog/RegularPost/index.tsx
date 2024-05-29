@@ -15,7 +15,7 @@ export const RegularPost = ({ date, description, title, imgUrl, url }: ServiceIt
     <div
       id="regularPost"
       className="py-8 overflow-x-hidden relative font-inter">
-    	<div className="grid grid-cols-1 px-[12%] ">
+    	<div className="grid grid-cols-1 md:px-[12%] ">
 				<div className="flex flex-col gap-4">
 					<Image
 						src={imgUrl}
@@ -31,13 +31,13 @@ export const RegularPost = ({ date, description, title, imgUrl, url }: ServiceIt
 						<h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl">
 							{title}
 						</h2>
+						<div className="w-24 h-[2px] rounded-full main-gradient"></div>
 						<p className="font-poppins text-gray-secondary/80 text-sm pb-8">
 							{description}
 						</p>
 						<Link href={`/blog/post/${url}`}>
 							<Button >More info</Button>
 						</Link>
-						<div className="w-24 h-[2px] rounded-full main-gradient"></div>
 					</div>
 				</div>
       </div>

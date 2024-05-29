@@ -23,16 +23,16 @@ export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemP
         height={500}
         className="fixed top-1/3 -right-40"
       />
-    	<div className="grid grid-cols-1 mt-12 px-[6%] lg:px-[4%]">
-				<div className="flex flex-col gap-8 md:flex-row items-center pb-8">
+    	<div className="grid grid-cols-1 mt-12 px-[0%] lg:px-[4%]">
+				<div className="flex flex-col gap-8 lg:flex-row items-center pb-8">
 					<Image
 						src={imgUrl}
 						width={400}
 						height={260}
 						alt={title}
-						className="rounded-md w-[85%] lg:w-[70%]"
+						className="rounded-md w-[100%] md:w-[90%] lg:w-[70%]"
 					/>
-					<div className="space-y-4 max-w-[80%]">
+					<div className="space-y-4 w-[100%] md:w-[90%] lg:w-[70%]">
 						<p className="font-poppins pb-2 text-gray-secondary/80 text-sm ">
 							{date} •  blog
 						</p>
