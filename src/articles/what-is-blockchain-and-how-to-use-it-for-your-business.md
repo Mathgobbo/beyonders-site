@@ -2,6 +2,7 @@
 title: "What is Blockchain and how to use it for your business"
 description: "Unlock the Power of Blockchain: Discover its secure, transparent ledger for trusted transactions. Explore its impact on finance, marketing, and gaming. Follow for insights!"
 author: "Matheus Gobbo Bernardi"
+authorPicture: "/blog/user.png"
 category: "blockchain"
 date: "2023-01-24"
 bannerImage: "/blog/what-is-blockchain-and-how-to-use-it-for-your-business/banner.jpg"

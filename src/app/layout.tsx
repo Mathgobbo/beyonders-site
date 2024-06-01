@@ -3,6 +3,7 @@ import "../styles/globals.css";
 import { HeaderLink } from "@/components/Header/HeaderLink";
 import { BlogMobileHeader } from "@/components/Header/BlogMobileHeader";
 import Image from "next/image";
+import { BlogFooter } from "@/components/blog/BlogFooter";
 export const metadata = {
   title: "Beyonders Blog",
   description:
@@ -51,6 +52,7 @@ export default function RootLayout({
           <BlogMobileHeader />
         </header>
         {children}
+        <BlogFooter />
       </body>
     </html>
   );

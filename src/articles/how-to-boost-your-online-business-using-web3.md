@@ -2,6 +2,7 @@
 title: "How to boost your online business using Web3"
 description: "Elevate your digital business with blockchain: Cultivate community, enhance value with NFTs and cryptocurrencies, and strategically map your growth. Unlock unprecedented success today."
 author: "Matheus Gobbo Bernardi"
+authorPicture: "/blog/user.png"
 category: "web3"
 date: "2023-01-27"
 bannerImage: "/blog/how-to-boost-your-online-business-using-web3/banner.jpg"

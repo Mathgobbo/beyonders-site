@@ -53,9 +53,6 @@ export const BlogMobileHeader = () => {
           <HeaderLink href={"/blog"} scroll={false}>
             Blog
           </HeaderLink>
-          <HeaderLink href={"/blog/all-posts"} scroll={false}>
-            All posts
-          </HeaderLink>
           <HeaderLink scroll={false} href={"/"}>
             Home
           </HeaderLink>

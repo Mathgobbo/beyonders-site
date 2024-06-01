@@ -1,5 +1,3 @@
-import { Author } from "./IAuthor";
-
 export type Post = {
   bannerImage: string;
   description: string;
@@ -7,8 +5,10 @@ export type Post = {
   title: string;
   date: string;
   coverImage: string;
-  author: Author;
+  author: string;
+  authorPicture: string;
   excerpt: string;
+  tags: [];
   ogImage: {
     url: string;
   };
