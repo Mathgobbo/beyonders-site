@@ -1,4 +1,5 @@
 import { Button } from "@/components/common/Button";
+import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -26,7 +27,7 @@ export const RegularPost = ({ date, description, title, imgUrl, url }: ServiceIt
 					/>
 					<div className="space-y-4">
 						<p className="font-poppins text-gray-secondary/80 text-sm">
-							{date} •  blog
+							{format(new Date(date), "MMM dd, yyyy")} •  blog
 						</p>
 						<h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl">
 							{title}

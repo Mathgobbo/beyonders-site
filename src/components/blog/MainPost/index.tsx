@@ -1,4 +1,5 @@
-import { Button } from "@/components/common/Button";
+import { OutlineButton } from "@/components/common/Button";
+import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -7,7 +8,7 @@ interface ServiceItemProps {
 	imgUrl: string;
 	title: string;
 	description: string;
-  url: string;
+  	url: string;
 }
 
 export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemProps) => {
@@ -30,20 +31,20 @@ export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemP
 						width={400}
 						height={260}
 						alt={title}
-						className="rounded-md w-[100%] md:w-[90%] lg:w-[70%]"
+						className="rounded-md w-[100%] md:w-[90%] lg:max-w-xl"
 					/>
 					<div className="space-y-4 w-[100%] md:w-[90%] lg:w-[70%]">
 						<p className="font-poppins pb-2 text-gray-secondary/80 text-sm ">
-							{date} •  blog
+							{format(new Date(date), "MMM dd, yyyy")} •  blog
 						</p>
-						<h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl">
+						<h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-2xl">
 							{title}
 						</h2>
-						<p className="font-poppins text-gray-secondary/80 text-sm pb-8">
+						<p className="font-poppins text-gray-secondary/80 text-md pb-8">
 							{description}
 						</p>
 						<Link href={`/blog/post/${url}`} >
-							<Button>More info</Button>
+							<OutlineButton>More info</OutlineButton>
 						</Link>
 					</div>
 				</div>

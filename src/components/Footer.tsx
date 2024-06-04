@@ -65,8 +65,13 @@ export const Footer = () => {
               </Link>
             </li>
             <li>
-              <Link href="/#contact" className="hover:underline">
+              <Link href="/#contact" className="mr-4 hover:underline">
                 {header.contact}
+              </Link>
+            </li>
+            <li>
+              <Link href="/blog" className="hover:underline">
+                {header.blog}
               </Link>
             </li>
           </ul>

@@ -50,11 +50,27 @@ export const BlogMobileHeader = () => {
           className="z-40 p-4 pt-6 fixed top-16 left-0 w-full bg-main-black/90 border-b border-gray-800 flex text-left flex-col"
         >
           {" "}
-          <HeaderLink href={"/blog"} scroll={false}>
-            Blog
+          <HeaderLink href={"/#showcase"} scroll={false}>
+            Showcase
           </HeaderLink>
-          <HeaderLink scroll={false} href={"/"}>
-            Home
+          <HeaderLink href={"/#benefits"} scroll={false}>
+            Values
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#services"}>
+            Services
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#pricing"}>
+            Start Now
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#faq"}>
+            Faq
+          </HeaderLink>
+          <HeaderLink scroll={false} href={"/#contact"}>
+            Contact
+          </HeaderLink>
+          <div className="text-white">•</div>
+          <HeaderLink scroll={false} href={"/blog"}>
+            Blog
           </HeaderLink>
           {/* <LocaleSwitcher /> */}
         </motion.section>

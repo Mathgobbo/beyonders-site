@@ -14,7 +14,7 @@ export default function BlogHome() {
 
   return (
     <main className="min-h-screen bg-main-black">
-      <div className="w-[100%] mx-auto px-10 md:px-0">
+      <div className="w-[100%] mx-auto px-10 lg:px-28 ">
         <MainPost
           date={heroPost.date}
           imgUrl={heroPost.bannerImage}
@@ -23,7 +23,7 @@ export default function BlogHome() {
           url={heroPost.slug}
         />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] px-10 md:px-0">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] px-10 lg:px-28">
         {[...morePosts,...morePosts,...morePosts,...morePosts,...morePosts,...morePosts,...morePosts,...morePosts].map((post)=>(
           <RegularPost
           date={post.date}

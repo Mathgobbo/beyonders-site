@@ -9,6 +9,7 @@ import { format } from "date-fns";
 import { RegularPost } from "@/components/blog/RegularPost";
 import Link from "next/link";
 import { Button } from "@/components/common/Button";
+import { IoMdShare } from "react-icons/io";
 
 
 export default function Post({ params }: Params) {
@@ -22,15 +23,15 @@ export default function Post({ params }: Params) {
   const index = allPosts.findIndex(item => item.slug==post.slug);
   allPosts.splice(index, 1);
   const test = [...allPosts,...allPosts,...allPosts,...allPosts,...allPosts]
-  const recentPost = test.slice(0,3)
+  const recentPost = test.slice(0,4)
   
 
   return (
     <main className="min-h-screen bg-main-black">
-      <div className="w-[85%] sm:w-[600px] mx-auto pt-32">
+      <div className="w-[85%] max-w-2xl mx-auto pt-32">
         <Image
           src={post.bannerImage}
-          width={600}
+          width={700}
           height={390}
           alt={post.title}
           className="rounded-md mx-auto"
@@ -58,13 +59,7 @@ export default function Post({ params }: Params) {
             </div>
           </div>
           <Link href={`https://wa.me/?text=https://beyonders.com.br/blog/post/${params.slug}`}  target="_blank">
-            <Image
-              width={32}
-              height={32}
-              src="/share.svg"
-              alt="share"
-              className="rounded-full float-right my-2"
-              /> 
+            <IoMdShare className="w-8 h-8 float-right my-2" fill="#31a85d"/> 
           </Link>
         </div>
         <div className="h-[2px] rounded-full main-gradient mx-auto"/>
@@ -78,9 +73,12 @@ export default function Post({ params }: Params) {
           <Button additionalClassName={`w-full mt-8`}>SHARE</Button>
         </Link>
       </div>
-      <div className="w-full bg-gray-800 mt-16">
-        <div className="h-[2px] rounded-full main-gradient mx-auto"/>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 w-[100%] px-10 md:px-0">
+      <div className="h-[2px] rounded-full bg-gray-500 mx-[5%] mt-16"/>
+      <div className="w-[85%] max-w-3xl mx-auto">
+        <h2 className="text-center main-gradient bg-clip-text text-transparent font-poppins font-semibold text-2xl py-8">
+          Recent Posts
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-2">
           {recentPost.map((post)=>(
             <RegularPost
             date={post.date}
@@ -91,7 +89,6 @@ export default function Post({ params }: Params) {
           />
           ))}
         </div>
-        <div className="h-[2px] rounded-full main-gradient mx-auto"/>
       </div>
     </main>
   );
