@@ -1,4 +1,3 @@
-import { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "@/services/api";
 import Image from "next/image";
 import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
@@ -8,10 +7,9 @@ import gfm from 'remark-breaks';
 import rehypeRaw from 'rehype-raw'
 import { format } from "date-fns";
 import { RegularPost } from "@/components/blog/RegularPost";
+import Link from "next/link";
+import { Button } from "@/components/common/Button";
 
-export const metadata: Metadata = {
-  title: "Beyonders Blog",
-};
 
 export default function Post({ params }: Params) {
   const post = getPostBySlug(params.slug);
@@ -59,13 +57,15 @@ export default function Post({ params }: Params) {
               </p>
             </div>
           </div>
-          <Image
-            width={32}
-            height={32}
-            src="/share.svg"
-            alt="share"
-            className="rounded-full float-right my-2"
-            /> 
+          <Link href={`https://wa.me/?text=https://beyonders.com.br/blog/post/${params.slug}`}  target="_blank">
+            <Image
+              width={32}
+              height={32}
+              src="/share.svg"
+              alt="share"
+              className="rounded-full float-right my-2"
+              /> 
+          </Link>
         </div>
         <div className="h-[2px] rounded-full main-gradient mx-auto"/>
         <div className="flow-root mt-4">
@@ -74,6 +74,9 @@ export default function Post({ params }: Params) {
         <div className="mx-auto text-justify font-poppins text-gray-secondary/80 text-md py-4">
           <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeRaw]} children={post.content} />
         </div>
+        <Link href={`https://wa.me/?text=https://beyonders.com.br/blog/post/${params.slug}`}  target="_blank">
+          <Button additionalClassName={`w-full mt-8`}>SHARE</Button>
+        </Link>
       </div>
       <div className="w-full bg-gray-800 mt-16">
         <div className="h-[2px] rounded-full main-gradient mx-auto"/>
@@ -93,3 +96,4 @@ export default function Post({ params }: Params) {
     </main>
   );
 }
+
