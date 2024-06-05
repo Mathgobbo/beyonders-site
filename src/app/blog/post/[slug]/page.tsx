@@ -1,18 +1,18 @@
 import { getAllPosts, getPostBySlug } from "@/services/api";
 import Image from "next/image";
-import { Params } from "next/dist/shared/lib/router/utils/route-matcher";
 import { notFound } from "next/navigation";
 import ReactMarkdown from "react-markdown";
 import gfm from 'remark-breaks';
 import rehypeRaw from 'rehype-raw'
 import { format } from "date-fns";
 import { RegularPost } from "@/components/blog/RegularPost";
-import Link from "next/link";
-import { Button } from "@/components/common/Button";
-import { IoMdShare } from "react-icons/io";
+import {ShareIcon, ShareButton} from "./shareDialog";
 
+interface PageProps {
+  params: { slug: string };
+}
 
-export default function Post({ params }: Params) {
+export default function Post({ params }: PageProps) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
@@ -36,11 +36,10 @@ export default function Post({ params }: Params) {
           alt={post.title}
           className="rounded-md mx-auto"
 					/> 
-        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-2xl py-8">
+        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-3xl pt-8 pb-6">
           {post.title}
         </h2>
-        <div className="h-[2px] rounded-full main-gradient mx-auto"/>
-        <div className="flow-root mt-2 mb-2">
+        <div className="flow-root mt-0 mb-6">
           <div className="float-left">
             <Image
               width={45}
@@ -49,38 +48,39 @@ export default function Post({ params }: Params) {
               alt={post.title}
               className="rounded-full mr-4 float-left"
               /> 
-            <div className="float-right ">
-              <p className="mx-auto main-gradient bg-clip-text text-transparent font-poppins font-semibold">
+            <div className="float-right text-white font-poppins font-semibold">
+              <p>
                 {post.author}
               </p>
-              <p className="mx-auto main-gradient bg-clip-text text-transparent font-poppins font-semibold">
+              <p>
                 {format(new Date(post.date), "MMM dd, yyyy")}
               </p>
             </div>
           </div>
-          <Link href={`https://wa.me/?text=https://beyonders.com.br/blog/post/${params.slug}`}  target="_blank">
-            <IoMdShare className="w-8 h-8 float-right my-2" fill="#31a85d"/> 
-          </Link>
+          <ShareIcon />
         </div>
-        <div className="h-[2px] rounded-full main-gradient mx-auto"/>
+        
         <div className="flow-root mt-4">
-          {post.tags.map((tag) => (<div className="float-left border-[#31a85d] px-2 m-1 main-gradient bg-clip-text text-transparent font-poppins border rounded-full">{tag}</div>))}
+          {post.tags.map((tag) => (<div key={tag} className="float-left border-[#31a85d] px-2 m-1 main-gradient bg-clip-text text-transparent font-poppins border rounded-full">{tag}</div>))}
         </div>
-        <div className="mx-auto text-justify font-poppins text-gray-secondary/80 text-md py-4">
-          <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeRaw]} children={post.content} />
+        <div className="h-[2px] rounded-full bg-gray-800 mx-auto mt-6"/>
+        <div className="mx-auto text-justify font-poppins text-white text-lg py-6">
+          <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeRaw]}>
+            {post.content}
+          </ReactMarkdown>
         </div>
-        <Link href={`https://wa.me/?text=https://beyonders.com.br/blog/post/${params.slug}`}  target="_blank">
-          <Button additionalClassName={`w-full mt-8`}>SHARE</Button>
-        </Link>
-      </div>
-      <div className="h-[2px] rounded-full bg-gray-500 mx-[5%] mt-16"/>
-      <div className="w-[85%] max-w-3xl mx-auto">
-        <h2 className="text-center main-gradient bg-clip-text text-transparent font-poppins font-semibold text-2xl py-8">
+        <ShareButton />
+      
+        <div className="h-[2px] rounded-full bg-gray-800 mt-10"/>
+        <h3 className="text-white font-poppins font-semibold text-2xl pt-8">
           Recent Posts
-        </h2>
+        </h3>
+      </div>
+      <div className="w-[85%] max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2">
           {recentPost.map((post)=>(
             <RegularPost
+            key={post.slug}
             date={post.date}
             imgUrl={post.bannerImage}
             title={post.title}
@@ -93,4 +93,3 @@ export default function Post({ params }: Params) {
     </main>
   );
 }
-

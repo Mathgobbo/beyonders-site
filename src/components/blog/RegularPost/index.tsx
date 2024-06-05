@@ -8,7 +8,7 @@ interface ServiceItemProps {
 	imgUrl: string;
 	title: string;
 	description: string;
-  url: string;
+  	url: string;
 }
 
 export const RegularPost = ({ date, description, title, imgUrl, url }: ServiceItemProps) => {
@@ -25,15 +25,15 @@ export const RegularPost = ({ date, description, title, imgUrl, url }: ServiceIt
 						alt={title}
 						className="rounded-md w-full"
 					/>
-					<div className="space-y-4">
-						<p className="font-poppins text-gray-secondary/80 text-sm">
-							{format(new Date(date), "MMM dd, yyyy")} •  blog
+					<div className="space-y-4 font-poppins text-white">
+						<p className="text-sm">
+							{format(new Date(date), "MMM dd, yyyy")}
 						</p>
-						<h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-xl">
+						<h2 className="main-gradient bg-clip-text text-transparent font-semibold text-xl">
 							{title}
 						</h2>
 						<div className="w-24 h-[2px] rounded-full main-gradient"></div>
-						<p className="font-poppins text-gray-secondary/80 text-sm pb-8">
+						<p className="text-sm pb-8">
 							{description}
 						</p>
 						<Link href={`/blog/post/${url}`}>
