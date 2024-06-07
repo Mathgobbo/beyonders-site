@@ -4,20 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 
 interface ServiceItemProps {
-	date: string;
-	imgUrl: string;
-	title: string;
-	description: string;
-  	url: string;
+  date: string;
+  imgUrl: string;
+  title: string;
+  description: string;
+  url: string;
 }
 
-export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemProps) => {
+export const MainPost = ({
+  date,
+  description,
+  title,
+  imgUrl,
+  url,
+}: ServiceItemProps) => {
   return (
     <div
       id="mainPost"
-      className="py-10 overflow-x-hidden relative font-inter pt-40 mx-auto "
+      className="lg:py-10 overflow-x-hidden relative font-inter pt-16 lg:pt-40 mx-auto "
     >
-    	<div className="z-50 grid grid-cols-1 mt-12 px-[0%] lg:px-[4%]">
+      <div className="z-50 grid grid-cols-1 mt-12 px-[0%] lg:px-[4%]">
         <div className="flex flex-col gap-8 lg:flex-row items-center pb-8">
           <Image
             src={imgUrl}
@@ -33,10 +39,8 @@ export const MainPost = ({ date, description, title, imgUrl, url }: ServiceItemP
             <h2 className="main-gradient bg-clip-text text-transparent font-semibold text-3xl">
               {title}
             </h2>
-            <p className="text-md pb-8">
-              {description}
-            </p>
-            <Link href={`/blog/post/${url}`} >
+            <p className="text-md pb-8">{description}</p>
+            <Link href={`/blog/post/${url}`}>
               <OutlineButton>More info</OutlineButton>
             </Link>
           </div>
