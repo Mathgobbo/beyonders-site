@@ -23,14 +23,7 @@ export default function Post({ params }: PageProps) {
   const allPosts = getAllPosts();
   const index = allPosts.findIndex((item) => item.slug == post.slug);
   allPosts.splice(index, 1);
-  const test = [
-    ...allPosts,
-    ...allPosts,
-    ...allPosts,
-    ...allPosts,
-    ...allPosts,
-  ];
-  const recentPost = test.slice(0, 4);
+  const recentPost = allPosts.slice(0, 4);
 
   return (
     <main className="min-h-screen bg-main-black">
