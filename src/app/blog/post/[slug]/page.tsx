@@ -8,17 +8,21 @@ import { format } from "date-fns";
 import { RegularPost } from "@/components/blog/RegularPost";
 import { ShareIcon, ShareButton } from "./shareDialog";
 import { Metadata } from "next";
+import markdownStyles from "./markdown-styles.module.css";
+import markdownToHtml from "@/services/markdownToHtml";
 
 interface PageProps {
   params: { slug: string };
 }
 
-export default function Post({ params }: PageProps) {
+export default async function Post({ params }: PageProps) {
   const post = getPostBySlug(params.slug);
 
   if (!post) {
     return notFound();
   }
+
+  const content = await markdownToHtml(post.content || "");
 
   const allPosts = getAllPosts();
   const index = allPosts.findIndex((item) => item.slug == post.slug);
@@ -35,7 +39,7 @@ export default function Post({ params }: PageProps) {
           alt={post.title}
           className="rounded-md mx-auto"
         />
-        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-3xl pt-8 pb-6">
+        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-5xl tracking-wide leading-tight pt-8 pb-6">
           {post.title}
         </h2>
         <div className="flow-root mt-0 mb-6">
@@ -66,10 +70,11 @@ export default function Post({ params }: PageProps) {
           ))}
         </div>
         <div className="h-[2px] rounded-full bg-gray-800 mx-auto mt-6" />
-        <div className="mx-auto text-justify font-poppins text-white text-lg py-6">
-          <ReactMarkdown remarkPlugins={[gfm]} rehypePlugins={[rehypeRaw]}>
-            {post.content}
-          </ReactMarkdown>
+        <div className="mx-auto font-poppins text-white text-lg py-6">
+          <div
+            className={markdownStyles["markdown"]}
+            dangerouslySetInnerHTML={{ __html: content }}
+          />
         </div>
         <ShareButton />
 

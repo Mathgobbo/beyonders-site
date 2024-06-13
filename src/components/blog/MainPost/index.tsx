@@ -30,13 +30,13 @@ export const MainPost = ({
             width={400}
             height={260}
             alt={title}
-            className="rounded-md w-[100%] md:w-[90%] lg:max-w-xl"
+            className="rounded-md w-[100%] md:w-[90%] lg:max-w-xl h-full object-cover"
           />
           <div className="space-y-4 w-[100%] md:w-[90%] lg:w-[70%] font-poppins text-white">
             <p className="pb-2 text-md ">
               {format(new Date(date), "MMM dd, yyyy")}
             </p>
-            <h2 className="main-gradient bg-clip-text text-transparent font-semibold text-3xl">
+            <h2 className="main-gradient bg-clip-text text-transparent font-semibold text-4xl tracking-wide">
               {title}
             </h2>
             <p className="text-md pb-8">{description}</p>
