@@ -31,15 +31,15 @@ export default async function Post({ params }: PageProps) {
 
   return (
     <main className="min-h-screen bg-main-black">
-      <div className="w-[85%] max-w-2xl mx-auto pt-32">
+      <div className="w-[85%] max-w-2xl md:max-w-4xl mx-auto pt-32">
         <Image
           src={post.bannerImage}
           width={700}
           height={390}
           alt={post.title}
-          className="rounded-md mx-auto"
+          className="rounded-lg mx-auto w-full object-cover"
         />
-        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-5xl tracking-wide leading-tight pt-8 pb-6">
+        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-3xl md:text-5xl tracking-wide leading-tight pt-8 pb-8 lg:pb-6">
           {post.title}
         </h2>
         <div className="flow-root mt-0 mb-6">

@@ -16,13 +16,13 @@ export default function BlogHome() {
   const morePosts = allPosts.slice(1);
 
   return (
-    <main className="min-h-screen bg-main-black">
+    <main className="min-h-screen bg-main-black relative overflow-hidden">
       <Image
         src={"/circle.svg"}
         alt="circle"
         width={500}
         height={500}
-        className="z-1 fixed top-1/3 -right-40"
+        className="z-1 absolute top-1/3 -right-40 opacity-50"
       />
       <div className="w-[100%] mx-auto px-10 lg:px-28">
         <MainPost

@@ -78,7 +78,7 @@ export const Footer = () => {
         </div>
         <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <span className="block text-sm sm:text-center text-gray-400">
-          © 2023{" "}
+          © 2024{" "}
           <a href="https://beyonders.com.br/" className="hover:underline">
             Beyonders™
           </a>
