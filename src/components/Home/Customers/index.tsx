@@ -14,6 +14,14 @@ const customers = [
     role: "Teacher and Speaker",
     picture: "/home/showcase/testimonials/teacher-marcelo.webp",
   },
+  {
+    quote: `ContractApp is my passion project, born from over 10 years of experiencing pain 
+    points as a business owner in the construction industry. Together we developed and launched the Minimum Viable Product in only 3 months. 
+    Each week strategize and prioritize tasks based on our individual strengths. They're extremely professional and great to work with.`,
+    name: "Taylor Francis",
+    role: "ContractApp Founder",
+    picture: "/home/showcase/testimonials/taylor.webp",
+  },
   // {
   //   quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
   //   name: "Jackson Jones",

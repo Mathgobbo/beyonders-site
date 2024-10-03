@@ -1,6 +1,6 @@
-import { IPostMetadata } from "./IPost";
+import { Post } from "./Post";
 
 export interface IBlogArticlePageProps {
-  metadata: IPostMetadata;
+  metadata: Post;
   content: string;
 }

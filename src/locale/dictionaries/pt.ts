@@ -15,6 +15,11 @@ export const pt: IDictionary = {
     customers: "Clientes",
     faq: "FAQ",
     pricing: "Preços",
+    blog: "Blog",
+  },
+  blog: {
+    blog: "Blog",
+    moreInfo: "Veja mais",
   },
   footer: {
     companyName: "BEYONDERS - SOLUÇÕES DIGITAIS",

@@ -12,7 +12,12 @@ export interface IDictionary {
     pricing: string;
     faq: string;
     benefits: string;
+    blog: string;
   };
+  blog: {
+    blog: string;
+    moreInfo: string;
+  }
   footer: {
     companyName: string;
     cnpj: string;
