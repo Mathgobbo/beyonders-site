@@ -28,3 +28,13 @@
 .markdown a {
   @apply text-blue-400 underline hover:no-underline
 }
+
+.markdown ul li ,
+.markdown ol li ul li {
+  @apply list-disc list-inside
+}
+
+.markdown ol li {
+  @apply list-decimal
+}
+ 

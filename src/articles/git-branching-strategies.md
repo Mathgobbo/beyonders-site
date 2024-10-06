@@ -4,7 +4,7 @@ description: "Different branching strategies and how they can help with your Git
 author: "Matheus Gobbo Bernardi"
 authorPicture: "/team/matheus.webp"
 category: "git"
-date: "2024-10-06"
+date: "2024-10-02"
 bannerImage: "/blog/git-branching-strategies/banner.png"
 tags:
   - git
