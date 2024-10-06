@@ -24,3 +24,7 @@
 .markdown img {
   @apply mx-auto mb-10
 }
+
+.markdown a {
+  @apply text-blue-400 underline hover:no-underline
+}
