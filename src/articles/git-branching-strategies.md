@@ -53,7 +53,7 @@ This is a lightweight, branch-based workflow designed to support simplicity and 
 
 This workflow is particularly well-suited for small teams or projects that prioritize frequent deployments, as it encourages rapid iteration, efficient code review, and minimal overhead in managing branches.
 
-As GitHub Flow is one of our favorite strategies, [we wrote an article exploring its documentation and how to implement it.](/blog/post/github-branching-strategy)
+As GitHub Flow is one of our favorite strategies, [we wrote an article exploring its documentation and how to implement it.](/blog/post/github-flow-branching-strategy)
 
 #### 5. Trunk-Based Development
 
@@ -69,6 +69,6 @@ Each branching strategy has distinct strengths, balancing control, flexibility, 
 
 ### How We Work
 
-At Beyonders, we mix **GitHub Flow** and **Feature Branching**. Since we like to make the deployment process quick, easy, and secure, we value the flexibility of having a clean main branch with frequent deploys. We also have an article where we discuss the **GitHub Flow** strategy extensively, so if you like it, [don't hesitate to read more here.](/blog/post/github-branching-strategy)
+At Beyonders, we mix **GitHub Flow** and **Feature Branching**. Since we like to make the deployment process quick, easy, and secure, we value the flexibility of having a clean main branch with frequent deploys. We also have an article where we discuss the **GitHub Flow** strategy extensively, so if you like it, [don't hesitate to read more here.](/blog/post/github-flow-branching-strategy)
 
 This post was inspired by one of [Dr. Milan Milanovic's](https://www.linkedin.com/in/milanmilanovic/) LinkedIn articles. Thanks for the insights, Dr. Milanovic!

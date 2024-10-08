@@ -17,7 +17,7 @@ tags:
 ---
 
 Github Flow is the name of a poupular branching strategy, widely adopted by it's benefits, advantages and convenience. Very easy to understand, so anyone in the team can participate in the release process!
-We already talked about [Github Flow and other branching strategies in this post](/blog/post/git-branching-strategies), so if you're curious them, don't miss the chance and read that article!
+We already talked about [Github Flow and other branching strategies in this post](/blog/post/git-branching-strategies), so if you're curious about them, don't miss the chance and read that article!
 
 But let's go!
 
@@ -59,10 +59,10 @@ We can explain this strategy with 6 simple steps.
 ### Origins of this method
 
 This strategy didn't get its name for nothing. It was born inside Github, and used by their teams inside their main project (Github itself). And this article was inspired by a page published by one of Github co-founders, [Scott Chacon](https://github.com/schacon).
-They thought about this strategy when being asked about what he thinks about the [git-flow strategy](https://nvie.com/posts/a-successful-git-branching-model/), and Scott tells that this strategy is great, but most of the teams (including Github) don't require a complex strategy to achieve great results, and that a simflified process can bring many advantages, like we commented before.
+He thought about this strategy when being asked about what he thinks about the [git-flow strategy](https://nvie.com/posts/a-successful-git-branching-model/), and Scott tells that this strategy is great, but most of the teams (including Github) don't require a complex strategy to achieve great results, and that a simplified process can bring many advantages, like we commented before.
 
 ### Results
 
-Inside Beyonders we don't think different. We like solutions that can bring benefits without much complexity. We have our own strategy, where we mix the Github and Feature strategies together, but always in a simple way, so we can implement a new release fast, without worries of breaking the something in production.
+Inside Beyonders we don't think different. We like solutions that can bring benefits without much complexity. We have our own strategy, where we mix the Github and Feature strategies together, but always in a simple way, so we can implement a new release fast, without worries of breaking something in production.
 
 Thanks for the reading and see you in the next post 👋
