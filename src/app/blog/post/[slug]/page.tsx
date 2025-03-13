@@ -1,15 +1,12 @@
+import { RegularPost } from "@/components/blog/RegularPost";
 import { getAllPosts, getPostBySlug } from "@/services/api";
+import markdownToHtml from "@/services/markdownToHtml";
+import { format } from "date-fns";
+import { Metadata } from "next";
 import Image from "next/image";
 import { notFound } from "next/navigation";
-import ReactMarkdown from "react-markdown";
-import gfm from "remark-breaks";
-import rehypeRaw from "rehype-raw";
-import { format } from "date-fns";
-import { RegularPost } from "@/components/blog/RegularPost";
-import { ShareIcon, ShareButton } from "./shareDialog";
-import { Metadata } from "next";
 import markdownStyles from "./markdown-styles.module.css";
-import markdownToHtml from "@/services/markdownToHtml";
+import { ShareButton, ShareIcon } from "./shareDialog";
 
 interface PageProps {
   params: { slug: string };
