@@ -1,9 +1,9 @@
-import { Button, OutlineButton } from "@/components/common/Button";
+import {
+  ConversionButton,
+  ConversionOutlineButton,
+} from "@/components/app/ConversionButton";
 import { FaqQuestion } from "@/components/FaqQuestion";
-import { PIPEFY_FORM_URL } from "@/config/constants";
 import { Metadata } from "next";
-import Image from "next/image";
-import { ComponentProps } from "react";
 import { BsCheck, BsChevronDown } from "react-icons/bs";
 
 export const metadata: Metadata = {
@@ -58,12 +58,12 @@ export default function ELearningPage() {
               content, with custom design, analytics, and full ownership.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
-              <PipefyButton additionalClassName="bg-green-500 hover:bg-green-900 text-black font-medium px-8 py-4">
+              <ConversionButton additionalClassName="bg-green-500 hover:bg-green-900 text-black font-medium px-8 py-4">
                 Get a Custom Quote
-              </PipefyButton>
-              <PipefyOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
+              </ConversionButton>
+              <ConversionOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
                 Start for $280/month
-              </PipefyOutlineButton>
+              </ConversionOutlineButton>
             </div>
           </div>
         </div>
@@ -176,9 +176,9 @@ export default function ELearningPage() {
                     1 course, unlimited students, all features, custom design,
                     hosted and managed by us. Cancel anytime.
                   </p>
-                  <PipefyButton additionalClassName="w-full bg-green-500 hover:bg-green-600 text-black">
+                  <ConversionButton additionalClassName="w-full bg-green-500 hover:bg-green-600 text-black">
                     Start for only $280/month
-                  </PipefyButton>
+                  </ConversionButton>
                 </div>
                 <div className="bg-zinc-900 p-6 border-t border-zinc-700">
                   <div className="flex items-start gap-3 mb-3">
@@ -205,9 +205,9 @@ export default function ELearningPage() {
                     Complete platform ownership, custom-built for your business,
                     no monthly fees, delivered in 30 days.
                   </p>
-                  <PipefyButton additionalClassName="w-full border-green-500 text-green-500 hover:bg-green-500/10">
+                  <ConversionButton additionalClassName="w-full border-green-500 text-green-500 hover:bg-green-500/10">
                     Request a Demo
-                  </PipefyButton>
+                  </ConversionButton>
                 </div>
                 <div className="bg-zinc-900 p-6 border-t border-zinc-700">
                   <div className="flex items-start gap-3 mb-3">
@@ -338,12 +338,12 @@ export default function ELearningPage() {
               Start building your own custom learning platform today.
             </h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <PipefyButton additionalClassName="bg-green-500 hover:bg-green-600 text-black font-medium px-8 py-4">
+              <ConversionButton additionalClassName="bg-green-500 hover:bg-green-600 text-black font-medium px-8 py-4">
                 Start for $280/month
-              </PipefyButton>
-              <PipefyOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
+              </ConversionButton>
+              <ConversionOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
                 Request a Custom Quote
-              </PipefyOutlineButton>
+              </ConversionOutlineButton>
             </div>
           </div>
         </div>
@@ -351,18 +351,3 @@ export default function ELearningPage() {
     </div>
   );
 }
-
-const PipefyButton = (props: ComponentProps<typeof Button>) => {
-  return (
-    <a target="_blank" href={PIPEFY_FORM_URL} rel="noreferrer">
-      <Button {...props}>{props.children}</Button>
-    </a>
-  );
-};
-const PipefyOutlineButton = (props: ComponentProps<typeof Button>) => {
-  return (
-    <a target="_blank" href={PIPEFY_FORM_URL} rel="noreferrer">
-      <OutlineButton {...props}>{props.children}</OutlineButton>
-    </a>
-  );
-};
