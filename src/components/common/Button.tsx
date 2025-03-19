@@ -1,10 +1,10 @@
 import { ButtonHTMLAttributes } from "react";
 
-interface Props extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   additionalClassName?: string;
 }
 
-export const Button = (props: Props) => {
+export const Button = (props: ButtonProps) => {
   const { additionalClassName, ...rest } = props;
   return (
     <button
@@ -16,7 +16,7 @@ export const Button = (props: Props) => {
   );
 };
 
-export const OutlineButton = (props: Props) => {
+export const OutlineButton = (props: ButtonProps) => {
   const { additionalClassName, ...rest } = props;
   return (
     <button

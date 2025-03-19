@@ -2,6 +2,7 @@ import { BlogFooter } from "@/components/blog/BlogFooter";
 import { BlogHeader } from "@/components/BlogHeader";
 import { Inter, Poppins } from "@next/font/google";
 import "../styles/globals.css";
+import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 export const metadata = {
   title: "Beyonders Blog",
   description:
@@ -28,6 +29,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.variable} ${inter.variable}  bg-main-black`}>
+        <GoogleAnalytics />
         <BlogHeader />
         {children}
         <BlogFooter />
