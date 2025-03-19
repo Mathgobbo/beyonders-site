@@ -26,13 +26,21 @@ export default function ELearningPage() {
       {/* Hero Section */}
       <section className="relative w-full py-20 pt-32 md:py-32 md:pt-48 lg:py-40 lg:pt-52 overflow-hidden">
         <div className="absolute inset-0 z-0 opacity-20">
-          <Image
-            src="/e-learning/banner.webp"
-            alt="Background pattern"
-            fill
-            className="object-cover"
-            priority
-          />
+          <video
+            className="object-cover w-full h-full"
+            autoPlay
+            muted
+            controls={false}
+            loop
+            preload="auto"
+          >
+            <source src="/e-learning/e-learning.mp4" />
+            <p>
+              Sorry, Your Browser Doesn&pos;t Support Embedded Videos.
+              Here&apos;s the{" "}
+              <a href="/e-learning/e-learning.mp4">Link to the video</a>
+            </p>
+          </video>
         </div>
         <div className="container relative z-10 mx-auto px-4 md:px-6">
           <div className="flex flex-col items-center text-center max-w-4xl mx-auto space-y-6">
@@ -168,7 +176,7 @@ export default function ELearningPage() {
                     hosted and managed by us. Cancel anytime.
                   </p>
                   <PipefyButton additionalClassName="w-full bg-green-500 hover:bg-green-600 text-black">
-                    Start for only $300/month
+                    Start for only $280/month
                   </PipefyButton>
                 </div>
                 <div className="bg-zinc-900 p-6 border-t border-zinc-700">
@@ -330,7 +338,7 @@ export default function ELearningPage() {
             </h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
               <PipefyButton additionalClassName="bg-green-500 hover:bg-green-600 text-black font-medium px-8 py-4">
-                Start for $300/month
+                Start for $280/month
               </PipefyButton>
               <PipefyOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
                 Request a Custom Quote
