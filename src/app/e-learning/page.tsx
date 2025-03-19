@@ -33,8 +33,9 @@ export default function ELearningPage() {
             controls={false}
             loop
             preload="auto"
+            playsInline
           >
-            <source src="/e-learning/e-learning.mp4" />
+            <source src="/e-learning/e-learning.mp4" type="video/mp4" />
             <p>
               Sorry, Your Browser Doesn&pos;t Support Embedded Videos.
               Here&apos;s the{" "}
