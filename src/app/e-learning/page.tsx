@@ -251,7 +251,7 @@ export default function ELearningPage() {
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
             Why build your platform with <span className="text-main-green">Beyonders</span>?
           </h2>
-          <p className="lg:mx-14 text-center text-gray-200 mb-16 text-sm lg:text-base">We are a software development company with more than 5 years of market. We already helped many teachers, coeaches and entrepreneurs with their ideas, transforming their dreams into reality. We develop custom solutions in a transparent and straighforward way. We won't be only your developers, our goal is to identify your needs and build the best solution ever, making you thrive! </p>
+          <p className="lg:mx-14 text-center text-gray-200 mb-16 text-sm lg:text-base">We are a software development company with more than 5 years of market. We already helped many teachers, coeaches and entrepreneurs with their ideas, transforming their dreams into reality. We develop custom solutions in a transparent and straighforward way. We won&apos;t be only your developers, our goal is to identify your needs and build the best solution ever, making you thrive! </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               {
