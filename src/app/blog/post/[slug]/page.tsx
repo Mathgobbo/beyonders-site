@@ -122,6 +122,7 @@ export function generateMetadata({ params }: PageProps): Metadata {
     ],
     keywords: post.tags,
     robots: "index, follow",
+    icons: '/favicon.ico',
     openGraph: {
       title,
       images: [post.bannerImage],

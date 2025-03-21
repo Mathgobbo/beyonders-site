@@ -30,7 +30,6 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${poppins.variable} ${inter.variable}  bg-main-black`}>
         <GoogleAnalytics />
-        <BlogHeader />
         {children}
         <BlogFooter />
       </body>

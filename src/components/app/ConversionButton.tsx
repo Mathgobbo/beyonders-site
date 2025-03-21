@@ -28,3 +28,18 @@ export const ConversionOutlineButton = (
     </OutlineButton>
   );
 };
+
+
+export const EmailButtonOutline = (
+  props: ComponentProps<typeof Button>
+) => {
+  const handleClick = () => {
+    const link = "mailto://matheus@beyonders.com.br?subject=Free Custom Quote - E-learning Platform&body="
+    reportConversion(link);
+  };
+  return (
+    <OutlineButton {...props} onClick={handleClick}>
+      {props.children}
+    </OutlineButton>
+  );
+};

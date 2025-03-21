@@ -1,13 +1,16 @@
 import {
   ConversionButton,
   ConversionOutlineButton,
+  EmailButtonOutline,
 } from "@/components/app/ConversionButton";
+import { Button } from "@/components/common/Button";
 import { FaqQuestion } from "@/components/FaqQuestion";
 import { Metadata } from "next";
 import { BsCheck, BsChevronDown } from "react-icons/bs";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://beyonders.com.br"),
+  icons: '/favicon.ico',
   title: "Custom E-Learning Platform Development - Beyonders",
   description:
     "Build your own custom e-learning platform — fully tailored design, unlimited students, course management, payment integration, and advanced analytics. Scalable solutions from just $280/month. Request your quote today!",
@@ -59,10 +62,10 @@ export default function ELearningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <ConversionButton additionalClassName="bg-green-500 hover:bg-green-900 text-black font-medium px-8 py-4">
-                Get a Custom Quote
+               Free Expert Consultant Here
               </ConversionButton>
               <ConversionOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
-                Start for $280/month
+                Start with 50% Discount Now
               </ConversionOutlineButton>
             </div>
           </div>
@@ -104,7 +107,7 @@ export default function ELearningPage() {
       </section>
 
       {/* Features Section */}
-      <section className="w-full py-20 bg-black">
+      <section className="w-full py-20 bg-black" id="features">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -145,7 +148,7 @@ export default function ELearningPage() {
       </section>
 
       {/* Pricing Section */}
-      <section className="w-full py-20 bg-zinc-900">
+      <section className="w-full py-20 bg-zinc-900" id="pricing">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
@@ -158,18 +161,18 @@ export default function ELearningPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm bg-zinc-800 border-green-500/20 overflow-hidden relative">
               <div className="absolute top-0 right-0 bg-green-500 text-black font-bold py-1 px-3 rounded-bl-lg">
-                44% OFF
+                <span className="hidden lg:inline-block">SPECIAL OFFER</span> 50% OFF
               </div>
               <div className="p-0">
                 <div className="p-6">
-                  <h3 className="text-2xl font-bold mb-2">Start Small</h3>
+                  <h3 className="text-2xl font-bold mb-2">Start Today</h3>
                   <div className="mb-4 flex items-center gap-2">
                     <span className="text-4xl font-bold text-green-500">
-                      $280
+                     Only $280
                     </span>
                     <span className="text-gray-400">/month</span>
                     <span className="text-gray-500 line-through text-lg">
-                      $500
+                      $560
                     </span>
                   </div>
                   <p className="text-gray-300 mb-6">
@@ -177,7 +180,7 @@ export default function ELearningPage() {
                     hosted and managed by us. Cancel anytime.
                   </p>
                   <ConversionButton additionalClassName="w-full bg-green-500 hover:bg-green-600 text-black">
-                    Start for only $280/month
+                    Start now with discount
                   </ConversionButton>
                 </div>
                 <div className="bg-zinc-900 p-6 border-t border-zinc-700">
@@ -185,7 +188,7 @@ export default function ELearningPage() {
                     <BsCheck className="h-5 w-5 text-green-500 shrink-0 mt-0.5" />
                     <span>
                       Continuous support, updates, and performance monitoring
-                      for 3 months free
+                      for free
                     </span>
                   </div>
                 </div>
@@ -225,7 +228,7 @@ export default function ELearningPage() {
       </section>
 
       {/* Case Study Section */}
-      <section className="w-full py-16 bg-black">
+      <section className="w-full py-16 bg-black" id="showcase">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto bg-zinc-900 rounded-xl p-8 text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">Case Study</h2>
@@ -280,7 +283,7 @@ export default function ELearningPage() {
       </section>
 
       {/* FAQ Section */}
-      <section className="w-full py-20 bg-black">
+      <section className="w-full py-20 bg-black" id="faq">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
             Frequently Asked Questions
@@ -331,23 +334,31 @@ export default function ELearningPage() {
       </section>
 
       {/* Final CTA Section */}
-      <section className="w-full py-16">
+      <section className="w-full py-16" id="contact">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              Start building your own custom learning platform today.
+              With <span className="text-main-green">50% discount</span>, start building your own custom learning platform today.
+
             </h2>
+            <p></p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
-              <ConversionButton additionalClassName="bg-green-500 hover:bg-green-600 text-black font-medium px-8 py-4">
-                Start for $280/month
+              <ConversionButton additionalClassName="bg-green-600 hover:bg-green-700 text-black font-medium px-16 py-4">
+                Start now and get the 50% discount Today!
               </ConversionButton>
-              <ConversionOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
-                Request a Custom Quote
-              </ConversionOutlineButton>
             </div>
           </div>
         </div>
       </section>
     </div>
   );
+}
+
+
+const EmailButton = () => {
+  return <a href="mailto:matheus@beyonders.com.br">
+    <Button>
+
+    </Button>
+  </a>
 }

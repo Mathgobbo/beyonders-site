@@ -6,6 +6,8 @@ import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Beyonders Blog",
+  icons: '/favicon.ico',
+
   description:
     "Check out the best articles about technology, development, programming, blockchain, business, startups and other relevant topics.",
 };
