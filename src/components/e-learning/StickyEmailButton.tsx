@@ -27,7 +27,7 @@ export default function StickyEmailButton() {
             exit={{ opacity: 0 }}
             className="absolute right-16 bottom-3 translate-y-1/2 bg-gray-900 text-white text-sm rounded-lg px-3 py-2 shadow-xl whitespace-nowrap"
           >
-            Request a free quote today and let's start!
+            Request a free quote today and let&apos;s start!
           </motion.div>
         )}
        <a
