@@ -1,6 +1,26 @@
+"use client";
 import Script from "next/script";
+import { useEffect } from "react";
 
 export const ContactForm = () => {
+  useEffect(() => {
+    if (window)
+      window.addEventListener("message", function (event) {
+        if (
+          event.data.type === "hsFormCallback" &&
+          event.data.eventName === "onFormSubmitted"
+        ) {
+          console.log("Event Triggered");
+          // @ts-ignore
+          window.gtag("event", "conversion", {
+            send_to: "AW-16877219122/sLanCPaR7KwaELLa1-8-",
+            value: 1.0,
+            currency: "BRL",
+          });
+        }
+      });
+  }, []);
+
   return (
     <section
       id="elearning-contact"
