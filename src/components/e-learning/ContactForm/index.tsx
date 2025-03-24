@@ -1,0 +1,21 @@
+import Script from "next/script";
+
+export const ContactForm = () => {
+  return (
+    <section
+      id="elearning-contact"
+      className="font-poppins font-semibold w-full flex flex-col justify-center items-center bg-black py-20"
+    >
+      <Script
+        src="https://js.hsforms.net/forms/embed/49196676.js"
+        defer
+      ></Script>
+      <div
+        className="hs-form-frame w-full max-w-3xl flex flex-col justify-center items-center"
+        data-region="na1"
+        data-form-id="4503cca1-a579-4de5-8ce8-4c7137ddcff1"
+        data-portal-id="49196676"
+      ></div>
+    </section>
+  );
+};

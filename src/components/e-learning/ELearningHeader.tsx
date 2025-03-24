@@ -15,7 +15,7 @@ export const ELearningHeader = () => {
       <header
         className={`bg-main-black/80 border-b border-b-gray-800 fixed z-50 flex transition duration-700 items-center justify-between w-screen lg:w-full px-6 py-4 lg:py-6 xl:px-36 `}
       >
-        <Link href={"/e-learning"} >
+        <Link href={"/e-learning"}>
           <Image
             width={516}
             height={90.5}
@@ -25,22 +25,13 @@ export const ELearningHeader = () => {
           />
         </Link>
         <div className="hidden md:flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
-          <HeaderLink href={"/e-learning#features"} >
-            Features
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#pricing"} >
-            Pricing
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#showcase"}>
-            Showcase
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#faq"}>
-            FAQ
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#contact"}>
+          <HeaderLink href={"/e-learning#features"}>Features</HeaderLink>
+          <HeaderLink href={"/e-learning#pricing"}>Pricing</HeaderLink>
+          <HeaderLink href={"/e-learning#showcase"}>Showcase</HeaderLink>
+          <HeaderLink href={"/e-learning#faq"}>FAQ</HeaderLink>
+          <HeaderLink href={"/e-learning#elearning-contact"}>
             Contact
           </HeaderLink>
-         
         </div>
         <div className="flex justify-center items-center md:hidden">
           <button
@@ -83,19 +74,11 @@ export const ELearningHeader = () => {
           className="z-40 p-4 pt-6 fixed top-16 left-0 w-full bg-main-black/90 border-b border-gray-800 flex text-left flex-col"
         >
           {" "}
-          <HeaderLink href={"/e-learning#features"} >
-            Features
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#pricing"} >
-            Pricing
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#showcase"}>
-            Showcase
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#faq"}>
-            FAQ
-          </HeaderLink>
-          <HeaderLink href={"/e-learning#contact"}>
+          <HeaderLink href={"/e-learning#features"}>Features</HeaderLink>
+          <HeaderLink href={"/e-learning#pricing"}>Pricing</HeaderLink>
+          <HeaderLink href={"/e-learning#showcase"}>Showcase</HeaderLink>
+          <HeaderLink href={"/e-learning#faq"}>FAQ</HeaderLink>
+          <HeaderLink href={"/e-learning#elearning-contact"}>
             Contact
           </HeaderLink>
         </motion.section>

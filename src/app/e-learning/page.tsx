@@ -1,16 +1,16 @@
 import {
   ConversionButton,
   ConversionOutlineButton,
-  EmailButtonOutline,
 } from "@/components/app/ConversionButton";
 import { Button } from "@/components/common/Button";
+import { ContactForm } from "@/components/e-learning/ContactForm";
 import { FaqQuestion } from "@/components/FaqQuestion";
 import { Metadata } from "next";
 import { BsCheck, BsChevronDown } from "react-icons/bs";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://beyonders.com.br"),
-  icons: '/favicon.ico',
+  icons: "/favicon.ico",
   title: "Custom E-Learning Platform Development - Beyonders",
   description:
     "Build your own custom e-learning platform — fully tailored design, unlimited students, course management, payment integration, and advanced analytics. Scalable solutions from just $280/month. Request your quote today!",
@@ -62,7 +62,7 @@ export default function ELearningPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 mt-8">
               <ConversionButton additionalClassName="bg-green-500 hover:bg-green-900 text-black font-medium px-8 py-4">
-               Free Expert Consultant Here
+                Free Expert Consultant Here
               </ConversionButton>
               <ConversionOutlineButton additionalClassName="border-green-500 text-green-500 hover:bg-green-500/10 font-medium px-8 py-4">
                 Start with 50% Discount Now
@@ -161,14 +161,15 @@ export default function ELearningPage() {
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div className="rounded-lg border bg-card text-card-foreground shadow-sm bg-zinc-800 border-green-500/20 overflow-hidden relative">
               <div className="absolute top-0 right-0 bg-green-500 text-black font-bold py-1 px-3 rounded-bl-lg">
-                <span className="hidden lg:inline-block">SPECIAL OFFER</span> 50% OFF
+                <span className="hidden lg:inline-block">SPECIAL OFFER</span>{" "}
+                50% OFF
               </div>
               <div className="p-0">
                 <div className="p-6">
                   <h3 className="text-2xl font-bold mb-2">Start Today</h3>
                   <div className="mb-4 flex items-center gap-2">
                     <span className="text-4xl font-bold text-green-500">
-                     Only $280
+                      Only $280
                     </span>
                     <span className="text-gray-400">/month</span>
                     <span className="text-gray-500 line-through text-lg">
@@ -249,9 +250,17 @@ export default function ELearningPage() {
       <section className="w-full py-20 bg-zinc-900">
         <div className="container mx-auto px-4 md:px-6">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-            Why build your platform with <span className="text-main-green">Beyonders</span>?
+            Why build your platform with{" "}
+            <span className="text-main-green">Beyonders</span>?
           </h2>
-          <p className="lg:mx-14 text-center text-gray-200 mb-16 text-sm lg:text-base">We are a software development company with more than 5 years of market. We already helped many teachers, coeaches and entrepreneurs with their ideas, transforming their dreams into reality. We develop custom solutions in a transparent and straighforward way. We won&apos;t be only your developers, our goal is to identify your needs and build the best solution ever, making you thrive! </p>
+          <p className="lg:mx-14 text-center text-gray-200 mb-16 text-sm lg:text-base">
+            We are a software development company with more than 5 years of
+            market. We already helped many teachers, coeaches and entrepreneurs
+            with their ideas, transforming their dreams into reality. We develop
+            custom solutions in a transparent and straighforward way. We
+            won&apos;t be only your developers, our goal is to identify your
+            needs and build the best solution ever, making you thrive!{" "}
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-5xl mx-auto">
             {[
               {
@@ -282,6 +291,9 @@ export default function ELearningPage() {
           </div>
         </div>
       </section>
+
+      {/* CONTACT FORM */}
+      <ContactForm />
 
       {/* FAQ Section */}
       <section className="w-full py-20 bg-black" id="faq">
@@ -339,8 +351,8 @@ export default function ELearningPage() {
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-2xl md:text-3xl font-bold mb-6">
-              With <span className="text-main-green">50% discount</span>, start building your own custom learning platform today.
-
+              With <span className="text-main-green">50% discount</span>, start
+              building your own custom learning platform today.
             </h2>
             <p></p>
             <div className="flex flex-col sm:flex-row justify-center gap-4">
@@ -355,11 +367,10 @@ export default function ELearningPage() {
   );
 }
 
-
 const EmailButton = () => {
-  return <a href="mailto:matheus@beyonders.com.br">
-    <Button>
-
-    </Button>
-  </a>
-}
+  return (
+    <a href="mailto:matheus@beyonders.com.br">
+      <Button></Button>
+    </a>
+  );
+};
