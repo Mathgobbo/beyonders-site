@@ -2,7 +2,6 @@ import {
   ConversionButton,
   ConversionOutlineButton,
 } from "@/components/app/ConversionButton";
-import { Button } from "@/components/common/Button";
 import { ContactForm } from "@/components/e-learning/ContactForm";
 import { FaqQuestion } from "@/components/FaqQuestion";
 import { Metadata } from "next";
@@ -71,6 +70,9 @@ export default function ELearningPage() {
           </div>
         </div>
       </section>
+
+      {/* CONTACT FORM */}
+      <ContactForm />
 
       {/* Pain Points Section */}
       <section className="w-full py-16 bg-zinc-900">
@@ -231,16 +233,29 @@ export default function ELearningPage() {
       {/* Case Study Section */}
       <section className="w-full py-16 bg-black" id="showcase">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-4xl mx-auto bg-zinc-900 rounded-xl p-8 text-center">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6">Case Study</h2>
+          <div className="max-w-4xl mx-auto bg-zinc-900 rounded-xl p-8 text-center space-y-4">
+            <h2 className="text-2xl md:text-3xl font-bold">
+              What they say about us?
+            </h2>
             <p className="text-xl italic">
-              &quot;We helped{" "}
+              &quot;They helped me launch my custom course platform and reach
+              100+ active students in just 2 months.&quot; <br />{" "}
               <a href="https://da2x.com.br" target="_blank" rel="noreferrer">
                 {" "}
                 <span className="text-green-500">Matheus from DA2X</span>
               </a>{" "}
-              launch their custom course platform and reach 100+ active students
-              in just 6 months.&quot;
+            </p>
+            <p className="text-xl italic">
+              &quot;My goal was to create something different from what I saw on
+              the market. And the Beyonders, from the first contact, gave me all
+              the support and contributed to the success of my project.&quot;
+              <br />
+              <a href="https://da2x.com.br" target="_blank" rel="noreferrer">
+                {" "}
+                <span className="text-green-500">
+                  Marcelo from Geografia Irada
+                </span>
+              </a>{" "}
             </p>
           </div>
         </div>
@@ -291,9 +306,6 @@ export default function ELearningPage() {
           </div>
         </div>
       </section>
-
-      {/* CONTACT FORM */}
-      <ContactForm />
 
       {/* FAQ Section */}
       <section className="w-full py-20 bg-black" id="faq">
@@ -366,11 +378,3 @@ export default function ELearningPage() {
     </div>
   );
 }
-
-const EmailButton = () => {
-  return (
-    <a href="mailto:matheus@beyonders.com.br">
-      <Button></Button>
-    </a>
-  );
-};
