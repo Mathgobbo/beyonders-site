@@ -24,8 +24,19 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <MainHead />
-      <GoogleAnalytics />
+      {/* Commented to seup only GTAG */}
+      {/* <GoogleAnalytics /> */}
       <main>
+        {/* GTAG  */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-KRT8W847"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          ></iframe>
+        </noscript>
+
         <LazyMotion features={domAnimation}>
           <main
             className={`${poppins.variable} ${inter.variable}  bg-main-black`}
