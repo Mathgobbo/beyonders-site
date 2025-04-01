@@ -3,6 +3,8 @@ import { BlogHeader } from "@/components/BlogHeader";
 import { Inter, Poppins } from "@next/font/google";
 import "../styles/globals.css";
 import { GoogleAnalytics } from "@/components/GoogleAnalytics";
+import { GoogleTagManager } from "@next/third-parties/google";
+
 export const metadata = {
   title: "Beyonders Blog",
   description:
@@ -28,6 +30,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <GoogleTagManager gtmId="GTM-KRT8W847" />
       <body className={`${poppins.variable} ${inter.variable}  bg-main-black`}>
         {/* <GoogleAnalytics /> */}
         {children}
