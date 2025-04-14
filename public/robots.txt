@@ -12,7 +12,7 @@ Allow:
 Disallow: 
 Disallow: /cgi-bin/
 
-Sitemap: https://beyonders.com.br/sitemap.xml
+Sitemap: https://beyonders.agency/sitemap.xml
 
 # Host
-Host: https://beyonders.com.br
+Host: https://beyonders.agency

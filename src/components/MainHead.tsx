@@ -39,7 +39,7 @@ export const MainHead = () => {
       <meta name="theme-color" content="#ffffff" />
       {/* <!-- Open Graph / Facebook --> */}
       <meta property="og:type" content="website" />
-      <meta property="og:url" content="https://beyonders.com.br" />
+      <meta property="og:url" content="https://beyonders.agency" />
       <meta key={"og-title"} property="og:title" content={head.title} />
       <meta
         key={"og-description"}
@@ -49,7 +49,7 @@ export const MainHead = () => {
       <meta property="og:image" content="/beyonders-logo-new.png" />
 
       <meta property="twitter:card" content="summary_large_image" />
-      <meta property="twitter:url" content="https://beyonders.com.br" />
+      <meta property="twitter:url" content="https://beyonders.agency" />
       <meta
         key={"twitter-title"}
         property="twitter:title"
@@ -71,8 +71,8 @@ export const MainHead = () => {
     {
       "@context": "https://schema.org",
       "@type": "Organization",
-      "url": "https://www.beyonders.com.br",
-      "logo": "https://www.beyonders.com.br/logo-full.webp"
+      "url": "https://www.beyonders.agency",
+      "logo": "https://www.beyonders.agency/logo-full.webp"
     }
       `,
         }}

@@ -8,7 +8,7 @@ import { Metadata } from "next";
 import { BsCheck, BsChevronDown } from "react-icons/bs";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://beyonders.com.br"),
+  metadataBase: new URL("https://beyonders.agency"),
   icons: "/favicon.ico",
   title: "Custom E-Learning Platform Development - Beyonders",
   description:

@@ -113,16 +113,16 @@ export function generateMetadata({ params }: PageProps): Metadata {
     authors: [
       {
         name: "Beyonders - Digital Solutions",
-        url: "https://beyonders.com.br",
+        url: "https://beyonders.agency",
       },
       {
         name: post.author,
-        url: "https://beyonders.com.br",
+        url: "https://beyonders.agency",
       },
     ],
     keywords: post.tags,
     robots: "index, follow",
-    icons: '/favicon.ico',
+    icons: "/favicon.ico",
     openGraph: {
       title,
       images: [post.bannerImage],

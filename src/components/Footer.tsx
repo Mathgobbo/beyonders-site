@@ -79,7 +79,7 @@ export const Footer = () => {
         <hr className="my-6  sm:mx-auto border-gray-700 lg:my-8" />
         <span className="block text-sm sm:text-center text-gray-400">
           © 2025{" "}
-          <a href="https://beyonders.com.br/" className="hover:underline">
+          <a href="https://beyonders.agency/" className="hover:underline">
             Beyonders™
           </a>
           . All Rights Reserved.

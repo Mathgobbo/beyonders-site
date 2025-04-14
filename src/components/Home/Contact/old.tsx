@@ -54,7 +54,7 @@ export const Contact = () => {
           <input type='hidden' name='zc_gad' id='zc_gad' value=''></input> 
           <input type='text' style='display:none;' name='xmIwtLD' value='7efb3c786f26c94f79b71710027fc68952850a9a83c4274d27977be837a77c5f'></input> 
           <input type='text'  style='display:none;' name='actionType' value='TGVhZHM='></input>
-          <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;beyonders.com.br&#x2f;success' > </input>
+          <input type='text' style='display:none;' name='returnURL' value='https&#x3a;&#x2f;&#x2f;beyonders.agency&#x2f;success' > </input>
             <!-- Do not remove this code. -->
          
          <div class='zcwf_row'><div class='zcwf_col_lab' style='font-size:14px; font-family: Arial;'><label for='First_Name'>First Name</label></div><div class='zcwf_col_fld'><input type='text' id='First_Name' name='First Name' maxlength='40'></input><div class='zcwf_col_help'></div></div></div>
