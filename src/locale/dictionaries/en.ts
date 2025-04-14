@@ -2,9 +2,9 @@ import { IDictionary } from "./IDictionary";
 
 export const en: IDictionary = {
   head: {
-    title: "Beyonders - Digital Solutions",
+    title: "Beyonders | Software Design and Development",
     description:
-      "Development of Websites, Mobile Apps, and Blockchain applications for every industry. We are the right choice for your next project.",
+      "Custom software development agency helping startups and global companies build scalable web and mobile solutions. Partner with Beyonders to innovate with impact.",
   },
   header: {
     contact: "contact",

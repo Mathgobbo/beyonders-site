@@ -1,14 +1,12 @@
 import { BlogFooter } from "@/components/blog/BlogFooter";
-import { BlogHeader } from "@/components/BlogHeader";
 import { Inter, Poppins } from "@next/font/google";
-import "../styles/globals.css";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { GoogleTagManager } from "@next/third-parties/google";
+import "../styles/globals.css";
 
 export const metadata = {
-  title: "Beyonders Blog",
+  title: "Software Design and Development: Ideas and Insights | Beyonders",
   description:
-    "Discover more about the software development world, learn and have new ideas.",
+    "Insights on product design, emerging tech, and app development — plus real lessons from the front lines of building bold digital products at Beyonders.",
 };
 
 const poppins = Poppins({

@@ -5,11 +5,10 @@ import { RegularPost } from "../../components/blog/RegularPost";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Beyonders Blog",
-  icons: '/favicon.ico',
-
+  icons: "/favicon.ico",
+  title: "Software Design and Development: Ideas and Insights | Beyonders",
   description:
-    "Check out the best articles about technology, development, programming, blockchain, business, startups and other relevant topics.",
+    "Insights on product design, emerging tech, and app development — plus real lessons from the front lines of building bold digital products at Beyonders.",
 };
 
 export default function BlogHome() {
