@@ -1,6 +1,6 @@
 ---
 title: "How Companies Are Adopting Blockchain in Their Business Processes"
-description: "Different branching strategies and how they can help with your Git branch management, as well as your test and release pipelines."
+description: "Discover how leading companies like Walmart, Nike, and Visa are adopting blockchain to enhance supply chains, manage digital identity, issue NFTs, and simplify international payments."
 author: "Igor Benedet"
 authorPicture: "/team/igor.webp"
 category: "web3"
