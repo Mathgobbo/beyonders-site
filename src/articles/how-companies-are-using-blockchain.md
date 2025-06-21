@@ -1,10 +1,10 @@
 ---
-title: "How Companies Are Adopting Blockchain in Their Business Processes   "
+title: "How Companies Are Adopting Blockchain in Their Business Processes"
 description: "Different branching strategies and how they can help with your Git branch management, as well as your test and release pipelines."
 author: "Igor Benedet"
 authorPicture: "/team/igor.webp"
 category: "web3"
-date: "2025-06-22"
+date: "2025-06-21"
 bannerImage: "/blog/how-companies-are-using-blockchain/banner.jpg"
 tags:
   - web3
