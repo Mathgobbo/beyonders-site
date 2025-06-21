@@ -36,9 +36,9 @@ export default async function Post({ params }: PageProps) {
           alt={post.title}
           className="rounded-lg mx-auto w-full object-cover"
         />
-        <h2 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-3xl md:text-5xl tracking-wide leading-tight pt-8 pb-8 lg:pb-6">
+        <h1 className="main-gradient bg-clip-text text-transparent font-poppins font-semibold text-3xl md:text-4xl tracking-wide leading-tight pt-8 pb-8 lg:pb-6">
           {post.title}
-        </h2>
+        </h1>
         <div className="flow-root mt-0 mb-6">
           <div className="float-left">
             <Image
