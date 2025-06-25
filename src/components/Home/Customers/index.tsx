@@ -7,7 +7,7 @@ import Image from "next/image";
 
 const customers = [
   {
-    quote: `My goal was to create something different from what I saw on the market. And the
+    quote: `My goal was to create something different from what I saw on the market. And
     Beyonders, from the first contact, gave me all the support and
     contributed to the success of my project.`,
     name: "Marcelo da Silva",
@@ -21,6 +21,12 @@ const customers = [
     name: "Taylor Francis",
     role: "ContractApp Founder",
     picture: "/home/showcase/testimonials/taylor.webp",
+  },
+  {
+    quote: `When I hired Beyonders, I expected fast and reliable service, committed to delivering my project on the agreed deadlines. I found more than that. I found a company I fully trust and that will be a long-term partner for my business.`,
+    name: "Henrique Cimbalista",
+    role: "Entrepreneur and Lup Founder",
+    picture: "/home/showcase/testimonials/henrique.webp",
   },
   // {
   //   quote: `A Beyonders conseguiu aliar competência e velocidade para trazer o meu projeto à vida. Sou grato à eles pelo que fizeram.`,
@@ -90,7 +96,7 @@ export const Customers = () => {
                     />
                   </div>
 
-                  <div>
+                  <div className="xl:h-72">
                     <Image
                       alt="quotation-marks"
                       src="/quotation-mark.svg"
@@ -98,7 +104,7 @@ export const Customers = () => {
                       height={40}
                       className="w-10 md:w-14 mb-7"
                     />
-                    <p className="max-w-xl text-gray-secondary/80 font-light italic text-base md:text-lg">
+                    <p className="max-w-xl text-gray-secondary/80 font-light italic text-base md:text-lg  ">
                       {customer.quote}
                     </p>
                     <div>
