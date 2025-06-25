@@ -28,7 +28,7 @@ export const Header = () => {
         </Link>
 
         <div className="hidden md:flex items-center space-x-3 text-xs lg:space-x-6 lg:text-sm">
-          <HeaderLink href={"/#showcase"} scroll={false}>
+          <HeaderLink href={"/showcases"} scroll={false}>
             {dictionary.showcase}
           </HeaderLink>
           <HeaderLink href={"/#benefits"} scroll={false}>
