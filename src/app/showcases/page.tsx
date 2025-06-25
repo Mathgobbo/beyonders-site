@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const projects = [
   {
-    id: 1,
     title: "ContractApp",
+    id: "contractapp",
     description:
       "Create legally binding contracts and manage your projects easily. The Contractor’s dream software.",
     tech: "Web • Startup (Legal Software & Productivity)",
@@ -18,8 +18,8 @@ const projects = [
     link: "https://contractapp.ca",
   },
   {
-    id: 2,
     title: "PLAYSK8",
+    id: "playsk8",
     description:
       "A metaverse NFT game where you collect unique 3D skateboarder avatars, battle others in the classic SKATE challenge, level up tricks, unlock rarer moves, and compete for prizes.",
     tech: "Web • NFTs and Blockchain",
@@ -29,8 +29,8 @@ const projects = [
     link: "https://playsk8.com",
   },
   {
-    id: 3,
     title: "SK8WALLET",
+    id: "sk8wallet",
     description:
       "Your Crypto skateboarding token hub. A website where you can buy, transfer, airdrop and stake the $SK8 token, the SK8 community token.",
     tech: "Web • Cryptocurrency and Blockchain",
@@ -40,8 +40,8 @@ const projects = [
     link: "https://sk8wallet.com",
   },
   {
-    id: 4,
     title: "Lup",
+    id: "lup",
     description:
       "Do you want to find the best suppliers and service providers for your event? Start with Lup. Here, anyone can create events and all suppliers can share your services.",
     tech: "Web & Mobile • Startup (Events)",
@@ -51,8 +51,8 @@ const projects = [
     link: "https://lup.com.br",
   },
   {
-    id: 5,
     title: "DA2X",
+    id: "da2x",
     description:
       "DA2X is a subscription platform for law students and professionals, offering courses, mentorships, and editable legal templates. It provides practical, certified content to accelerate legal career development.",
     tech: "Web • E-Learning",
@@ -62,8 +62,8 @@ const projects = [
     link: "https://da2x.com.br",
   },
   {
-    id: 6,
     title: "Geografia Irada",
+    id: "geografia-irada",
     description:
       "The best website to learn Geography for your exams. Focused on High School and College content.",
     tech: "Web • E-Learning",
@@ -73,8 +73,8 @@ const projects = [
     link: "https://geografiairada.com",
   },
   {
-    id: 7,
     title: "Salesgrid",
+    id: "salesgrid",
     description:
       "Salesgrid is a sales automation platform that helps companies understand their performance through data-driven dashboard. Salespeople, managers, and executives can make better decisions, reach goals, and identify new opportunities for growth within the place.",
     tech: "Web • Startup (Business Intelligence and Analytics)",
@@ -89,6 +89,7 @@ const projects = [
 const bottomProjects = [
   {
     title: "Professor Marcelo",
+    id: "professor-marcelo",
     description:
       "Explore the fieldwork and published books from a TedX Speaker and Geography educator passionate about connecting people and places through knowledge.",
     tech: "Web • Portfolio",
@@ -99,6 +100,7 @@ const bottomProjects = [
   },
   {
     title: "It's On",
+    id: "itson",
     description:
       "Buy, sell, and find the best waves of your life. This Marketplace was made for Surfers and Photographers to connect and make business. We are still working on this project, so follow our LinkdeIn to know when we release it!",
     tech: "Web • Startup (Marketplace)",
@@ -118,7 +120,7 @@ export default function Showcases() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.4 }}
-          className="py-16 px-4 lg:px-36 pt-48 max-w-[92rem] w-full"
+          className="py-16 px-4 lg:px-36 pt-36 xl:pt-48 max-w-[92rem] w-full"
         >
           <div className="font-bold text-transparent font-poppins mb-3 text-lg md:text-xl lg:text-3xl main-gradient bg-clip-text uppercase">
             PROVIDING THE BEST SERVICE
@@ -144,6 +146,7 @@ export default function Showcases() {
           {projects.map((project, index) => (
             <motion.a
               key={project.id}
+              id={project.id}
               href={project.link}
               target="_blank"
               initial={{ opacity: 0, y: 50 }}
@@ -164,7 +167,7 @@ export default function Showcases() {
                     alt={`${project.title} mockup`}
                     width={900}
                     height={600}
-                    className="w-full h-80"
+                    className="w-full  md:h-80"
                   />
                 </motion.div>
               </div>

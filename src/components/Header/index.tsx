@@ -95,7 +95,7 @@ export const Header = () => {
           className="z-40 p-4 pt-6 fixed top-16 w-full bg-main-black/90 border-b border-gray-800 flex text-left flex-col"
         >
           {" "}
-          <HeaderLink href={"/#showcase"} scroll={false}>
+          <HeaderLink href={"/showcases"} scroll={false}>
             {dictionary.showcase}
           </HeaderLink>
           <HeaderLink href={"/#benefits"} scroll={false}>
