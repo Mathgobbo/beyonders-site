@@ -48,9 +48,9 @@ export default async function Post({ params }: PageProps) {
               alt={post.title}
               className="rounded-full mr-4 float-left"
             />
-            <div className="float-right text-white font-poppins font-semibold">
-              <p>{post.author}</p>
-              <p>{format(new Date(post.date), "MMM dd, yyyy")}</p>
+            <div className="float-right text-white font-poppins">
+              <p className="font-semibold">{post.author}</p>
+              <p className="font-light">{format(new Date(post.date), "MMM dd, yyyy")}</p>
             </div>
           </div>
           <ShareIcon />
