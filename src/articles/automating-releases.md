@@ -17,13 +17,13 @@ As a software engineer and manager of a small team, we often have to create new 
 
 This way, we created our own automation to do so, helping us saving hours of manual work.
 
-In this video we will guide you through the concepts of publishing software releases, why it is important and how we automated this process inside our company.
+In this post we will guide you through the concepts of publishing software releases, why it is important and how we automated this process inside our company.
 
 My name is Matheus and I’m the founder and CEO of Beyonders.
 
 # 1. What orbits a Release?
 
-I believe everyone watching this video already knows what a release is. But I like to say that **it’s a new version of the system that is now published and available to users**.
+I believe everyone reading this article already knows what a release is. But I like to say that **it’s a new version of the system that is now published and available to users**.
 
 If you search online, you’ll see that a release can’t be summed up in a single word — it’s a complete process, and I agree.
 
