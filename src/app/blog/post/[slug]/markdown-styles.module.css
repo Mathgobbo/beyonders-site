@@ -22,19 +22,23 @@
 }
 
 .markdown img {
-  @apply mx-auto mb-10
+  @apply mx-auto mb-10;
+}
+
+.markdown iframe {
+  @apply mx-auto mb-10;
 }
 
 .markdown a {
-  @apply text-blue-400 underline hover:no-underline
+  @apply text-blue-400 underline hover:no-underline;
 }
 
-.markdown ul li ,
+.markdown ul li,
+.markdown ol li,
 .markdown ol li ul li {
-  @apply list-disc list-inside
+  @apply list-disc list-inside;
 }
 
 .markdown ol li {
-  @apply list-decimal
+  @apply list-decimal;
 }
- 
