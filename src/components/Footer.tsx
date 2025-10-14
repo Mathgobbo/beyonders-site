@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import Script from "next/script";
 
 export const Footer = () => {
   return (
@@ -157,6 +158,22 @@ export const Footer = () => {
                   </li>
                 </ul>
               </div>
+            </div>
+            <div className="bg-white grid h-10 w-60 place-items-center mt-4 overflow-hidden">
+              <Script
+                src="https://widget.clutch.co/static/js/widget.js"
+                defer
+              />
+              <div
+                className="clutch-widget"
+                data-url="https://widget.clutch.co"
+                data-widget-type="7"
+                data-height="65"
+                data-nofollow="false"
+                data-expandifr="true"
+                data-scale="100"
+                data-clutchcompany-id="2439513"
+              ></div>
             </div>
           </div>
         </div>
