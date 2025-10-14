@@ -159,7 +159,7 @@ export const Footer = () => {
                 </ul>
               </div>
             </div>
-            <div className="bg-white grid h-10 w-60 place-items-center mt-4 overflow-hidden">
+            <div className="bg-white grid h-[2.8rem] w-[16.8rem] place-items-center mt-4 overflow-hidden">
               <Script
                 src="https://widget.clutch.co/static/js/widget.js"
                 defer
