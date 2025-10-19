@@ -1,13 +1,12 @@
 "use client";
 
+import { reportConversion } from "@/services/gtag";
 import { ComponentProps } from "react";
 import { Button, OutlineButton } from "../common/Button";
-import { PIPEFY_FORM_URL } from "@/config/constants";
-import { reportConversion } from "@/services/gtag";
 
 export const ConversionButton = (props: ComponentProps<typeof Button>) => {
   // const handleClick = () => {
-  //   reportConversion(PIPEFY_FORM_URL);
+  //   reportConversion(CONTACT_FORM_URL);
   // };
   return (
     <a href="#elearning-contact">

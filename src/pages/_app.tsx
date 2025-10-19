@@ -1,13 +1,11 @@
 import { Footer } from "@/components/Footer";
-import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 import { Header } from "@/components/Header";
 import { MainHead } from "@/components/MainHead";
 import "@/styles/globals.css";
-import { Poppins, Inter } from "@next/font/google";
+import { Inter, Poppins } from "@next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
-import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -50,7 +48,7 @@ export default function App({ Component, pageProps }: AppProps) {
         </LazyMotion>
 
         {/* Vbout script tag */}
-        <Script
+        {/* <Script
           id="vbout-tag"
           dangerouslySetInnerHTML={{
             __html: `
@@ -64,7 +62,7 @@ export default function App({ Component, pageProps }: AppProps) {
             })();
             `,
           }}
-        />
+        /> */}
       </main>
     </>
   );
