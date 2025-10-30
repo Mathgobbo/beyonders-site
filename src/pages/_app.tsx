@@ -6,6 +6,7 @@ import { Inter, Poppins } from "@next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { domAnimation, LazyMotion } from "framer-motion";
 import type { AppProps } from "next/app";
+import Script from "next/script";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -23,8 +24,6 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <>
       <MainHead />
-      {/* Commented to seup only GTAG */}
-      {/* <GoogleAnalytics /> */}
       <main>
         {/* GTAG  */}
         <noscript>
@@ -48,10 +47,11 @@ export default function App({ Component, pageProps }: AppProps) {
         </LazyMotion>
 
         {/* Vbout script tag */}
-        {/* <Script
+        <Script
           id="vbout-tag"
           dangerouslySetInnerHTML={{
-            __html: `
+            __html: ` 
+            /* embed code starts */
             var _vbset = _vbset || [];
             _vbset.push(['_account', 'VBT-05131-15326']);
             _vbset.push(['_domain', 'https://beyonders.agency']);
@@ -60,9 +60,10 @@ export default function App({ Component, pageProps }: AppProps) {
               var vbt = document.createElement('script'); vbt.type = 'text/javascript'; vbt.async = true; 
               vbt.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'www.vbt.io/tracker?_account='+_vbset[0][1]+'&_domain='+_vbset[1][1];var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(vbt, s);
             })();
+            /* embed code ends */ 
             `,
           }}
-        /> */}
+        />
       </main>
     </>
   );
