@@ -39,15 +39,24 @@ export const Contact = () => {
           Logo={MdOutlineMail}
         />
       </div>
-      <section className="mt-20 ">
-        <p className="text-xl  relative z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
+      <section className="mt-12 ">
+        {/* <p className="text-xl  relative z-10 font-bold mb-4 font-inter text-gray-primary tracking-widest">
           {contact.subtitle2}
-        </p>
-        <a href={CONTACT_FORM_URL} target="_blank" rel="noreferrer">
+        </p> */}
+        {/* <a href={CONTACT_FORM_URL} target="_blank" rel="noreferrer">
           <Button additionalClassName="w-full h-14 lg:w-3/4 font-bold  relative z-10">
             Get Started
           </Button>
-        </a>
+        </a> */}
+
+        <script async src="https://www.vbt.io/ext/vbtforms.js?lang=en"></script>
+        <div id="vbtEFWrapper-177761">
+          <div
+            className="vboutEmbedFormBox"
+            id="vboutEmbedFormBox-177761"
+            data-vbtfc="f52ed5452a82f9e182e174d43185c4c4"
+          ></div>
+        </div>
       </section>
     </Section>
   );
